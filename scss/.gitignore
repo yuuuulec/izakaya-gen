@@ -30,14 +30,3 @@ node_modules
 # ビルドファイル除外
 dist
 assets
-
-# cssフォルダ除外（SCSSの場合）
-css
-
-# cssフォルダの「style.css」と「style.css.map」を除外（SCSSの場合）
-# パスは開発環境によって変更してください
-css/**/style.css
-css/**/style.css.map
-
-# macOSの不要な隠しファイル
-.DS_Store

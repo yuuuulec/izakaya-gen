@@ -1,97 +1,156 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent; 
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-  }
-  body {
-    font-family:"Zen Old Mincho","EB Garamond",
-    "Hiragino Mincho ProN","游明朝","Yu Mincho","serif";
-    font-size: 1.8rem;
-    font-weight: 500;
-  }
-  body span.en {
-    font-family: "EB Garamond", serif;
-  }
-  img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  }
-  li {
-    list-style: none;
-  }
-  a {
-text-decoration: none;
-  } 
-  .inner {
-    max-width: 114rem;
-    padding: 0 3rem;
-    margin-inline: auto;
-  }
-  .address {
-    font-family: "Noto Serif JP","Hiragino Mincho ProN", "游明朝", "Yu Mincho", "serif";
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Zen Old Mincho", "EB Garamond",
+    "Hiragino Mincho ProN", "游明朝", "Yu Mincho", "serif";
+  font-size: 1.8rem;
+  font-weight: 500;
+  maincolor: #530700;
+
+}
+
+body span.en {
+  font-family: "EB Garamond", serif;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner {
+  max-width: 114rem;
+  padding: 0 3rem;
+  margin-inline: auto;
+}
+
+.address {
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", "serif";
+}
+$mainColor: #530700;
 /* ===========================
    header
    =========================== */
-   #header {
-    color: #FFFFFF;
-    background-color: aqua;
-    height: 9rem;
+#header {
+  height: 100vh;
 
-   #slider-pc,#slider-sp {
+  #slider-pc,
+  #slider-sp {
     position: relative;
-   }
-    #slider-sp {
-      display: none;
-    }
-    .header__content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .header__list {
-      display: flex;
-      align-items: center;
-      font-size: 1.8rem;
-      justify-content: space-between;
-      position: absolute;
-      top: 3rem;
-      right: 8rem;
-      gap: 2rem;
-    }
-    .header__logo {
-      font-size: 2rem;
-      position: absolute;
-      top: 3rem;
-    }
-    .header__logo a,.header__item a {
-      padding: 1rem;
-      position: relative;
-    }
-    .header__logo a,.header__item a::after{
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0%;
-      height: 0.1rem;
-      background-color: #FFFFFF;
-      transition: width 0.8s ease;
-    }
-    .header__logo a,.header__item a::hover{
-width: 100%;
-    }
-  .catchcopy {
+  }
+
+  #slider-sp {
+    display: none;
+  }
+
+  #slider-pc {
+    display: block;
+    ;
+  }
+
+  .header__content {
     position: absolute;
-    box-shadow: 0.5rem 0.5rem 0.5rem #000000;
+    top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header__list {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: calc(1.8rem / 108rem * 100vw);
+    justify-content: space-between;
+    position: absolute;
+    right: 2rem;
+    gap: 1rem;
+  }
+
+  .header__logo {
+    font-size: calc(2rem / 108rem * 100vw);
+    left: 2rem;
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  .header__logo a,
+  .header__item a {
+    padding: 1rem;
+    position: relative;
+    color: #FFFFFF;
+  }
+
+  .header__logo a::after,
+  .header__item a::after {
+    background-color: #FFFFFF;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 0%;
+    height: 0.2rem;
+    transition: width 0.8s ease;
+  }
+
+  .header__logo a:hover::after,
+  .header__item a:hover::after {
+    width: 100%;
+  }
+
+  .slider-pc {
+    display: block;
+  }
+  .catchcopy {
+    color: #FFFFFF;
+    position: absolute;
+    text-shadow: 0.5rem 0.5rem 0.5rem #000000;
     top: calc(34rem / 80rem * 100vh);
     left: 6.2rem;
-  }}
+    font-size: calc(4rem / 108rem * 100vw);
+    line-height: 1.75;
+    letter-spacing: 1.2rem;
+  }
+
+  @media (max-width: 76.7rem) {
+    #header {
+      .slider-pc {
+        display: none;
+      }
+    }
+  }
+
+/* ===========================
+   feature
+   =========================== */
+   #feature {
+    background-image: url(../img/feature-back.svg);
+    writing-mode: vertical-rl;
+
+    .feature__ttl {
+      font-size: 3rem;
+      color: $mainColor;
+    }
+  }

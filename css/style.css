@@ -17,6 +17,8 @@ html {
 body {
   font-family: "Zen Old Mincho", "EB Garamond", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", "serif";
   font-size: 1.8rem;
+  font-weight: 500;
+  maincolor: #530700;
 }
 
 body span.en {
@@ -51,24 +53,28 @@ a {
    header
    =========================== */
 #header {
-  color: #FFFFFF;
+  height: 100vh;
 }
-#header #slider-pc, #header #slider-sp {
+#header #slider-pc,
+#header #slider-sp {
   position: relative;
 }
 #header #slider-sp {
   display: none;
 }
+#header #slider-pc {
+  display: block;
+}
 #header .header__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
+  top: 3rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 #header .header__list {
   display: -webkit-box;
@@ -77,28 +83,70 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.8rem;
+  font-size: 1.6666666667vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  top: 3rem;
-  right: 8rem;
-  gap: 2rem;
+  right: 2rem;
+  gap: 1rem;
 }
 #header .header__logo {
-  font-size: 2rem;
+  font-size: 1.8518518519vw;
+  left: 2rem;
   position: absolute;
-  top: 3rem;
+  white-space: nowrap;
 }
-#header .header__logo a, #header .header__item a {
+#header .header__logo a,
+#header .header__item a {
   padding: 1rem;
+  position: relative;
+  color: #FFFFFF;
+}
+#header .header__logo a,
+#header .header__item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 0%;
+  height: 0.2rem;
+  -webkit-transition: width 0.8s ease;
+  transition: width 0.8s ease;
+}
+#header .header__logo a,
+#header .header__item a:hover::after {
+  width: 100%;
+}
+#header .slider-pc {
+  display: block;
 }
 #header .catchcopy {
+  color: #FFFFFF;
   position: absolute;
-  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #000000;
-          box-shadow: 0.5rem 0.5rem 0.5rem #000000;
+  text-shadow: 0.5rem 0.5rem 0.5rem #000000;
   top: 42.5vh;
   left: 6.2rem;
-  color: aqua;
+  font-size: 3.7037037037vw;
+  line-height: 1.75;
+  letter-spacing: 1.2rem;
+}
+@media (max-width: 76.7rem) {
+  #header #header .slider-pc {
+    display: none;
+  }
+}
+
+/* ===========================
+   feature
+   =========================== */
+#feature {
+  background-image: url(../img/feature-back.svg);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+#feature .feature__ttl {
+  font-size: 3rem;
+  color: #530700;
 }/*# sourceMappingURL=style.css.map */
