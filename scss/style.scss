@@ -88,22 +88,23 @@ a {
     width: 100%;
   }
 
-  &__logo {
+  .header__logo {
     font-size: 2rem;
     white-space: nowrap;
     line-height: 0.6;
     // margin-right: 14rem;
   }
 
-  &__list {
+
+  .header__list {
     display: flex;
     align-items: center;
     text-align: center;
-    gap: 2rem;
+    gap: 2.15rem;
     justify-content: space-between;
   }
 
-  &__logo a {
+  .header__logo a {
     display: block;
     padding: 1rem 0;
     position: relative;
@@ -114,7 +115,7 @@ a {
     }
   }
 
-  &__item a {
+  .header__item a {
     display: block;
     padding: 1rem 0;
     position: relative;
@@ -138,7 +139,8 @@ a {
     color: #ffffff;
     position: absolute;
     text-shadow: 0.5rem 0.5rem 0.5rem #000000;
-    top: calc(595 / 800 * 100vh); 
+    // top: calc( 340 / 800 * 100vh); 
+    top: calc( 510 / 800 * 100vh); 
     left: calc(62 / 1080 * 100vw); 
     height: calc(140 / 1080 * 100vh);
     font-size: calc(40 / 1080 * 100vw);
@@ -152,9 +154,8 @@ a {
    =========================== */
 #feature {
   background-image: url(../img/feature-back.svg);
-  padding-top: 1.3rem;
-  padding-bottom: 12.5rem;
-  // padding: 18.5rem  0 12.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 
   .feature__inner {
@@ -171,11 +172,12 @@ a {
   .feature__ttl {
     font-size: 3rem;
     color: $mainColor;
-    line-height: 2;
-    letter-spacing: 0.2rem;
+    line-height: 1.8;
+    // letter-spacing: 0.1rem;
   }
   .feature__dsc {
-    line-height: 2.4;
-    letter-spacing: 0.2rem;
+    line-height: 2.65;
+    letter-spacing: 0.6rem;
   }
 }
+

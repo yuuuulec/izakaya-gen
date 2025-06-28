@@ -85,12 +85,12 @@ a {
           justify-content: space-between;
   width: 100%;
 }
-.header__logo {
+.header .header__logo {
   font-size: 2rem;
   white-space: nowrap;
   line-height: 0.6;
 }
-.header__list {
+.header .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,12 +98,12 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  gap: 2rem;
+  gap: 2.15rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.header__logo a {
+.header .header__logo a {
   display: block;
   padding: 1rem 0;
   position: relative;
@@ -111,16 +111,16 @@ a {
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
 }
-.header__logo a:hover {
+.header .header__logo a:hover {
   opacity: 0.5;
 }
-.header__item a {
+.header .header__item a {
   display: block;
   padding: 1rem 0;
   position: relative;
   color: #ffffff;
 }
-.header__item a::after {
+.header .header__item a::after {
   background-color: #ffffff;
   content: "";
   position: absolute;
@@ -131,14 +131,14 @@ a {
   -webkit-transition: width 0.8s ease;
   transition: width 0.8s ease;
 }
-.header__item a:hover::after {
+.header .header__item a:hover::after {
   width: 100%;
 }
 .header .catchcopy {
   color: #ffffff;
   position: absolute;
   text-shadow: 0.5rem 0.5rem 0.5rem #000000;
-  top: 74.375vh;
+  top: 63.75vh;
   left: 5.7407407407vw;
   height: 12.962962963vh;
   font-size: 3.7037037037vw;
@@ -151,8 +151,8 @@ a {
    =========================== */
 #feature {
   background-image: url(../img/feature-back.svg);
-  padding-top: 1.3rem;
-  padding-bottom: 12.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 #feature .feature__inner {
@@ -179,10 +179,9 @@ a {
 #feature .feature__ttl {
   font-size: 3rem;
   color: #530700;
-  line-height: 2;
-  letter-spacing: 0.2rem;
+  line-height: 1.8;
 }
 #feature .feature__dsc {
-  line-height: 2.4;
-  letter-spacing: 0.2rem;
+  line-height: 2.65;
+  letter-spacing: 0.6rem;
 }/*# sourceMappingURL=style.css.map */
