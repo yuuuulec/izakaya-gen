@@ -18,10 +18,7 @@ body {
   font-family: "Zen Old Mincho", "EB Garamond", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", "serif";
   font-size: 1.8rem;
   font-weight: 500;
-}
-
-body span.en {
-  font-family: "EB Garamond", serif;
+  color: #000000;
 }
 
 img {
@@ -39,9 +36,35 @@ a {
 }
 
 .inner {
-  max-width: 114rem;
-  padding: 0 3rem;
+  max-width: 920px;
   margin-inline: auto;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  .inner {
+    max-width: 31.5rem;
+  }
+}
+
+/* ===========================
+  共通
+   =========================== */
+.section__ttl {
+  font-size: 3rem;
+  color: #530700;
+  text-align: center;
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+  letter-spacing: 9.9px;
+}
+.section__ttl span {
+  color: #000000;
+  font-size: 2rem;
+  font-family: "EB Garamond", serif;
+  display: block;
+  margin-bottom: 3.8rem;
 }
 
 /*あとでアドレスに設定
@@ -53,30 +76,32 @@ a {
 /* ===========================
    header
    =========================== */
-.header #slider-sp {
+#slider-sp {
   display: none;
 }
 @media (max-width: 767px) {
-  .header #slider-sp {
+  #slider-sp {
     display: block;
   }
 }
-.header #slider-pc {
+
+#slider-pc {
   display: block;
 }
 @media (max-width: 767px) {
-  .header #slider-pc {
+  #slider-pc {
     display: none;
   }
 }
-.header .header__container {
+
+.header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.6rem 8rem;
+  padding: 1.6rem 0;
   top: 0;
   left: 0;
   position: fixed;
@@ -85,12 +110,14 @@ a {
           justify-content: space-between;
   width: 100%;
 }
-.header .header__logo {
+
+.header__logo {
   font-size: 2rem;
   white-space: nowrap;
   line-height: 0.6;
 }
-.header .header__list {
+
+.header__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,7 +130,8 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.header .header__logo a {
+
+.header__logo a {
   display: block;
   padding: 1rem 0;
   position: relative;
@@ -111,16 +139,17 @@ a {
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
 }
-.header .header__logo a:hover {
+.header__logo a:hover {
   opacity: 0.5;
 }
-.header .header__item a {
+
+.header__item a {
   display: block;
   padding: 1rem 0;
   position: relative;
   color: #ffffff;
 }
-.header .header__item a::after {
+.header__item a::after {
   background-color: #ffffff;
   content: "";
   position: absolute;
@@ -131,10 +160,11 @@ a {
   -webkit-transition: width 0.8s ease;
   transition: width 0.8s ease;
 }
-.header .header__item a:hover::after {
+.header__item a:hover::after {
   width: 100%;
 }
-.header .catchcopy {
+
+.catchcopy {
   color: #ffffff;
   position: absolute;
   text-shadow: 0.5rem 0.5rem 0.5rem #000000;
@@ -143,7 +173,7 @@ a {
   height: 12.962962963vh;
   font-size: 3.7037037037vw;
   line-height: 1.75;
-  letter-spacing: 1.2rem;
+  letter-spacing: 12px;
 }
 
 /* ===========================
@@ -151,6 +181,8 @@ a {
    =========================== */
 #feature {
   background-image: url(../img/feature-back.svg);
+  background-repeat: repeat;
+  background-position: cover;
   padding-top: 0.5rem;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -182,6 +214,68 @@ a {
   line-height: 1.8;
 }
 #feature .feature__dsc {
-  line-height: 2.65;
-  letter-spacing: 0.6rem;
+  line-height: 1.37;
+}
+
+/* ===========================
+   recommend
+   =========================== */
+#recommend {
+  padding: 8rem 0;
+  background-color: rgba(83, 7, 0, 0.1019607843);
+}
+
+.recommend-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 11rem;
+}
+
+.recommend__img {
+  width: 65%;
+  position: relative;
+}
+
+.caption {
+  font-size: 1.6rem;
+  line-height: 0.64;
+  margin-top: 1.3rem;
+}
+
+.recommend__ttl {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  margin-bottom: 1.7rem;
+}
+
+.recommend__text {
+  background-color: #530700;
+  max-width: 50rem;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  line-height: 1.56;
+  text-align: left;
+  padding: 5rem 2rem 4.2rem 22rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: -1;
+}
+
+.recommend-item:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.recommend-item:nth-of-type(even) .caption {
+  text-align: right;
+}
+.recommend-item:nth-of-type(even) .recommend__text {
+  right: auto;
+  top: 50%;
+  left: 0;
+  padding: 5rem 22rem 4.2rem 2rem;
 }/*# sourceMappingURL=style.css.map */
