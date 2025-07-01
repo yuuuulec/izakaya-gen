@@ -1,6 +1,6 @@
 $mainColor: #530700;
-$bgColor: #5307001A;
-$fontColor: #FFFFFF;
+$bgColor: #5307001a;
+$fontColor: #ffffff;
 
 @mixin sp {
   @media (max-width: 767px) {
@@ -10,13 +10,11 @@ $fontColor: #FFFFFF;
 @mixin en {
   font-family: "EB Garamond", serif;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -24,7 +22,6 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%;
 }
-
 body {
   font-family: "Zen Old Mincho", "EB Garamond", "Hiragino Mincho ProN", "游明朝",
     "Yu Mincho", "serif";
@@ -32,26 +29,23 @@ body {
   font-weight: 500;
   color: #000000;
 }
-
 img {
   max-width: 100%;
   width: 100%;
   height: auto;
 }
-
 li {
   list-style: none;
 }
-
 a {
   text-decoration: none;
 }
-
 .inner {
   max-width: 920px;
   margin-inline: auto;
   width: 100%;
   box-sizing: border-box;
+
   @include sp {
     max-width: 31.5rem;
   }
@@ -69,11 +63,14 @@ a {
   span {
     color: #000000;
     font-size: 2rem;
+    line-height: 1.65;
+    letter-spacing: 4px;
     @include en;
     display: block;
     margin-bottom: 3.8rem;
   }
 }
+
 /*あとでアドレスに設定
 
 .address {
@@ -84,94 +81,84 @@ a {
 /* ===========================
    header
    =========================== */
-  
-  #slider-sp {
-    display: none;
+#slider-sp {
+  display: none;
 
-    @include sp {
-      display: block;
-    }
-  }
-
-  #slider-pc {
+  @include sp {
     display: block;
-
-    @include sp {
-      display: none;
-    }
   }
+}
+#slider-pc {
+  display: block;
 
-  .header__container {
-    display: flex;
-    align-items: center;
-    padding: 1.6rem 0;
-    top: 0;
+  @include sp {
+    display: none;
+  }
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 0;
+  top: 0;
+  left: 0;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+}
+.header__logo {
+  font-size: 2rem;
+  white-space: nowrap;
+  line-height: 0.6;
+  // margin-right: 14rem;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 2.15rem;
+  justify-content: space-between;
+}
+.header__logo a {
+  display: block;
+  padding: 1rem 0;
+  position: relative;
+  color: #ffffff;
+  transition: opacity 0.8s ease;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.header__item a {
+  display: block;
+  padding: 1rem 0;
+  position: relative;
+  color: #ffffff;
+  &::after {
+    background-color: #ffffff;
+    content: "";
+    position: absolute;
     left: 0;
-    position: fixed;
-    justify-content: space-between;
+    bottom: -0.1rem;
+    width: 0%;
+    height: 0.2rem;
+    transition: width 0.8s ease;
+  }
+  &:hover::after {
     width: 100%;
   }
-
-  .header__logo {
-    font-size: 2rem;
-    white-space: nowrap;
-    line-height: 0.6;
-    // margin-right: 14rem;
-  }
-
-
-  .header__list {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: 2.15rem;
-    justify-content: space-between;
-  }
-
-  .header__logo a {
-    display: block;
-    padding: 1rem 0;
-    position: relative;
-    color: #ffffff;
-    transition: opacity 0.8s ease;
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-
-  .header__item a {
-    display: block;
-    padding: 1rem 0;
-    position: relative;
-    color: #ffffff;
-    &::after {
-      background-color: #ffffff;
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -0.1rem;
-      width: 0%;
-      height: 0.2rem;
-      transition: width 0.8s ease;
-    }
-    &:hover::after {
-      width: 100%;
-    }
-  }
-
-  .catchcopy {
-    color: #ffffff;
-    position: absolute;
-    text-shadow: 0.5rem 0.5rem 0.5rem #000000;
-    // top: calc( 340 / 800 * 100vh); 
-    top: calc( 510 / 800 * 100vh); 
-    left: calc(62 / 1080 * 100vw); 
-    height: calc(140 / 1080 * 100vh);
-    font-size: calc(40 / 1080 * 100vw);
-    line-height: 1.75;
-    letter-spacing: 12px;
-  }
-
+}
+.catchcopy {
+  color: #ffffff;
+  position: absolute;
+  text-shadow: 0.5rem 0.5rem 0.5rem #000000;
+  // top: calc( 340 / 800 * 100vh);
+  top: calc(510 / 800 * 100vh);
+  left: calc(62 / 1080 * 100vw);
+  height: calc(140 / 1080 * 100vh);
+  font-size: calc(40 / 1080 * 100vw);
+  line-height: 1.75;
+  letter-spacing: 12px;
+}
 /* ===========================
    feature
    =========================== */
@@ -182,7 +169,6 @@ a {
   padding-top: 0.5rem;
   padding-bottom: 1.5rem;
   width: 100%;
-
   .feature__inner {
     writing-mode: vertical-rl;
     display: flex;
@@ -193,7 +179,6 @@ a {
     height: 100vh;
     width: 100%;
   }
-
   .feature__ttl {
     font-size: 3rem;
     color: $mainColor;
@@ -204,42 +189,37 @@ a {
   }
 }
 /* ===========================
-   recommend
+  いちおし recommend
    =========================== */
 #recommend {
   padding: 8rem 0;
   background-color: $bgColor;
 }
-
-.recommend-item {  
+.recommend-item {
   display: flex;
   position: relative;
-  margin-bottom: 11rem;
+  margin-bottom: 20rem;
 }
-
-  .recommend__img {
+.recommend__img {
   width: 65%;
   position: relative;
 }
-
 .caption {
   font-size: 1.6rem;
   line-height: 0.64;
   margin-top: 1.3rem;
 }
-
 .recommend__ttl {
   font-size: 2.5rem;
   line-height: 1.4;
   margin-bottom: 1.7rem;
 }
-
 .recommend__text {
   background-color: $mainColor;
   max-width: 50rem;
   color: $fontColor;
   font-size: 1.6rem;
-  line-height: 1.56;    
+  line-height: 1.56;
   text-align: left;
   padding: 5rem 2rem 4.2rem 22rem;
   position: absolute;
@@ -247,16 +227,222 @@ a {
   right: 0;
   z-index: -1;
 }
-
 .recommend-item:nth-of-type(even) {
   flex-direction: row-reverse;
   .caption {
     text-align: right;
   }
   .recommend__text {
-  right: auto;
+    right: auto;
+    top: 50%;
+    left: 0;
+    padding: 5rem 22rem 4.2rem 2rem;
+  }
+}
+/* ===========================
+  コース　course
+   =========================== */
+#course {
+  background-image: url(../img/course-back.svg);
+  padding: 8rem 9.7rem;
+}
+.course__list {
+  display: flex;
+  justify-content: space-between;
+}
+.course__item {
+  width: 21.7%;
+}
+.course__ttl {
+  color: #000000;
+  font-size: 1.6rem;
+  line-height: 1.56;
+}
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+.modal__overlay {
+  background: rgba(0, 0, 0, 0.7);
+  /* 半透明グレー背景 */
+  position: absolute;
+  inset: 0;
+}
+.modal__content {
+  position: relative;
   top: 50%;
-  left: 0;
-  padding: 5rem 22rem 4.2rem 2rem; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 41.6%;
+  max-height: 80%;
+  background: #fff;
+  padding: 2.5rem;
+  box-shadow: rgba(0, 0, 0, 0.502);
+  z-index: 10000;
+}
+.modal__text {
+  margin-top: 1.9rem;
+}
+.modal__content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.modal__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+/* ===========================
+   お知らせ　news
+   =========================== */
+#news {
+  background-color: $bgColor;
+  padding: 8rem 0;
+}
+.news__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.news__list,
+.blog__list {
+  width: 47%;
+}
+.news__ttl,
+.blog__ttl {
+  background-color: $mainColor;
+  color: $fontColor;
+  padding: 0.8rem 0 0.9rem 2rem;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+.news__items,
+.blog__items {
+  background-color: $fontColor;
+  padding: 1rem 0 7.4rem;
+}
+.news__item a,
+.blog__item a {
+  color: #000000;
+  display: grid;
+  grid-template-columns: 12.2rem 1fr;
+  align-items: start;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+  transition: opacity 0.8s ease;
+}
+.news__item a::after,
+.blog__item a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 0.1rem;
+  background-color: $mainColor;
+}
+.news__item a:hover,
+.blog__item a:hover {
+  opacity: 0.5;
+}
+.news__text,
+.blog__text {
+  line-height: 1.38;
+}
+.news__date {
+  font-size: 1.6rem;
+  line-height: 2.06;
+}
+.news__text .blog__text {
+  line-height: 1.38;
+}
+.more {
+  position: relative;
+}
+.more a {
+  display: block;
+  transition: opacity 0.8s ease;
+  width: 12rem;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.more__text {
+  color: $mainColor;
+  position: absolute;
+  right: 0;
+  bottom: -4rem;
+  font-size: 2rem;
+  line-height: 1.65;
+  padding: 0 5.5rem 0 0;
+}
+.more img {
+  position: absolute;
+  bottom: -5rem;
+  right: 2rem;
+  width: 8rem;
+}
+/* ===========================
+  アクセス　access
+   =========================== */
+#access {
+  padding: 8rem 0;
+  background-image: url(../img/access-back.svg);
+  position: relative;
+  z-index: -1;
+}
+.access__map  {
+  width: 55%;
+  max-width: 60rem;
+  aspect-ratio: 3 / 2;
+}
+.access__content {
+  background-color: $mainColor;
+  color: $fontColor;
+max-width: 50rem;
+padding: 5rem 2rem 4.2rem 22rem;
+position: absolute;
+top: 70%;
+left: 45%;
+z-index: -1;
+}
+.access__company-name {
+font-size: 2rem;
+line-height: 1.65;
+margin-bottom: 0.7rem;
+}
+.access__address {
+  font-size: 1.6rem;
+  line-height: 1.56;
+  margin-bottom: 1.2rem;
+}
+.access__tel{
+  margin-bottom: 1.9rem;
+a {
+  font-size: 2rem;
+  transition: opacity 0.8s ease;
+  color: inherit;
+  &:hover{
+  opacity: 0.5;
+}
+}
+}
+.access__email a {
+  text-decoration: none;
+  color: inherit; 
+  transition: opacity 0.8s ease;
+  span {
+    font-size: 2rem;
+  }
+  &:hover {
+    opacity: 0.5;
   }
 }
