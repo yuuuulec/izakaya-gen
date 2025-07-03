@@ -12,6 +12,7 @@ html {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -183,9 +184,7 @@ a {
    =========================== */
 #feature {
   background-image: url(../img/feature-back.svg);
-  background-repeat: repeat;
-  background-position: cover;
-  padding-top: 0.5rem;
+  padding-top: 5rem;
   padding-bottom: 1.5rem;
   width: 100%;
 }
@@ -523,15 +522,205 @@ a {
   opacity: 0.5;
 }
 
+.access__email {
+  font-size: 1.6rem;
+}
 .access__email a {
-  text-decoration: none;
   color: inherit;
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
-}
-.access__email a span {
-  font-size: 2rem;
+  cursor: pointer;
 }
 .access__email a:hover {
   opacity: 0.5;
+}
+
+/* ===========================
+   ご予約　お問い合わせ 
+Reservations / Contact
+   =========================== */
+#contact {
+  padding: 8rem 0;
+  background-color: rgba(83, 7, 0, 0.1019607843);
+}
+
+.contact__lead {
+  margin: 3.5rem 0 3.7rem;
+}
+
+.contact__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 5rem;
+  gap: 2rem;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+
+.contact__label {
+  width: 18rem;
+}
+
+.contact__item input[type=text],
+.contact__item input[type=email],
+#course {
+  width: 63rem;
+  height: 5rem;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+#name,
+#email,
+#message {
+  padding: 1.2rem 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.8rem;
+}
+
+.form__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#message {
+  width: 80rem;
+  height: 20rem;
+}
+
+.contact__checkboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3.4rem;
+  margin-bottom: 5.4rem;
+}
+
+.contact__checkbox {
+  display: grid;
+  grid-template-columns: 4fr;
+  grid-template-rows: 2fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__checkbox input {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem;
+}
+
+.contact__item--column {
+  display: block;
+}
+
+.contact__item--column > .contact__label {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact__privacy-box {
+  max-width: 70rem;
+  height: 30rem;
+  background-color: #ffffff;
+  overflow-y: scroll;
+  border: 1px solid #ffffff;
+  padding: 4rem;
+}
+
+button {
+  display: block;
+  margin-inline: auto;
+  padding: 0.8rem 6rem;
+  margin-top: 8rem;
+  text-align: center;
+  background-color: #530700;
+  color: #ffffff;
+  font-size: 2rem;
+  border: 1px solod #530700;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ffffff;
+  color: #530700;
+  border: 1px solid #530700;
+}
+
+/* ===========================
+footer
+   =========================== */
+#footer {
+  background-image: url(../img/footer-back.svg);
+  padding-top: 8rem;
+  text-align: center;
+  color: #000000;
+}
+
+.company__name {
+  font-size: 2rem;
+  line-height: 1.65;
+  padding-bottom: 2.8rem;
+  border-bottom: 1px solid;
+}
+
+.sns__item {
+  margin-inline: auto;
+  width: 2.8rem;
+  gap: 3rem;
+}
+
+.footer__item a,
+.sns__item a {
+  display: block;
+  text-align: center;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3rem 0 2.6rem;
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.sns__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 26rem;
+  margin-bottom: 7.8rem;
+}
+
+.copyright {
+  background-color: #530700;
+  padding: 3rem 0;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1.65;
 }/*# sourceMappingURL=style.css.map */
