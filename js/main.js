@@ -10,6 +10,14 @@ $(function () {
         nextArrow: '<button type="button" class="slick-next"></button>'
     });
 });
+// ハンバーガーメニュー
+$(".hamburger").click(
+    function() {
+    $(this).toggleClass("active");
+        $(".header__nav").toggleClass("active");
+    });
+
+
 
 // モーダル
 $(function () {
@@ -29,5 +37,24 @@ $(function () {
     $('#modalClose, #modalOverlay').on(`click`, function () {
         $(`#modal`).fadeOut();
         $(`#modalImage`).attr(`src`, '');
+    });
+});
+
+// トップへ戻るボタン
+$('.page-top').on('click',function(e){
+    e.preventDefault();
+    $('html,body').animate({scrollTop: 0}, 1000)
+    });
+
+// トップへ戻るボタン途中で表示させる
+$(document).ready(function(){
+    $('.page-top').hide();
+
+    $(window).on('scroll',function(){
+        if($(this).scrollTop() >1300) {
+            $('.page-top').fadeIn();
+        }else {
+            $('.page-top').fadeOut();
+        }
     });
 });
