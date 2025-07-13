@@ -1,15 +1,12 @@
 $mainColor: #530700;
 $bgColor: #5307001a;
 $fontColor: #ffffff;
+$EB: "EB Garamond", "Georgia", "Times New Roman", "Noto Serif JP", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
 
 @mixin sp {
   @media (max-width: 767px) {
     @content;
   }
-}
-
-@mixin en {
-  font-family: "EB Garamond", serif;
 }
 
 * {
@@ -28,7 +25,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   font-size: 62.5%;
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -75,7 +72,7 @@ a {
   color: $mainColor;
   text-align: center;
   row-gap: 0.6rem;
-  line-height: 1;
+  line-height: 1.1;
   letter-spacing: 9px;
   display: flex;
   flex-direction: column;
@@ -86,12 +83,15 @@ a {
     color: #000000;
     font-size: 2rem;
     line-height: 1.65;
-    letter-spacing: 6px;
-    font-family: "EB Garamond", "Georgia", "Times New Roman", serif;
-
-    @include en;
+    letter-spacing: 4px;
+    font-family: $EB;
     display: block;
     margin-bottom: 6.8rem;
+
+    @include sp {
+      letter-spacing: 4px;
+      margin-bottom: 3.8rem;
+    }
   }
 }
 
@@ -99,11 +99,19 @@ a {
    header
    =========================== */
 #header {
-  position: absolute;
-  top: 1.8rem;
+  position: fixed;
+  top: 0;
   left: 0;
+  height: 9rem;
   width: 100%;
   z-index: 10;
+  display: flex;
+  align-items: center;
+
+  @include sp {
+    top: -1rem;
+    left: -2rem
+  }
 }
 
 .header__container {
@@ -112,17 +120,18 @@ a {
   align-items: center;
   box-sizing: border-box;
   flex-wrap: nowrap;
+  height: 100%;
   width: 100%;
 }
 
 .header__logo {
   font-size: 2rem;
   white-space: nowrap;
-  line-height: 0.6;
   flex-shrink: 0;
 }
 
 .header__nav {
+  height: 9rem;
   right: auto;
   min-width: 0;
 
@@ -164,30 +173,38 @@ a {
 }
 
 .header__logo a {
-  display: block;
-  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 5rem 1rem;
   position: relative;
   color: #ffffff;
   transition: opacity 0.8s ease;
 
+  @include sp {
+    padding: 1.4rem;
+  }
+
   &:hover {
     opacity: 0.5;
-  }
-}
 
-.header__item:first-of-type a {
-  @include sp {
-    background-color: #000000;
+    @include sp {
+      opacity: 0;
+    }
   }
 }
 
 .header__item a {
   display: block;
-  padding: 1rem 0;
+  height: 100%;
+  padding: 0 1rem;
   position: relative;
   color: #ffffff;
+  padding: 2rem 0.5rem;
+  transition: all 0.8s ease;
 
   @include sp {
+    background-color: $mainColor;
     padding-top: 1.2rem;
     padding-left: 2rem;
     padding-bottom: 1.3rem;
@@ -195,17 +212,20 @@ a {
   }
 
   &:hover {
+        opacity: 0.5;
     @include sp {
-      opacity: 0.5;
+      background-color: #000000;
+      color: $fontColor;
+      opacity: 1;
     }
   }
-
+  
   &::after {
-    background-color: #ffffff;
+    background-color: $fontColor;
     content: "";
     position: absolute;
     left: 0;
-    bottom: -0.1rem;
+    bottom: 0;
     width: 0%;
     height: 0.2rem;
     transition: width 0.8s ease;
@@ -217,7 +237,6 @@ a {
     @include sp {
       content: none;
     }
-
   }
 }
 
@@ -225,7 +244,7 @@ a {
   color: $fontColor;
   position: absolute;
   text-shadow: 0.5rem 0.5rem 0.5rem #000000;
-  top: calc(325 / 1080 * 100vw);
+  top: calc(338 / 1080 * 100vw);
   left: calc(62 / 1080 * 100vw);
   height: calc(140 / 1080 * 100vh);
   font-size: calc(40 / 1080 * 100vw);
@@ -235,9 +254,11 @@ a {
   @include sp {
     font-size: calc(30 / 375 * 100vw);
     letter-spacing: calc(9 / 375 * 100vw);
-    line-height: 2;
+    line-height: calc(60 / 375 * 100vw);
     text-align: center;
-    width: 100%;
+    top: calc(250 / 375 * 100vw);
+    left: calc(94 / 375 * 100vw);
+    // transform: translate(-50% -50%);
   }
 }
 
@@ -272,21 +293,21 @@ a {
   transition: all 0.8s;
 
   &:nth-of-type(1) {
-    top: 1.5rem;
+    top: 1.1rem;
   }
 
   &:nth-of-type(2) {
-    top: 2.7rem;
+    top: 2.3rem;
   }
 
   &:nth-of-type(3) {
-    top: 3.9rem;
+    top: 3.5rem;
   }
 }
 
 // 開いた時のばつ印
 .hamburger.active span:nth-of-type(1) {
-  top: 2.7rem;
+  top: 2.3rem;
   transform: rotate(45deg);
 }
 
@@ -295,7 +316,7 @@ a {
 }
 
 .hamburger.active span:nth-of-type(3) {
-  top: 2.7rem;
+  top: 2.3rem;
   transform: rotate(-45deg);
 }
 
@@ -329,46 +350,67 @@ a {
   background-image: url(../img/feature-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 13.5rem 0 11rem;
   width: 100%;
+  margin-inline: auto;
+
+  @include sp {
+    padding: 6rem 0;
+  }
 }
 
 .feature__inner {
-  writing-mode: vertical-rl;
   display: flex;
-  flex-direction: column;
-  // justify-content: center;
-  align-items: start;
-  padding-right: 29rem;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 
-  @include sp {}
+  @include sp {
+    display: block;
+  }
 }
 
 .feature__ttl {
   font-size: 3rem;
   color: $mainColor;
-  line-height: 1.18;
+  line-height: 118%;
   letter-spacing: 0.5rem;
   white-space: nowrap;
-  margin-left: 4rem;
+  margin-left: 7rem;
+  writing-mode: vertical-rl;
 
-  @include sp {}
+  @include sp {
+    font-size: 2.5rem;
+    margin-left: 0;
+  }
 }
 
 .feature__ttl span {
   display: block;
-  margin-left: 1.8rem;
+  margin-right: 2rem;
+
+  @include sp {
+    margin-right: 2.4rem;
+  }
+}
+
+.feature__container {
+  writing-mode: vertical-rl;
+
+  // margin-right: 4rem;
 }
 
 .feature__dsc {
   line-height: 1;
   letter-spacing: 0.7rem;
   white-space: nowrap;
-  margin-left: 3rem;
+  margin-left: 3.5rem;
+
+  @include sp {
+    margin-left: 1rem;
+    margin-top: 4rem;
+  }
 }
 
 /* ===========================
@@ -415,10 +457,11 @@ a {
   font-size: 1.6rem;
   line-height: 0.64;
   // line-height: 1;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 
   @include sp {
     margin-bottom: 0.6rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -442,8 +485,8 @@ a {
   font-size: 1.6rem;
   line-height: 1.56;
   text-align: left;
-  margin-top: 15rem;
-  padding: 4.8rem 2rem 3.8rem 4.1rem;
+  margin-top: 14.4rem;
+  padding: 4.6rem 2rem 4.5rem 4.1rem;
 
   &::before {
     content: "";
@@ -451,7 +494,7 @@ a {
     bottom: 0;
     right: 30rem;
     width: 20rem;
-    height: 24.3rem;
+    height: 24rem;
     background-color: $mainColor;
     z-index: -1;
   }
@@ -465,6 +508,11 @@ a {
     width: 100%;
     z-index: auto;
     margin-bottom: 5rem;
+    margin-top: 0.6rem;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -485,7 +533,7 @@ a {
 }
 
 .recommend-item:nth-of-type(even) .recommend__text {
-  margin-top: 14.7rem;
+  margin-top: 14.6rem;
   padding: 4.6rem 3rem 4.2rem 3.8rem;
 
   &::before {
@@ -504,6 +552,8 @@ a {
     left: 0;
     top: 0;
     padding: 2rem 2rem 1.2rem;
+    margin-bottom: 5rem;
+    margin-top: 0.6rem;
   }
 }
 
@@ -518,6 +568,10 @@ a {
   background-position: center;
   padding: 8rem 0 9.7rem;
   width: 100%;
+
+  @include sp {
+    padding: 5rem 0 6rem;
+  }
 }
 
 .course__list {
@@ -532,6 +586,11 @@ a {
 
 .course__item {
   width: 21.7%;
+  transition: opacity 0.8s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   @include sp {
     width: 100%;
@@ -543,16 +602,27 @@ a {
   font-size: 1.6rem;
   line-height: 1.56;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1.8rem;
 
   span {
     display: block;
+
+    @include sp {
+      display: inline;
+    }
   }
 
   @include sp {
     margin: 1rem 0 2rem;
+    text-align: left;
   }
 }
+
+.course__item img,
+.course__item .course__ttl {
+  cursor: pointer;
+}
+
 
 .modal {
   display: none;
@@ -620,6 +690,10 @@ a {
 #news {
   background-color: $bgColor;
   padding: 8rem 0;
+
+  @include sp {
+    padding: 5rem 0;
+  }
 }
 
 .news__inner {
@@ -629,15 +703,13 @@ a {
   justify-content: space-between;
   align-items: stretch;
 
-  @include sp {
+  @media (max-width: 990px) {
     display: block;
   }
 }
 
 .news__list,
 .blog__list {
-  flex: 1;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 
@@ -647,7 +719,7 @@ a {
 }
 
 .news__list {
-  @include sp {
+  @media (max-width: 990px) {
     margin-bottom: 5rem;
   }
 }
@@ -656,7 +728,7 @@ a {
 .blog__ttl {
   background-color: $mainColor;
   color: $fontColor;
-  padding: 1rem 0 0.9rem 2.1rem;
+  padding: 0.7rem 0 0.8rem 2rem;
   font-size: 2rem;
   line-height: 1.65;
 }
@@ -664,7 +736,7 @@ a {
 .news__items,
 .blog__items {
   background-color: $fontColor;
-  flex: 1;
+  // flex: 1;
   padding: 1rem 2rem 0;
   display: flex;
   flex-direction: column;
@@ -674,12 +746,19 @@ a {
 .blog__item a {
   color: #000000;
   display: grid;
-  grid-template-columns: 10.2rem 26.8rem;
+  grid-template-columns: 12.3rem 1fr;
   align-items: start;
-  gap: 2rem;
+  // gap: 2rem;
   padding: 2.1rem 0 1.2rem;
   position: relative;
   transition: opacity 0.8s ease;
+  max-width: 43rem;
+  width: 100%;
+  
+  @include sp {
+    grid-template-columns: 6.3rem 1fr;
+    padding: 1.9rem 0 1.4rem;
+  }
 }
 
 .news__item a::after,
@@ -712,18 +791,25 @@ a {
   line-height: 1.38;
 }
 
+@keyframes shake-right-loop {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(4px); }
+  50%  { transform: translateX(0); }
+  75%  { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
 .more {
   position: relative;
 }
 
 .more a {
   display: block;
-  transition: opacity 0.8s ease;
   width: 100%;
   height: 7.4rem;
 
   &:hover {
-    opacity: 0.5;
+    animation: shake-right-loop 0.6s ease-in-out infinite;
   }
 }
 
@@ -767,12 +853,13 @@ a {
 }
 
 .access__map {
-  max-width: 60rem;
-  aspect-ratio: 3 / 2;
+  height: auto;
   z-index: 1;
   pointer-events: none;
-  position: relative;
-  width: 55%;
+  // position: relative;
+  max-width: 60rem;
+  height: 40rem;
+  width: 100%;
 
   @include sp {
     width: 100%;
@@ -780,11 +867,17 @@ a {
   }
 }
 
+.access__map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .access__content {
   background-color: $mainColor;
   color: $fontColor;
-  padding: 5rem 2rem 4.2rem 4rem;
-  // margin-top: 20rem;
+  padding: 5rem 2rem 4.5rem 4rem;
+  margin-top: 20rem;
   max-width: 32rem;
   width: 100%;
 
@@ -792,7 +885,7 @@ a {
     content: "";
     position: absolute;
     right: 40rem;
-    bottom: 3rem;
+    bottom: 8rem;
     width: 18rem;
     height: 26.2rem;
     background-color: $mainColor;
@@ -806,6 +899,10 @@ a {
     left: auto;
     margin-top: 2rem;
     padding: 2rem;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -818,16 +915,56 @@ a {
 .access__address {
   font-size: 1.6rem;
   line-height: 1.56;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
+
+  span {
+    font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+  }
+}
+
+.pc-only {
+  display: inline;
+
+  @include sp {
+    display: none;
+  }
+}
+
+.sp-only {
+  display: none;
+
+  @include sp {
+    display: inline;
+  }
 }
 
 .access__tel {
-  margin-bottom: 1.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-bottom: 2.1rem;
+  // font-size: 1.6rem;
+}
 
-  a {
-    font-size: 2rem;
-    transition: opacity 0.8s ease;
-    color: inherit;
+a {
+  text-decoration: none;
+}
+
+.access__label {
+  font-size: 1.6rem;
+}
+
+.access__number {
+  font-size: 2.5rem;
+  font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+  line-height: 1;
+  transition: opacity 0.8s ease;
+  color: $fontColor;
+  cursor: default;
+
+  @include sp {
+    cursor: pointer;
+    // text-align: left;
 
     &:hover {
       opacity: 0.5;
@@ -844,6 +981,8 @@ a {
     color: inherit;
     transition: opacity 0.8s ease;
     cursor: pointer;
+    margin-left: 1.1rem;
+    text-decoration: none;
 
     &:hover {
       opacity: 0.5;
@@ -856,7 +995,7 @@ a {
 Reservations / Contact
    =========================== */
 #contact {
-  padding: 8rem 0;
+  padding: 8rem 0 3.2rem;
   background-color: $bgColor;
 
   @include sp {
@@ -864,8 +1003,16 @@ Reservations / Contact
   }
 }
 
+#contact .section__ttl {
+  & span {
+    margin-bottom: 0rem;
+  }
+}
+
 #contact .inner {
-  max-width: 80rem;
+  max-width: 86rem;
+  font-size: 2rem;
+  line-height: 1.65;
 }
 
 .contact__lead {
@@ -874,47 +1021,108 @@ Reservations / Contact
 
 .contact__item {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 5rem;
-  gap: 2rem;
+  align-items: center;
+  margin-bottom: 5.1rem;
   font-size: 2rem;
   line-height: 1.65;
   width: 100%;
 
+  @media (max-width: 855px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   @include sp {
-    display: block;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
-.contact__label {
-  width: 18rem;
+.contact__item--radio {
+  @include sp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
+.contact__item--radio .contact__label {
+  @include sp {
+    width: 17rem;
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+}
+.contact__label {
+  width: 17rem;
+}
+
+.contact__radios {
+  display: flex;
+  gap: 4rem;
+
+  @include sp {
+    gap: 2rem;
+    flex-wrap: wrap; 
+  }
+}
+
+.contact__radio {
+  font-size: 1.8rem;
+  margin-right: 1.5rem;
+}
+
+input[type="radio"] {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1.9rem;
+}
+
+  .sp-only {
+    display: none;
+
+    @include sp {
+      display: block;
+      text-align: right;
+      width: 100%;
+    }
+  }
 
 .contact__item input[type="text"],
 .contact__item input[type="email"],
 #course__select {
   max-width: 63rem;
-  height: 5rem;
+  height: 4.8rem;
   background-color: $fontColor;
   border: 1px solid $fontColor;
   width: 100%;
+  font-size: 1.6rem;
 
   @include sp {
     display: flex;
   }
 }
 
+#course__select {
+  font-size: 1.8rem;
+  line-height: 1.38;
+  padding-left: 1.8rem;
+  padding-top: 0.3rem;
+  appearance: none;
+  background-image: url(../img/dropdown.svg);
+  background-repeat: no-repeat;
+  background-position: right 1.5rem top 2rem;
+}
+
 #name,
 #email,
 #message {
-  padding: 1.2rem 1.5rem;
+  padding: 0.9rem 2rem 1.2rem;
   box-sizing: border-box;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .form__select {
   appearance: none;
-  background-image: url(../img/dropdown.svg);
   background-size: 2rem;
   background-repeat: no-repeat;
   background-position: right 1rem center;
@@ -924,58 +1132,71 @@ Reservations / Contact
 #message {
   width: 100%;
   max-width: 80rem;
-  height: 20rem;
+  height: 20.3rem;
+  margin-bottom: 0.2rem;
+  border: none;
 }
 
 .contact__checkboxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3.4rem;
-  margin-bottom: 5.4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 1rem;
+
+  @media (max-width: 63rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .contact__checkbox {
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
+  margin-right: 3.5rem;
+  white-space: nowrap;
 
-  // width: 18rem;
   @include sp {
-    width: 22.8rem;
+width: 100%;
+margin-right: 5rem;
   }
 }
 
 .contact__checkbox input {
+  background-color: $fontColor;
+  appearance: none;
   width: 2rem;
   height: 2rem;
   margin-right: 2rem;
 }
 
 .contact__item--column {
-  display: block;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .contact__item--column>.contact__label {
   width: 100%;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact__privacy-box {
-  max-width: 70rem;
+  font-size: 1.8rem;
+  line-height: 1.72;
   height: 30rem;
   background-color: $fontColor;
   overflow-y: scroll;
   border: 1px solid $fontColor;
-  padding: 4rem;
+  padding: 4rem 4rem;
   margin-inline: auto;
+  margin-top: 0.5rem;
   width: 100%;
 }
 
 button {
   display: block;
   margin-inline: auto;
-  padding: 0.8rem 6rem;
-  margin-top: 8rem;
+  padding: 1rem 6rem 1.3rem;
+  margin-top: 8.3rem;
   text-align: center;
   background-color: $mainColor;
   color: $fontColor;
@@ -1000,7 +1221,7 @@ footer
    =========================== */
 #footer {
   background-image: url(../img/footer-back.svg);
-  padding-top: 8rem;
+  padding: 7.8rem 0 8rem;
   text-align: center;
   color: #000000;
 }
@@ -1008,8 +1229,19 @@ footer
 .company__name {
   font-size: 2rem;
   line-height: 1.65;
-  padding-bottom: 2.8rem;
-  border-bottom: 1px solid;
+  padding-bottom: 2.7rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    width: 79%;
+    height: 1px;
+  }
 }
 
 .sns__item {
@@ -1033,8 +1265,8 @@ footer
 .footer__list {
   display: flex;
   flex-wrap: wrap;
-  margin: 3rem 0 2.6rem;
-  gap: 2rem;
+  margin: 3.5rem 0 3.2rem;
+  gap: 2.4rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -1044,23 +1276,38 @@ footer
   }
 }
 
-.footer__list a {}
+.sns__item img {
+  width: 2.8rem;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 
 .sns__list {
   display: flex;
-  gap: 3rem;
   justify-content: center;
   align-items: center;
-  padding: 0 26rem;
-  margin-bottom: 7.8rem;
+  gap: 3rem;
+}
+
+.sns__item,
+.sns__item a {
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 .copyright {
   background-color: $mainColor;
-  padding: 3rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
   color: $fontColor;
   font-size: 2rem;
   line-height: 1.65;
+  font-family: $EB;
 }
 
 .copyright .sp-only {
