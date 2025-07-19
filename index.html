@@ -5,65 +5,471 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./scss/style.scss">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Zen+Old+Mincho:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/slick.css"/>
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:500&display=swap" rel="stylesheet">
 
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Zen+Old+Mincho:wght@500&display=swap"
+        rel="stylesheet">
     <title>和風居酒屋　源</title>
     <meta name="description" content="余計な味付けをせず素材の味を楽しむ。それが本来の和食だと考えています。五感を刺激する厳選した食材をお楽しみください">
 </head>
 
 <body>
-    <header id="header">
-        <div id="slider-pc">
-            <div class="header__img"><img src="./img/FV1-pc.jpg" alt="料理と日本酒"></div>
-            <div class="header__img"><img src="./img/FV2-pc.jpg" alt="楽しそうに食事する女性"></div>
-            <div class="header__img"><img src="./img/FV3-pc.jpg" alt="いくらの軍艦"></div>
+    <header id="header" class="header">
+            <div class="header__container inner">
+                <h1 class="header__logo"><a href="">和風居酒屋&emsp;源</a></h1>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#feature">はじめに</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#recommend">いちおし</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#course">コース</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#news">お知らせ</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#access">アクセス</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#contact">ご予約・お問い合わせ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <h2 class="catchcopy">五感を楽しむ<br>和の時間</h2>
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div id="slider-pc">
+        <div class="header__img"><img src="./img/FV1-pc.jpg" alt="料理と日本酒"></div>
+        <div class="header__img"><img src="./img/FV2-pc.jpg" alt="楽しそうに食事する女性"></div>
+        <div class="header__img"><img src="./img/FV3-pc.jpg" alt="いくらの軍艦"></div>
+    </div>
+    <div id="slider-sp">
+        <div class="header__img"><img src="./img/FV1-sp.jpg" alt="料理と日本酒"></div>
+        <div class="header__img"><img src="./img/FV2-sp.jpg" alt="楽しそうに食事する女性"></div>
+        <div class="header__img"><img src="./img/FV3-sp.jpg" alt="いくらの軍艦"></div>
+    </div>
+
+    <section id="feature">
+        <div class="feature__inner inner">
+            <h2 class="feature__ttl"><span>五感を刺激する</span><span>本来の和食を</span></h2>
+            <div class="feature__container">
+                <p class="feature__dsc">
+                    余計な味付けをせず</p>
+                <p class="feature__dsc">
+                    素材の味を楽しむ</p>
+                <p class="feature__dsc">
+                    それが本来の和食だと</p>
+                <p class="feature__dsc">
+                    私たちは考えます</p>
+                <p class="feature__dsc">
+                    日本全国から直送の</p>
+                <p class="feature__dsc">
+                    五感を刺激する</p>
+                <p class="feature__dsc">
+                    厳選した食材を</p>
+                <p class="feature__dsc">
+                    お楽しみください
+                </p>
+            </div>
         </div>
-        <div id="slider-sp">
-            <div class="header__img"><img src="./img/FV1-sp.jpg" alt="料理と日本酒"></div>
-            <div class="header__img"><img src="./img/FV2-sp.jpg" alt="楽しそうに食事する女性"></div>
-            <div class="header__img"><img src="./img/FV3-sp.jpg" alt="いくらの軍艦"></div>
+    </section>
+    <!-- /* ===========================
+    いちおし recommend
+     =========================== */ -->
+    <section id="recommend" class="recommend">
+        <div class="section__ttl">
+            いちおし<span class="subttl">Recommendation</span>
         </div>
-        <div class="header__content inner">
-            <h1 class="header__logo"><a href="">和風居酒屋　源</a></h1>
-            <nav class="header__nav">
-                <ul class="header__list">
-                    <li class="header__item">
+        <div class="inner">
+            <ul class="recommend__list">
+                <li class="recommend-item">
+                    <div class="recommend__img">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="./img/recommendation01sp.jpg">
+                            <img src="./img/recommendation01pc.jpg" alt="">
+                        </picture>
+                        <p class="caption">厳選した食材</p>
+                    </div>
+                    <div class="recommend__text">
+                        <h3 class="recommend__ttl">日本全国
+                            <br>旬の素材を使用
+                        </h3>
+                        <p class="recommend__dsc">
+                            全国から厳選直送した
+                            <br>旬の素材を使用した料理を
+                            <br>楽しんでいただけます
+                        </p>
+                    </div>
+                </li>
+
+                <li class="recommend-item">
+                    <div class="recommend__img">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="./img/recommendation02sp.jpg">
+                            <img src="./img/recommendation02pc.jpg" alt="">
+                        </picture>
+                        <p class="caption">こだわりの徳利とおちょこ</p>
+                    </div>
+                    <div class="recommend__text">
+                        <h3 class="recommend__ttl">日本酒ソムリエが
+                            <br>提案するペアリング
+                        </h3>
+                        <p class="recommend__dsc">
+                            10,000種類以上ある日本酒から
+                            <br>ソムリエがお料理に合わせて
+                            <br>ペアリングを提案いたします。
+                        </p>
+                    </div>
+                </li>
+                <li class="recommend-item">
+                    <div class="recommend__img">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="./img/recommendation03sp.jpg">
+                            <img src="./img/recommendation03pc.jpg" alt="">
+                        </picture>
+                        <p class="caption">２名席【桜】</p>
+                    </div>
+                    <div class="recommend__text">
+                        <h3 class="recommend__ttl">季節を感じるお部屋で
+                            <br>特別な空間を
+                        </h3>
+                        <p class="recommend__dsc">
+                            四季折々の植物が楽しめるお部屋で
+                            <br>ワンランク上の特別な空間を
+                            <br>ご提供いたします。
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- /* ===========================
+  コース　course
+   =========================== */ -->
+    <section id="course" class="course">
+        <div class="section__ttl">
+            コース<span class="subttl">Course</span>
+        </div>
+        <div class="inner">
+            <ul class="course__list">
+                <li class="course__item">
+                    <img src="./img/course01pc.jpg" alt="創作寿司" data-modal="./img/course01pc_modal.jpg"
+                        data-name="【創作寿司】" data-price="30,000円">
+                    <p class="course__ttl">【創作寿司】<span>30,000円</span></p>
+                </li>
+                <li class="course__item">
+                    <img src="./img/course02pc.jpg" alt="肉料理" data-modal="./img/course02pc_modal.jpg" data-name="【肉料理】"
+                        data-price="25,000円">
+                    <p class="course__ttl">【肉料理】<span>25,000円</span></p>
+                </li>
+                <li class="course__item">
+                    <img src="./img/course03pc.jpg" alt="日本酒飲み比べ" data-modal="./img/course03pc_modal.jpg"
+                        data-name="【日本酒飲み比べ】" data-price="20,000円">
+                    <p class="course__ttl">【日本酒飲み比べ】<span>20,000円</span></p>
+                </li>
+                <li class="course__item">
+                    <img src="./img/course04pc.jpg" alt="スイーツ盛" data-modal="./img/course04pc_modal.jpg"
+                        data-name="スイーツ盛" data-price="15,000円">
+                    <p class="course__ttl">【スイーツ盛】<span>15,000円</span></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- /* ===========================
+   お知らせ　news
+   =========================== */ -->
+    <section id="news" class="news">
+        <div class="section__ttl">
+            お知らせ<span class="subttl">News</span>
+        </div>
+        <div class="inner">
+            <div class="news__inner">
+                <div class="news__list">
+                    <p class="news__ttl">
+                        お知らせ
+                    </p>
+                    <ul class="news__items">
+                        <li class="news__item">
+                            <a href=""><span class="news__date">0000.00</span>
+                                <span class="news__text">土曜のお昼の番組で紹介されました！</span></a>
+                        </li>
+                        <li class="news__item">
+                            <a href=""><span class="news__date">0000.00</span>
+                                <span class="news__text">完全予約制についてのお願いとお知らせ</span></a>
+                        </li>
+                        <li class="news__item">
+                            <a href=""><span class="news__date">0000.00</span>
+                                <span class="news__text">年末年始の営業についてのご案内</span></a>
+                        </li>
+                        <li class="more">
+                            <a href=""><span class="more__text">more</span><img src="./img/more.svg" alt="矢印"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="blog__list">
+                    <p class="blog__ttl">
+                        ブログ
+                    </p>
+                    <ul class="blog__items">
+                        <li class="blog__item">
+                            <a href=""><span class="news__date">0000.00</span>
+                                <span class="blog__text">記念日のお客様がご来店いただきました！</span></a>
+                        </li>
+                        <li class="blog__item">
+                            <a href=""><span class="news__date">0000.00</span>
+                                <span class="blog__text">【vol.67】こだわりの日本酒を探して〜佐賀〜</span></a>
+                        </li>
+                        <li class="blog__item">
+                            <a href=""><span class="news__date">0000.00</span>
+                                <span class="blog__text">飲食店経営でやって良かったこと10選</span></a>
+                        </li>
+                        <li class="more">
+                            <a href=""><span class="more__text">more</span><img src="./img/more.svg" alt="矢印"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- /* ===========================
+  アクセス　access
+   =========================== */ -->
+    <section id="access" class="access">
+        <div class="section__ttl">
+            アクセス<span class="subttl">Access</span>
+        </div>
+        <div class="inner">
+            <div class="access__map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2335.9960500852217!2d139.77928800856535!3d35.67377806038917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1751234546481!5m2!1sja!2sjp"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="access__content">
+                <p class="access__company-name">和食居酒屋　源</p>
+                <p class="access__address"><span>〒104-0043</span>
+                    <br>東京都中央区港○丁目○○
+                </p>
+                <!-- <p class="access__tel">
+                    <span class="access__label">TEL</span>
+                    <span class="access__number pc-only">000-000-0000</span>
+                    <a href="tel:000-000-0000" class="sp-only">
+                        <span class="access__number">000-000-0000</span>
+                    </a>
+                </p> -->
+                <p class="access__tel">
+                    <span class="access__label">TEL</span><span class="access__number pc-only">000-000-0000</span>
+                    <a href="tel:000-000-0000" class="access__number sp-only">000-000-0000</a>
+                </p>
+
+                <p class="access__email">Mail <a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- /* ===========================
+   ご予約　お問い合わせ 
+Reservations / Contact
+   =========================== */ -->
+    <section id="contact" class="contact">
+        <div class="section__ttl">
+            ご予約・お問い合わせ<span class="subttl">Reservations / Contact</span>
+        </div>
+        <div class="inner">
+            <div class="contact__lead">
+                <p>
+                    ご予約は前日までの受付となります。</p>
+                <p>
+                    ２営業日以内にメールにてご連絡いたします。*は入力必須項目となります。
+                </p>
+            </div>
+            <div class="contact__item">
+                <label for="name" class="contact__label">お名前 *</label>
+                <input type="text" id="name" placeholder="例：北村太郎" required>
+            </div>
+            <div class="contact__item contact__item--radio">
+                <label class="contact__label label__short">種別</label>
+                <div class="contact__radios">
+                    <label class="contact__radio">
+                        <input type="radio" name="type" value="ご予約" required>
+                        ご予約
+                    </label>
+                    <label class="contact__radio">
+                        <input type="radio" name="type" value="お問い合わせ" required>お問い合わせ
+                    </label>
+                </div>
+            </div>
+            <div class="contact__item">
+                <label for="email" class="contact__label">メールアドレス *</label>
+                <input type="email" id="email" placeholder="例：aaaaaaaa@gmail.com" required>
+            </div>
+            <div class="contact__item">
+                <label for="course__select" class="contact__label">コース</label>
+                <select name="course" id="course__select" class="form-select">
+                    <option value="【創作寿司】30,000円">【創作寿司】30,000円</option>
+                    <option value="【肉料理】25,000円">【肉料理】25,000円</option>
+                    <option value="【日本酒飲み比べ】20,000円">【日本酒飲み比べ】20,000円</option>
+                    <option value="【スイーツ盛】15,000円">【スイーツ盛】15,000円</option>
+                </select>
+            </div>
+            <div class="contact__item contact__item--column">
+                <label for="message" class="contact__label">内容 *</label>
+                <textarea name="message" id="message" required></textarea>
+            </div>
+            <div class="contact__item contact__item--column">
+                <label class="contact__label">何を見て当居酒屋を知りましたか？ (複数回答可)　*</label>
+                <div class="contact__checkboxes">
+                    <label class="contact__checkbox">
+                        <input type="checkbox" name="know[]" value="インターネット">インターネット
+                    </label>
+                    <label class="contact__checkbox">
+                        <input type="checkbox" name="know[]" value="チラシ">チラシ
+                    </label>
+                    <label class="contact__checkbox">
+                        <input type="checkbox" name="know[]" value="口コミ">口コミ
+                    </label>
+                    <label class="contact__checkbox">
+                        <input type="checkbox" name="know[]" value="看板">看板
+                    </label>
+                    <label class="contact__checkbox">
+                        <input type="checkbox" name="know[]" value="各種SNS">各種SNS
+                    </label>
+                    <label class="contact__checkbox">
+                        <input type="checkbox" name="know[]" value="紹介">紹介
+                    </label>
+                    <label class="contact__checkbox">
+                        <input type="checkbox" name="know[]" value="通りがかり">通りがかり
+                    </label>
+                    <label class="contact__checkbox">
+                        <input type="checkbox" name="know[]" value="その他">その他
+                    </label>
+                </div>
+            </div>
+            <div class="contact__item contact__item--column">
+                <label class="contact__label">個人情報保護方針</label>
+                <div class="contact__privacy-box">
+                    <p>
+                        個人情報取扱事業者の氏名又は名称(法24条1項1号)</p>
+                    <P>和風居酒屋　源</P>
+                    <br>
+                    <p>個人情報の取り扱い</p>
+                    <p>弊社は、個人情報保護に関連する法令を遵守し、お客様からご提供いただく個人情報を、細心の注意を払って取り扱っております。このプライバシーポリシーでは、当社におけるお客様の個人情報の取扱いについてご説明しております。
+                    </p>
+                    <p>個人情報の利用目的(法18条、15条)
+                        弊社は建築物の設計、施工を主とした当社業務ならびにアフターサービスをさせていただく上で、お客様の個人情報を原則として次の利用目的の範囲内で利用させていただきます。なお、アンケート用紙・ウェブサイトの他のページ等で特に利用目的を定めている場合は、その利用目的を含みます。
+                    </p>
+
+                    <p>・お客様からご注文頂いた工事を適切に完成させるため及び物品の納品をさせて頂くため、お客様へ弊社が取扱う商品を積極的に提案する営業活動のため、商品及びサービスの提供に関する手続(融資・申請・保証・保険・登記など)の支援、取次ぎのため
+                        <br>・お客様に弊社が取扱う商品、企業活動、イベント等に関するお知らせをお届けするため (カタログ、ご提案資料、展示のご案内、各種刊行物など)
+                        <br>・見学会等へご来場のお客様へのご商談、ご来場日時の確認のため
+                        <br>・商品やサービスについてお客さまからいただいたご意見を活用するため
+                        <br>・商品のアフターサービス、メンテナンス等のためにお客さまと接触するため
+                        <br>・その他お客さまから寄せられたご意見、ご要望にお応えするため、及び弊社が取扱う商品、サービス等の向上を図るため
+                    </p><br>
+
+                    <p>保有個人データ利用目的(法24条1項2号)
+                        <br>・当社が建築したお客様宅のアフターメンテナンスを行うため
+                        <br>・当社がお客様に提供するサービスにおいて利用するため
+                        <br>・お客様に特別なサービスや新しい商品などの情報を的確にお知らせするため
+                    </p>
+                </div>
+                <button type="submit" class="submit__btn">内容に同意して送信</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- /* ===========================
+footer
+   =========================== */ -->
+    <footer id="footer" class="footer">
+        <div class="footer__inner inner">
+            <p class="company__name">和風居酒屋　源</p>
+            <div class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
                         <a href="#feature">はじめに</a>
                     </li>
-                    <li class="header__item">
+                    <li class="footer__item">
                         <a href="#recommend">いちおし</a>
                     </li>
-                    <li class="header__item">
-                        <a href="course">コース</a>
+                    <li class="footer__item">
+                        <a href="#course">コース</a>
                     </li>
-                    <li class="header__item">
+                    <li class="footer__item">
                         <a href="#news">お知らせ</a>
                     </li>
-                    <li class="header__item">
-                        <a href="acsess">アクセス</a>
+                    <li class="footer__item">
+                        <a href="#access">アクセス</a>
                     </li>
-                    <li class="header__item">
+                    <li class="footer__item">
                         <a href="#contact">ご予約・お問い合わせ</a>
                     </li>
                 </ul>
-            </nav>
+                </nav>
+                <div class="sns__container">
+                    <ul class="sns__list">
+                        <li class="sns__item">
+                            <a href="twitter"><img src="./img/twitter.svg" alt="twitter"></a>
+                        </li>
+                        <li class="sns__item">
+                            <a href="facebook"><img src="./img/facebook.svg" alt="facebook"></a>
+                        </li>
+                        <li class="sns__item">
+                            <a href="youtube"><img src="./img/youtube.svg" alt="youtube"></a>
+                        </li>
+                        <li class="sns__item">
+                            <a href="instagram"><img src="./img/instagram.svg" alt="instagram"></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-        <h2 class="catchcopy">五感を楽しむ<br>和の時間</h2>    
-        
-    </header>
+    </footer>
+
+    <div class="copyright">
+        <p>&copy;Copyright0000　<br class="sp-only">wasyokuizakaya gen</p>
+    </div>
 
 
+    <!-- トップへ戻るボタン -->
+    <div class="page-top">
+        <a href="index.html"><img src="./img/icon-to-top.svg" alt="矢印"></a>
+    </div>
+
+    <!-- モーダル -->
+    <div class="modal" id="modal">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content">
+            <img src="" alt="" id="modalImage">
+            <div class="modal__text" id="modalText">
+                <p class="modal__title">
+                    <span class="modal__name" id="modalName"></span>
+                    <span class="modal__price" id="modalPrice"></span>
+                </p>
+            </div>
+            <span class="modal__close" id="modalClose">&times;</span>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
