@@ -106,11 +106,16 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 875px) {
   #header {
     top: -1rem;
     left: -2rem;
+    height: 6rem;
   }
+}
+
+.header-scroll {
+  background-color: #3b2f2f;
 }
 
 .header__container {
@@ -143,7 +148,7 @@ a {
   right: auto;
   min-width: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 875px) {
   .header__nav {
     position: fixed;
     top: 5.1rem;
@@ -161,7 +166,7 @@ a {
   transition: right 0.3s ease;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 875px) {
   .header__item {
     width: 100%;
     text-align: left;
@@ -176,7 +181,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  gap: 2.15rem;
+  gap: 2.2rem;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -195,14 +200,12 @@ a {
 }
 
 .header__logo a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  padding: 5rem 1rem;
+  padding: 3.5rem 0;
   position: relative;
   color: #ffffff;
   -webkit-transition: opacity 0.8s ease;
@@ -218,17 +221,16 @@ a {
 }
 @media (max-width: 767px) {
   .header__logo a:hover {
-    opacity: 0;
+    opacity: 0.5;
   }
 }
 
 .header__item a {
-  display: block;
+  display: inline-block;
   height: 100%;
-  padding: 0 1rem;
   position: relative;
   color: #ffffff;
-  padding: 2rem 0.5rem;
+  padding: 3.5rem 0 2rem;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
@@ -256,7 +258,7 @@ a {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 1.5rem;
   width: 0%;
   height: 0.2rem;
   -webkit-transition: width 0.8s ease;
@@ -281,6 +283,7 @@ a {
   font-size: 3.7037037037vw;
   line-height: 6.4814814815vw;
   letter-spacing: 1.1111111111vw;
+  z-index: 1;
 }
 @media (max-width: 767px) {
   .catchcopy {
@@ -309,7 +312,7 @@ a {
           box-sizing: border-box;
   z-index: 100001;
 }
-@media (max-width: 767px) {
+@media (max-width: 875px) {
   .hamburger {
     display: block;
   }
@@ -412,7 +415,10 @@ a {
 }
 @media (max-width: 767px) {
   .feature__inner {
-    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -422,21 +428,21 @@ a {
   line-height: 118%;
   letter-spacing: 0.5rem;
   white-space: nowrap;
-  margin-left: 7rem;
+  margin-left: 6.2rem;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
 }
 @media (max-width: 767px) {
   .feature__ttl {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin-left: 0;
   }
 }
 
 .feature__ttl span {
   display: block;
-  margin-right: 2rem;
+  margin-left: 4rem;
 }
 @media (max-width: 767px) {
   .feature__ttl span {
@@ -449,17 +455,21 @@ a {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
 }
+@media (max-width: 767px) {
+  .feature__container {
+    margin-top: 4rem;
+  }
+}
 
 .feature__dsc {
   line-height: 1;
   letter-spacing: 0.7rem;
   white-space: nowrap;
-  margin-left: 3.5rem;
+  margin-left: 4rem;
 }
 @media (max-width: 767px) {
   .feature__dsc {
     margin-left: 1rem;
-    margin-top: 4rem;
   }
 }
 
@@ -501,8 +511,9 @@ a {
 }
 
 .recommend__img {
-  width: 65%;
+  max-width: 60rem;
   position: relative;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .recommend__img {
@@ -802,7 +813,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 767px) {
+@media (max-width: 990px) {
   .news__list,
   .blog__list {
     width: 100%;
@@ -842,9 +853,9 @@ a {
   color: #000000;
   display: grid;
   grid-template-columns: 12.3rem 1fr;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2.1rem 0 1.2rem;
   position: relative;
   -webkit-transition: opacity 0.8s ease;
@@ -852,11 +863,12 @@ a {
   max-width: 43rem;
   width: 100%;
 }
-@media (max-width: 767px) {
+@media (max-width: 990px) {
   .news__item a,
   .blog__item a {
-    grid-template-columns: 6.3rem 1fr;
+    grid-template-columns: 7.2rem 1fr;
     padding: 1.9rem 0 1.4rem;
+    max-width: none;
   }
 }
 
@@ -884,6 +896,8 @@ a {
 .news__date {
   font-size: 1.6rem;
   line-height: 1;
+  -ms-flex-item-align: start;
+      align-self: start;
 }
 
 .news__text .blog__text {
@@ -975,7 +989,6 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
   z-index: 0;
 }
 
@@ -1019,6 +1032,7 @@ a {
   background-color: #530700;
   color: #ffffff;
   padding: 5rem 2rem 4.5rem 4rem;
+  position: relative;
   margin-top: 20rem;
   max-width: 32rem;
   width: 100%;
@@ -1026,8 +1040,8 @@ a {
 .access__content::before {
   content: "";
   position: absolute;
-  right: 40rem;
-  bottom: 8rem;
+  right: 32rem;
+  bottom: 0rem;
   width: 18rem;
   height: 26.2rem;
   background-color: #530700;
@@ -1184,19 +1198,8 @@ Reservations / Contact
             align-items: flex-start;
   }
 }
-@media (max-width: 767px) {
-  .contact__item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
 
-@media (max-width: 767px) {
+@media (max-width: 855px) {
   .contact__item--radio {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1210,17 +1213,33 @@ Reservations / Contact
             align-items: center;
   }
 }
-
-@media (max-width: 767px) {
-  .contact__item--radio .contact__label {
-    width: 17rem;
-    margin-bottom: 0;
-    margin-right: 2rem;
+@media (max-width: 374px) {
+  .contact__item--radio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
 .contact__label {
   width: 17rem;
+}
+
+@media (max-width: 767px) {
+  .label__short {
+    width: 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact__item--radio .contact__label {
+    margin-bottom: 0;
+    margin-right: 2.3rem;
+  }
 }
 
 .contact__radios {
@@ -1231,15 +1250,28 @@ Reservations / Contact
 }
 @media (max-width: 767px) {
   .contact__radios {
-    gap: 2rem;
+    gap: 1.2rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+@media (max-width: 374px) {
+  .contact__radios {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
 .contact__radio {
   font-size: 1.8rem;
-  margin-right: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 input[type=radio] {
@@ -1255,7 +1287,6 @@ input[type=radio] {
   .sp-only {
     display: block;
     text-align: right;
-    width: 100%;
   }
 }
 
@@ -1317,6 +1348,7 @@ input[type=radio] {
   height: 20.3rem;
   margin-bottom: 0.2rem;
   border: none;
+  resize: vertical;
 }
 
 .contact__checkboxes {
@@ -1324,7 +1356,12 @@ input[type=radio] {
   grid-template-columns: repeat(4, 1fr);
   row-gap: 1rem;
 }
-@media (max-width: 63rem) {
+@media (max-width: 600px) {
+  .contact__checkboxes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 440px) {
   .contact__checkboxes {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1343,8 +1380,9 @@ input[type=radio] {
 }
 @media (max-width: 767px) {
   .contact__checkbox {
+    font-size: 1.6rem;
     width: 100%;
-    margin-right: 5rem;
+    margin-right: 1.6rem;
   }
 }
 
@@ -1420,6 +1458,11 @@ footer
   padding: 7.8rem 0 8rem;
   text-align: center;
   color: #000000;
+}
+@media (max-width: 767px) {
+  #footer {
+    padding: 5rem 0;
+  }
 }
 
 .company__name {

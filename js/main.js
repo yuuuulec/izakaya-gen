@@ -17,6 +17,21 @@ $(".hamburger").click(
         $(".header__nav").toggleClass("active");
     });
 
+//スクロールした時に背景色をつける
+$(function() {
+    const header = $('#header');
+    const target =$('#feature').offset().top;
+
+    $(window).on('scroll' , function () {
+        if($ (window).scrollTop() >= target) {
+            header.addClass('header-scroll');
+        }
+        else {
+            header.removeClass('header-scroll');
+        }
+        });
+    });
+
 
 
 // モーダル
@@ -43,7 +58,7 @@ $(function () {
 // トップへ戻るボタン
 $('.page-top').on('click',function(e){
     e.preventDefault();
-    $('html,body').animate({scrollTop: 0}, 1000)
+    $('html,body').animate({scrollTop: 0}, 300)
     });
 
 // トップへ戻るボタン途中で表示させる
@@ -51,7 +66,7 @@ $(document).ready(function(){
     $('.page-top').hide();
 
     $(window).on('scroll',function(){
-        if($(this).scrollTop() >1300) {
+        if($(this).scrollTop() >700) {
             $('.page-top').fadeIn();
         }else {
             $('.page-top').fadeOut();
