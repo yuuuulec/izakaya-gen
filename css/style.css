@@ -80,7 +80,6 @@ a {
   letter-spacing: 4px;
   font-family: "EB Garamond", "Georgia", "Times New Roman", "Noto Serif JP", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
   display: block;
-  margin-bottom: 6.8rem;
 }
 @media (max-width: 767px) {
   .section__ttl span {
@@ -387,7 +386,7 @@ a {
   background-image: url(../img/feature-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 13rem 0 11rem;
+  padding: 13.3rem 0 12rem;
   width: 100%;
   margin-inline: auto;
 }
@@ -428,8 +427,7 @@ a {
   line-height: 118%;
   letter-spacing: 0.5rem;
   white-space: nowrap;
-  margin-left: 6rem;
-  margin-right: 6.5rem;
+  margin-left: 5.8rem;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -469,7 +467,7 @@ a {
   line-height: 1;
   letter-spacing: 0.7rem;
   white-space: nowrap;
-  margin-left: 4.8rem;
+  margin-left: 3rem;
 }
 @media (max-width: 767px) {
   .feature__dsc {
@@ -502,7 +500,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin-bottom: 8.4rem;
+  margin: 6rem 0 8.4rem;
 }
 .recommend-item:nth-of-type(3) {
   margin-bottom: 0;
@@ -562,7 +560,7 @@ a {
   line-height: 1.56;
   text-align: left;
   margin-top: 14.4rem;
-  padding: 4.6rem 2rem 4.5rem 4.1rem;
+  padding: 4.8rem 2rem 4.5rem 4.1rem;
 }
 .recommend__text::before {
   content: "";
@@ -664,6 +662,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 6.5rem;
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -797,6 +796,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   gap: 6%;
+  margin-top: 7rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -991,7 +991,7 @@ a {
   アクセス　access
    =========================== */
 #access {
-  padding: 8rem 0;
+  padding: 8rem 0 7.8rem;
   background-image: url(../img/access-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1003,6 +1003,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 7rem;
 }
 @media (max-width: 767px) {
   #access .inner {
@@ -1038,7 +1039,7 @@ a {
 .access__content {
   background-color: #530700;
   color: #ffffff;
-  padding: 5rem 2rem 4.5rem 4rem;
+  padding: 4.8rem 2rem 4.5rem 4rem;
   position: relative;
   margin-top: 20rem;
   max-width: 32rem;
@@ -1253,7 +1254,7 @@ Reservations / Contact
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4rem;
+  gap: 5.9rem;
 }
 @media (max-width: 767px) {
   .contact__radios {
@@ -1411,12 +1412,13 @@ input[type=radio] {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-bottom: 4.8rem;
 }
 
 .contact__item--column > .contact__label {
   width: 100%;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .contact__privacy-box {
@@ -1436,7 +1438,7 @@ button {
   display: block;
   margin-inline: auto;
   padding: 1rem 6rem 1.3rem;
-  margin-top: 8.3rem;
+  margin-top: 8rem;
   text-align: center;
   background-color: #530700;
   color: #ffffff;
@@ -1462,7 +1464,7 @@ footer
    =========================== */
 #footer {
   background-image: url(../img/footer-back.svg);
-  padding: 7.8rem 0 8rem;
+  padding: 7.8rem 0 8.3rem;
   text-align: center;
   color: #000000;
 }
@@ -1475,7 +1477,7 @@ footer
 .company__name {
   font-size: 2rem;
   line-height: 1.65;
-  padding-bottom: 2.7rem;
+  padding-bottom: 3rem;
   position: relative;
 }
 .company__name::after {
@@ -1515,7 +1517,7 @@ footer
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 3.5rem 0 3.2rem;
+  margin: 3.6rem 0 3.2rem;
   gap: 2.4rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1620,23 +1622,4 @@ footer
 .page-top img {
   display: block;
   width: 2.3rem;
-}
-
-/* ===========================
-   スクロールでふわっと表示させる
-   =========================== */
-.fade-in-up {
-  opacity: 0;
-  -webkit-transform: translateY(120px);
-          transform: translateY(120px);
-  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-  transition: opacity 1s ease, -webkit-transform 1s ease;
-  transition: opacity 1s ease, transform 1s ease;
-  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
-}
-
-.fade-in-up.show {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */

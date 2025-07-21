@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:500&display=swap" rel="stylesheet">
-
     <link
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Zen+Old+Mincho:wght@500&display=swap"
         rel="stylesheet">
@@ -23,31 +23,31 @@
 
 <body>
     <header id="header" class="header">
-            <div class="header__container inner">
-                <h1 class="header__logo"><a href="">和風居酒屋&emsp;源</a></h1>
-                <nav class="header__nav">
-                    <ul class="header__list">
-                        <li class="header__item">
-                            <a href="#feature">はじめに</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#recommend">いちおし</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#course">コース</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#news">お知らせ</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#access">アクセス</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#contact">ご予約・お問い合わせ</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="header__container inner">
+            <h1 class="header__logo"><a href="">和風居酒屋&emsp;源</a></h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="#feature">はじめに</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#recommend">いちおし</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#course">コース</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#news">お知らせ</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#access">アクセス</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#contact">ご予約・お問い合わせ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <h2 class="catchcopy">五感を楽しむ<br>和の時間</h2>
     <!-- ハンバーガーメニュー -->
@@ -67,10 +67,10 @@
         <div class="header__img"><img src="./img/FV3-sp.jpg" alt="いくらの軍艦"></div>
     </div>
 
-    <section id="feature" class="fade-in-up">
+    <section id="feature">
         <div class="feature__inner inner">
-            <h2 class="feature__ttl"><span>五感を刺激する</span><span>本来の和食を</span></h2>
-            <div class="feature__container">
+            <h2 class="feature__ttl" data-aos="fade-up"><span>五感を刺激する</span><span>本来の和食を</span></h2>
+            <div class="feature__container" data-aos="fade-up">
                 <p class="feature__dsc">
                     余計な味付けをせず</p>
                 <p class="feature__dsc">
@@ -94,17 +94,17 @@
     <!-- /* ===========================
     いちおし recommend
      =========================== */ -->
-    <section id="recommend" class="recommend fade-in-up">
-        <div class="section__ttl">
+    <section id="recommend" class="recommend">
+        <div class="section__ttl" data-aos="fade-up">
             いちおし<span class="subttl">Recommendation</span>
         </div>
         <div class="inner">
             <ul class="recommend__list">
-                <li class="recommend-item">
+                <li class="recommend-item" data-aos="fade-up">
                     <div class="recommend__img">
                         <picture>
                             <source media="(max-width:767px)" srcset="./img/recommendation01sp.jpg">
-                            <img src="./img/recommendation01pc.jpg" alt="">
+                            <img src="./img/recommendation01pc.jpg" alt="厳選した食材">
                         </picture>
                         <p class="caption">厳選した食材</p>
                     </div>
@@ -120,11 +120,11 @@
                     </div>
                 </li>
 
-                <li class="recommend-item">
+                <li class="recommend-item" data-aos="fade-up">
                     <div class="recommend__img">
                         <picture>
                             <source media="(max-width:767px)" srcset="./img/recommendation02sp.jpg">
-                            <img src="./img/recommendation02pc.jpg" alt="">
+                            <img src="./img/recommendation02pc.jpg" alt="こだわりの徳利とおちょこ">
                         </picture>
                         <p class="caption">こだわりの徳利とおちょこ</p>
                     </div>
@@ -139,11 +139,11 @@
                         </p>
                     </div>
                 </li>
-                <li class="recommend-item">
+                <li class="recommend-item" data-aos="fade-up">
                     <div class="recommend__img">
                         <picture>
                             <source media="(max-width:767px)" srcset="./img/recommendation03sp.jpg">
-                            <img src="./img/recommendation03pc.jpg" alt="">
+                            <img src="./img/recommendation03pc.jpg" alt="２名席【桜】">
                         </picture>
                         <p class="caption">２名席【桜】</p>
                     </div>
@@ -164,28 +164,28 @@
     <!-- /* ===========================
   コース　course
    =========================== */ -->
-    <section id="course" class="course fade-in-up">
-        <div class="section__ttl">
+    <section id="course" class="course">
+        <div class="section__ttl" data-aos="fade-up">
             コース<span class="subttl">Course</span>
         </div>
         <div class="inner">
             <ul class="course__list">
-                <li class="course__item">
+                <li class="course__item" data-aos="fade-up">
                     <img src="./img/course01pc.jpg" alt="創作寿司" data-modal="./img/course01pc_modal.jpg"
                         data-name="【創作寿司】" data-price="30,000円">
                     <p class="course__ttl">【創作寿司】<span>30,000円</span></p>
                 </li>
-                <li class="course__item">
+                <li class="course__item" data-aos="fade-up">
                     <img src="./img/course02pc.jpg" alt="肉料理" data-modal="./img/course02pc_modal.jpg" data-name="【肉料理】"
                         data-price="25,000円">
                     <p class="course__ttl">【肉料理】<span>25,000円</span></p>
                 </li>
-                <li class="course__item">
+                <li class="course__item" data-aos="fade-up">
                     <img src="./img/course03pc.jpg" alt="日本酒飲み比べ" data-modal="./img/course03pc_modal.jpg"
                         data-name="【日本酒飲み比べ】" data-price="20,000円">
                     <p class="course__ttl">【日本酒飲み比べ】<span>20,000円</span></p>
                 </li>
-                <li class="course__item">
+                <li class="course__item" data-aos="fade-up">
                     <img src="./img/course04pc.jpg" alt="スイーツ盛" data-modal="./img/course04pc_modal.jpg"
                         data-name="スイーツ盛" data-price="15,000円">
                     <p class="course__ttl">【スイーツ盛】<span>15,000円</span></p>
@@ -197,12 +197,12 @@
    お知らせ　news
    =========================== */ -->
     <section id="news" class="news fade-in-up">
-        <div class="section__ttl">
+        <div class="section__ttl" data-aos="fade-up">
             お知らせ<span class="subttl">News</span>
         </div>
         <div class="inner">
             <div class="news__inner">
-                <div class="news__list">
+                <div class="news__list" data-aos="fade-up">
                     <p class="news__ttl">
                         お知らせ
                     </p>
@@ -224,7 +224,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="blog__list">
+                <div class="blog__list" data-aos="fade-up">
                     <p class="blog__ttl">
                         ブログ
                     </p>
@@ -254,27 +254,20 @@
   アクセス　access
    =========================== */ -->
     <section id="access" class="access fade-in-up">
-        <div class="section__ttl">
+        <div class="section__ttl" data-aos="fade-up">
             アクセス<span class="subttl">Access</span>
         </div>
         <div class="inner">
-            <div class="access__map">
+            <div class="access__map" data-aos="fade-up">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2335.9960500852217!2d139.77928800856535!3d35.67377806038917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1751234546481!5m2!1sja!2sjp"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="access__content">
+            <div class="access__content" data-aos="fade-up">
                 <p class="access__company-name">和食居酒屋　源</p>
                 <p class="access__address"><span>〒104-0043</span>
                     <br>東京都中央区港○丁目○○
                 </p>
-                <!-- <p class="access__tel">
-                    <span class="access__label">TEL</span>
-                    <span class="access__number pc-only">000-000-0000</span>
-                    <a href="tel:000-000-0000" class="sp-only">
-                        <span class="access__number">000-000-0000</span>
-                    </a>
-                </p> -->
                 <p class="access__tel">
                     <span class="access__label">TEL</span><span class="access__number pc-only">000-000-0000</span>
                     <a href="tel:000-000-0000" class="access__number sp-only">000-000-0000</a>
@@ -290,22 +283,22 @@
 Reservations / Contact
    =========================== */ -->
     <section id="contact" class="contact fade-in-up">
-        <div class="section__ttl">
+        <div class="section__ttl" data-aos="fade-up">
             ご予約・お問い合わせ<span class="subttl">Reservations / Contact</span>
         </div>
         <div class="inner">
-            <div class="contact__lead">
+            <div class="contact__lead" data-aos="fade-up">
                 <p>
                     ご予約は前日までの受付となります。</p>
                 <p>
                     ２営業日以内にメールにてご連絡いたします。*は入力必須項目となります。
                 </p>
             </div>
-            <div class="contact__item">
+            <div class="contact__item" data-aos="fade-up">
                 <label for="name" class="contact__label">お名前 *</label>
                 <input type="text" id="name" placeholder="例：北村太郎" required>
             </div>
-            <div class="contact__item contact__item--radio">
+            <div class="contact__item contact__item--radio" data-aos="fade-up">
                 <label class="contact__label label__short">種別</label>
                 <div class="contact__radios">
                     <label class="contact__radio">
@@ -317,11 +310,11 @@ Reservations / Contact
                     </label>
                 </div>
             </div>
-            <div class="contact__item">
+            <div class="contact__item" data-aos="fade-up">
                 <label for="email" class="contact__label">メールアドレス *</label>
                 <input type="email" id="email" placeholder="例：aaaaaaaa@gmail.com" required>
             </div>
-            <div class="contact__item">
+            <div class="contact__item" data-aos="fade-up">
                 <label for="course__select" class="contact__label">コース</label>
                 <select name="course" id="course__select" class="form-select">
                     <option value="【創作寿司】30,000円">【創作寿司】30,000円</option>
@@ -330,11 +323,11 @@ Reservations / Contact
                     <option value="【スイーツ盛】15,000円">【スイーツ盛】15,000円</option>
                 </select>
             </div>
-            <div class="contact__item contact__item--column">
+            <div class="contact__item contact__item--column" data-aos="fade-up">
                 <label for="message" class="contact__label">内容 *</label>
                 <textarea name="message" id="message" required></textarea>
             </div>
-            <div class="contact__item contact__item--column">
+            <div class="contact__item contact__item--column" data-aos="fade-up">
                 <label class="contact__label">何を見て当居酒屋を知りましたか？ (複数回答可)　*</label>
                 <div class="contact__checkboxes">
                     <label class="contact__checkbox">
@@ -363,7 +356,7 @@ Reservations / Contact
                     </label>
                 </div>
             </div>
-            <div class="contact__item contact__item--column">
+            <div class="contact__item contact__item--column" data-aos="fade-up">
                 <label class="contact__label">個人情報保護方針</label>
                 <div class="contact__privacy-box">
                     <p>
@@ -471,7 +464,11 @@ footer
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

@@ -74,23 +74,10 @@ $(document).ready(function(){
     });
 });
 
-//スクロールでふわっと表示させる
-$(function(){
-    function fadeInOnScroll() {
-        $('.fade-in-up').each(function() {
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-
-            if (scroll + windowHeight > elemPos - 50) {
-                $(this).addClass('show');
-            }
-        });
-    }
-
-    fadeInOnScroll();
-
-    $(window).on('scroll', function(){
-        fadeInOnScroll();
-    });
-});
+//スクロールした時にふわっとでる 
+AOS.init({
+    duration: 300,
+    once: true,
+    offset: 80,
+    easing: 'ease-out-cubic'
+  });
