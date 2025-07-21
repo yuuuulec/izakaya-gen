@@ -361,7 +361,7 @@ a {
   background-image: url(../img/feature-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 13.5rem 0 11rem;
+  padding: 13rem 0 11rem;
   width: 100%;
   margin-inline: auto;
 
@@ -374,7 +374,8 @@ a {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  // padding: 0 21rem;
   width: 100%;
 
   @include sp {
@@ -388,7 +389,8 @@ a {
   line-height: 118%;
   letter-spacing: 0.5rem;
   white-space: nowrap;
-  margin-left: 6.2rem;
+  margin-left: 6rem;
+  margin-right: 6.5rem;
   writing-mode: vertical-rl;
 
   @include sp {
@@ -399,11 +401,14 @@ a {
 
 .feature__ttl span {
   display: block;
-  margin-left: 4rem;
+  margin-left: 2rem;
 
   @include sp {
     margin-right: 2.4rem;
   }
+&:last-of-type {
+  margin-left: 0;
+}
 }
 
 .feature__container {
@@ -418,11 +423,14 @@ a {
   line-height: 1;
   letter-spacing: 0.7rem;
   white-space: nowrap;
-  margin-left: 4rem;
+  margin-left: 4.8rem;
 
   @include sp {
     margin-left: 1rem;
+  }
 
+  &:last-of-type {
+    margin-left: 0;
   }
 }
 
@@ -1366,9 +1374,30 @@ footer
   right: 6rem;
   bottom: 6rem;
   cursor: pointer;
+
+  @include sp {
+width: 5rem;
+height: 5rem;
+right: 2rem;
+bottom: 6rem;
+  }
 }
 
 .page-top img {
   display: block;
   width: 2.3rem;
 }
+
+/* ===========================
+   スクロールでふわっと表示させる
+   =========================== */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(120px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }

@@ -17,7 +17,7 @@ $(".hamburger").click(
         $(".header__nav").toggleClass("active");
     });
 
-//スクロールした時に背景色をつける
+//header スクロールした時に背景色をつける
 $(function() {
     const header = $('#header');
     const target =$('#feature').offset().top;
@@ -71,5 +71,26 @@ $(document).ready(function(){
         }else {
             $('.page-top').fadeOut();
         }
+    });
+});
+
+//スクロールでふわっと表示させる
+$(function(){
+    function fadeInOnScroll() {
+        $('.fade-in-up').each(function() {
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+
+            if (scroll + windowHeight > elemPos - 50) {
+                $(this).addClass('show');
+            }
+        });
+    }
+
+    fadeInOnScroll();
+
+    $(window).on('scroll', function(){
+        fadeInOnScroll();
     });
 });
