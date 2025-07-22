@@ -75,9 +75,11 @@ $(document).ready(function(){
 });
 
 //スクロールした時にふわっとでる 
+$(window).on('load', function () {
 AOS.init({
-    duration: 300,
+    duration: 1000,
     once: true,
     offset: 80,
-    easing: 'ease-out-cubic'
+    easing: 'ease-in-out'
   });
+});

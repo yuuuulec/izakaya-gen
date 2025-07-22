@@ -22,9 +22,15 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
   width: 100%;
   height: auto;
+}
+
+picture {
+  display: block;
+  width: 100%;
 }
 
 li {
@@ -84,7 +90,6 @@ a {
 @media (max-width: 767px) {
   .section__ttl span {
     letter-spacing: 4px;
-    margin-bottom: 3.8rem;
   }
 }
 
@@ -212,7 +217,7 @@ a {
 }
 @media (max-width: 767px) {
   .header__logo a {
-    padding: 1.4rem;
+    padding: 1.1rem 0 0 1.1rem;
   }
 }
 .header__logo a:hover {
@@ -290,8 +295,8 @@ a {
     letter-spacing: 2.4vw;
     line-height: 16vw;
     text-align: center;
-    top: 66.6666666667vw;
-    left: 25.0666666667vw;
+    top: 64vw;
+    left: 20.8vw;
   }
 }
 
@@ -392,7 +397,7 @@ a {
 }
 @media (max-width: 767px) {
   #feature {
-    padding: 6rem 0;
+    padding: 6.3rem 0 5.5rem;
   }
 }
 
@@ -418,6 +423,9 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -436,6 +444,7 @@ a {
   .feature__ttl {
     font-size: 2.4rem;
     margin-left: 0;
+    letter-spacing: 0.5rem;
   }
 }
 
@@ -445,7 +454,7 @@ a {
 }
 @media (max-width: 767px) {
   .feature__ttl span {
-    margin-right: 2.4rem;
+    margin-left: 2.1rem;
   }
 }
 .feature__ttl span:last-of-type {
@@ -459,7 +468,7 @@ a {
 }
 @media (max-width: 767px) {
   .feature__container {
-    margin-top: 4rem;
+    margin-top: 4.3rem;
   }
 }
 
@@ -471,7 +480,9 @@ a {
 }
 @media (max-width: 767px) {
   .feature__dsc {
+    font-size: 1.6rem;
     margin-left: 1rem;
+    letter-spacing: 0.6rem;
   }
 }
 .feature__dsc:last-of-type {
@@ -482,7 +493,7 @@ a {
   いちおし recommend
    =========================== */
 #recommend {
-  padding: 8.5rem 0 8rem;
+  padding: 8rem 0;
   background-color: rgba(83, 7, 0, 0.1019607843);
 }
 @media (max-width: 767px) {
@@ -505,36 +516,50 @@ a {
 .recommend-item:nth-of-type(3) {
   margin-bottom: 0;
 }
+@media (max-width: 970px) {
+  .recommend-item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 @media (max-width: 767px) {
   .recommend-item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 3.8rem;
     margin-bottom: 0.6rem;
   }
 }
 
 .recommend__img {
+  display: block;
   max-width: 60rem;
   position: relative;
   width: 100%;
 }
+@media (max-width: 970px) {
+  .recommend__img {
+    max-width: 50rem;
+  }
+}
 @media (max-width: 767px) {
   .recommend__img {
     width: 100%;
+    max-width: 100%;
   }
 }
 
 .caption {
   font-size: 1.6rem;
-  line-height: 0.64;
+  line-height: 1.56;
   margin-top: 2.5rem;
 }
 @media (max-width: 767px) {
   .caption {
-    margin-bottom: 0.6rem;
-    margin-top: 0.5rem;
+    margin-top: 0.7rem;
   }
 }
 
@@ -561,6 +586,7 @@ a {
   text-align: left;
   margin-top: 14.4rem;
   padding: 4.8rem 2rem 4.5rem 4.1rem;
+  width: 100%;
 }
 .recommend__text::before {
   content: "";
@@ -568,9 +594,21 @@ a {
   bottom: 0;
   right: 30rem;
   width: 20rem;
-  height: 24rem;
+  height: 25rem;
   background-color: #530700;
   z-index: -1;
+}
+@media (max-width: 970px) {
+  .recommend__text {
+    max-width: 29rem;
+    margin-top: 12rem;
+    padding: 3.5rem 1.5rem 3.5rem 1.5rem;
+  }
+  .recommend__text::before {
+    right: 27rem;
+    width: 18rem;
+    height: 20rem;
+  }
 }
 @media (max-width: 767px) {
   .recommend__text {
@@ -583,8 +621,18 @@ a {
     z-index: auto;
     margin-bottom: 5rem;
     margin-top: 0.6rem;
+    max-width: 100%;
   }
   .recommend__text::before {
+    display: none;
+  }
+}
+
+.recommend__text .pc-only {
+  display: block;
+}
+@media (max-width: 767px) {
+  .recommend__text .pc-only {
     display: none;
   }
 }
@@ -627,6 +675,18 @@ a {
   background-color: #530700;
   z-index: -1;
 }
+@media (max-width: 970px) {
+  .recommend-item:nth-of-type(even) .recommend__text {
+    max-width: 29rem;
+    padding: 3.5rem 1.5rem 3.5rem 1.5rem;
+    margin-top: 12rem;
+  }
+  .recommend-item:nth-of-type(even) .recommend__text::before {
+    left: 27rem;
+    width: 18rem;
+    height: 20rem;
+  }
+}
 @media (max-width: 767px) {
   .recommend-item:nth-of-type(even) .recommend__text {
     right: 0;
@@ -635,6 +695,7 @@ a {
     padding: 2rem 2rem 1.2rem;
     margin-bottom: 5rem;
     margin-top: 0.6rem;
+    max-width: 100%;
   }
 }
 
@@ -662,7 +723,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 6.5rem;
+  margin-top: 6.7rem;
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -991,7 +1052,7 @@ a {
   アクセス　access
    =========================== */
 #access {
-  padding: 8rem 0 7.8rem;
+  padding: 8.3rem 0 7.8rem;
   background-image: url(../img/access-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1041,7 +1102,7 @@ a {
   color: #ffffff;
   padding: 4.8rem 2rem 4.5rem 4rem;
   position: relative;
-  margin-top: 20rem;
+  margin-top: 19.6rem;
   max-width: 32rem;
   width: 100%;
 }
@@ -1053,6 +1114,14 @@ a {
   width: 18rem;
   height: 26.2rem;
   background-color: #530700;
+}
+@media (max-width: 970px) {
+  .access__content::before {
+    right: 30rem;
+    bottom: 0rem;
+    width: 15rem;
+    height: 26.2rem;
+  }
 }
 @media (max-width: 767px) {
   .access__content {
@@ -1160,7 +1229,7 @@ a {
 Reservations / Contact
    =========================== */
 #contact {
-  padding: 8rem 0 3.2rem;
+  padding: 8.2rem 0 3.2rem;
   background-color: rgba(83, 7, 0, 0.1019607843);
 }
 @media (max-width: 767px) {
