@@ -85,7 +85,7 @@ a {
   align-items: center;
   justify-content: center;
 
-  span {
+  .subttl {
     color: #000000;
     font-size: 2rem;
     line-height: 1.65;
@@ -450,13 +450,16 @@ a {
 }
 
 .recommend__list {
-  margin: 0;
+  margin-top: 6.1rem;
+  @include sp {
+      margin-top: 3.8rem;
+  }
 }
 
 .recommend-item {
   display: flex;
   position: relative;
-  margin: 6rem 0 8.4rem;
+  margin-bottom: 8.4rem;
 
   &:nth-of-type(3) {
     margin-bottom: 0;
@@ -467,8 +470,18 @@ a {
 
   @include sp {
     flex-direction: column;
-    margin-top: 3.8rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 5.1rem;
+  }
+
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+    margin-top: 0;
+    margin-bottom: 8.1rem;
+  
+    @include sp {
+      flex-direction: column;
+      margin-bottom: 5.2rem;
+    }
   }
 }
 
@@ -491,22 +504,23 @@ a {
 .caption {
   font-size: 1.6rem;
   line-height: 1.56;
-  margin-top: 2.5rem;
+  margin-top: 1.8rem;
 
   @include sp {
-    margin-top: 0.7rem;
+    margin-top: 0.6rem;
   }
 }
 
 .recommend__ttl {
   font-size: 2.5rem;
   line-height: 1.4;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.4rem;
 
   @include sp {
     font-size: 2rem;
-    line-height: 1.65;
-    margin-bottom: 1rem;
+    line-height: 1.35;
+font-weight: 600;
+    margin-bottom: 0.9rem;
   }
 }
 
@@ -519,7 +533,7 @@ a {
   line-height: 1.56;
   text-align: left;
   margin-top: 14.4rem;
-  padding: 4.8rem 2rem 4.5rem 4.1rem;
+  padding: 4.9rem 2rem 4.3rem 4.1rem;
   width: 100%;
 
   &::before {
@@ -549,12 +563,11 @@ a {
     position: relative;
     width: 100%;
     top: 0;
-    padding: 2rem 2rem 1.2rem;
+    padding: 2.2rem 2rem 1.3rem;
     max-width: none;
     width: 100%;
     z-index: auto;
-    margin-bottom: 5rem;
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
     max-width: 100%;
 
     &::before {
@@ -572,25 +585,19 @@ a {
   }
 }
 
-.recommend-item:nth-of-type(even) {
-  flex-direction: row-reverse;
-
-  @include sp {
-    flex-direction: column;
-  }
-}
-
 .recommend-item:nth-of-type(even) .caption {
   text-align: right;
+  margin-top: 2rem;
 
   @include sp {
     text-align: left;
+    margin-top: 0.5rem;
   }
 }
 
 .recommend-item:nth-of-type(even) .recommend__text {
   margin-top: 14.6rem;
-  padding: 4.6rem 3rem 4.2rem 3.8rem;
+  padding: 4.9rem 3rem 4.2rem 3.8rem;
 
   &::before {
     content: "";
@@ -619,8 +626,7 @@ a {
     right: 0;
     left: 0;
     top: 0;
-    padding: 2rem 2rem 1.2rem;
-    margin-bottom: 5rem;
+    padding: 2rem 2rem 1.15rem;
     margin-top: 0.6rem;
     max-width: 100%;
   }
@@ -634,23 +640,23 @@ a {
   background-image: url(../img/course-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  padding: 8rem 0 9.7rem;
+  padding: 7.8rem 0 9.7rem;
   width: 100%;
 
   @include sp {
-    padding: 5rem 0 6rem;
+    padding: 5rem 0 4.3rem;
   }
 }
 
 .course__list {
   display: flex;
   justify-content: space-between;
-  margin-top: 6.7rem;
+  margin-top: 6.9rem;
   width: 100%;
 
   @include sp {
     display: block;
+    margin-top: 3.5rem;
   }
 }
 
@@ -672,7 +678,7 @@ a {
   font-size: 1.6rem;
   line-height: 1.56;
   text-align: center;
-  margin-top: 1.8rem;
+  margin-top: 2rem;
 
   span {
     display: block;
@@ -762,7 +768,7 @@ a {
   padding: 8rem 0;
 
   @include sp {
-    padding: 5rem 0;
+    padding: 5rem 0 5rem;
   }
 }
 
@@ -770,12 +776,16 @@ a {
   padding: 0;
   display: flex;
   gap: 6%;
-  margin-top: 7rem;
+  margin-top: 6.8rem;
   justify-content: space-between;
   align-items: stretch;
 
   @media (max-width: 990px) {
     display: block;
+  }
+
+  @include sp {
+    margin-top: 3.5rem;
   }
 }
 
@@ -793,6 +803,9 @@ a {
   @media (max-width: 990px) {
     margin-bottom: 5rem;
   }
+  @include sp {
+    margin-bottom: 5rem;
+  }
 }
 
 .news__ttl,
@@ -802,6 +815,10 @@ a {
   padding: 0.7rem 0 0.8rem 2rem;
   font-size: 2rem;
   line-height: 1.65;
+
+  @include sp {
+    padding: 1rem 0 0.8rem 2rem;
+  }
 }
 
 .news__items,
@@ -859,6 +876,9 @@ a {
   line-height: 1;
   align-self: start;
 
+  @include sp {
+  padding-top: 0.15rem;
+  }
 }
 
 .news__text .blog__text {
@@ -909,6 +929,10 @@ a {
   font-size: 2rem;
   line-height: 1.65;
   padding: 0;
+
+  @include sp {
+    right: 3.3rem;
+  }
 }
 
 .more img {
@@ -922,12 +946,27 @@ a {
   アクセス　access
    =========================== */
 #access {
-  padding: 8.3rem 0 7.8rem;
+  padding: 8.3rem 0 8rem;
   background-image: url(../img/access-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   z-index: 0;
+
+  @include sp {
+    padding: 5.2rem 0 3.7rem;
+  }
+}
+
+#access .section__ttl {
+  @include sp {
+    letter-spacing: 0;
+    white-space: nowrap;
+  
+    .subttl {
+      letter-spacing: 1px;
+    }
+  }
 }
 
 #access .inner {
@@ -937,6 +976,7 @@ a {
   @include sp {
     flex-direction: column;
     width: 100%;
+    margin-top: 3rem;
   }
 }
 
@@ -951,6 +991,7 @@ a {
   @include sp {
     width: 100%;
     max-width: none;
+    height: 30rem;
   }
 }
 
@@ -969,6 +1010,10 @@ a {
   max-width: 32rem;
   width: 100%;
 
+  @media (max-width: 970px) {
+    padding: 4.8rem 1rem 4.5rem 6rem;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -983,18 +1028,19 @@ a {
     &::before {
       right: 30rem;
       bottom: 0rem;
-      width: 15rem;
+      width: 11rem;
       height: 26.2rem;
     }
   }
+
   @include sp {
     position: static;
     max-width: none;
     width: 100%;
     top: auto;
     left: auto;
-    margin-top: 2rem;
-    padding: 2rem;
+    margin-top: 2.8rem;
+    padding: 1.8rem 2rem 1.9rem;
 
     &::before {
       display: none;
@@ -1006,6 +1052,10 @@ a {
   font-size: 2rem;
   line-height: 1.65;
   margin-bottom: 0.7rem;
+
+  @include sp {
+    margin-bottom: 0.6rem;
+  }
 }
 
 .access__address {
@@ -1013,8 +1063,12 @@ a {
   line-height: 1.56;
   margin-bottom: 1.4rem;
 
-  span {
+ & span {
     font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+  }
+
+  @include sp {
+    margin-bottom: 1.4rem;
   }
 }
 
@@ -1039,7 +1093,10 @@ a {
   align-items: center;
   gap: 0.2rem;
   margin-bottom: 2.1rem;
-  // font-size: 1.6rem;
+
+  @include sp {
+    margin-bottom: 1.6rem;
+  }
 }
 
 a {
@@ -1091,11 +1148,11 @@ a {
 Reservations / Contact
    =========================== */
 #contact {
-  padding: 8.2rem 0 3.2rem;
+  padding: 8.2rem 0;
   background-color: $bgColor;
 
   @include sp {
-    padding: 5rem 0;
+    padding: 5rem 0 3.2rem;
   }
 }
 
@@ -1127,7 +1184,16 @@ Reservations / Contact
     flex-direction: column;
     align-items: flex-start;
   }
+
+  @include sp {
+    margin-bottom: 3rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
+
 
 .contact__item--radio {
   @media (max-width: 855px) {
@@ -1291,7 +1357,7 @@ input[type="radio"] {
 .contact__item--column>.contact__label {
   width: 100%;
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.7rem;
 }
 
 .contact__privacy-box {
@@ -1301,7 +1367,7 @@ input[type="radio"] {
   background-color: $fontColor;
   overflow-y: scroll;
   border: 1px solid $fontColor;
-  padding: 4rem 4rem;
+  padding: 3.8rem 4rem;
   margin-inline: auto;
   margin-top: 0.5rem;
   width: 100%;
@@ -1322,6 +1388,7 @@ button {
 
   @include sp {
     width: 100%;
+    margin-top: 5rem;
   }
 
   &:hover {
@@ -1336,7 +1403,7 @@ footer
    =========================== */
 #footer {
   background-image: url(../img/footer-back.svg);
-  padding: 7.8rem 0 8.3rem;
+  padding: 7.8rem 0 8.1rem;
   text-align: center;
   color: #000000;
 

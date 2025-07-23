@@ -79,7 +79,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.section__ttl span {
+.section__ttl .subttl {
   color: #000000;
   font-size: 2rem;
   line-height: 1.65;
@@ -88,7 +88,7 @@ a {
   display: block;
 }
 @media (max-width: 767px) {
-  .section__ttl span {
+  .section__ttl .subttl {
     letter-spacing: 4px;
   }
 }
@@ -503,7 +503,12 @@ a {
 }
 
 .recommend__list {
-  margin: 0;
+  margin-top: 6.1rem;
+}
+@media (max-width: 767px) {
+  .recommend__list {
+    margin-top: 3.8rem;
+  }
 }
 
 .recommend-item {
@@ -511,7 +516,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin: 6rem 0 8.4rem;
+  margin-bottom: 8.4rem;
 }
 .recommend-item:nth-of-type(3) {
   margin-bottom: 0;
@@ -529,8 +534,24 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 3.8rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 5.1rem;
+  }
+}
+.recommend-item:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-top: 0;
+  margin-bottom: 8.1rem;
+}
+@media (max-width: 767px) {
+  .recommend-item:nth-of-type(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5.2rem;
   }
 }
 
@@ -555,24 +576,25 @@ a {
 .caption {
   font-size: 1.6rem;
   line-height: 1.56;
-  margin-top: 2.5rem;
+  margin-top: 1.8rem;
 }
 @media (max-width: 767px) {
   .caption {
-    margin-top: 0.7rem;
+    margin-top: 0.6rem;
   }
 }
 
 .recommend__ttl {
   font-size: 2.5rem;
   line-height: 1.4;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.4rem;
 }
 @media (max-width: 767px) {
   .recommend__ttl {
     font-size: 2rem;
-    line-height: 1.65;
-    margin-bottom: 1rem;
+    line-height: 1.35;
+    font-weight: 600;
+    margin-bottom: 0.9rem;
   }
 }
 
@@ -585,7 +607,7 @@ a {
   line-height: 1.56;
   text-align: left;
   margin-top: 14.4rem;
-  padding: 4.8rem 2rem 4.5rem 4.1rem;
+  padding: 4.9rem 2rem 4.3rem 4.1rem;
   width: 100%;
 }
 .recommend__text::before {
@@ -615,12 +637,11 @@ a {
     position: relative;
     width: 100%;
     top: 0;
-    padding: 2rem 2rem 1.2rem;
+    padding: 2.2rem 2rem 1.3rem;
     max-width: none;
     width: 100%;
     z-index: auto;
-    margin-bottom: 5rem;
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
     max-width: 100%;
   }
   .recommend__text::before {
@@ -637,33 +658,20 @@ a {
   }
 }
 
-.recommend-item:nth-of-type(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-@media (max-width: 767px) {
-  .recommend-item:nth-of-type(even) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
 .recommend-item:nth-of-type(even) .caption {
   text-align: right;
+  margin-top: 2rem;
 }
 @media (max-width: 767px) {
   .recommend-item:nth-of-type(even) .caption {
     text-align: left;
+    margin-top: 0.5rem;
   }
 }
 
 .recommend-item:nth-of-type(even) .recommend__text {
   margin-top: 14.6rem;
-  padding: 4.6rem 3rem 4.2rem 3.8rem;
+  padding: 4.9rem 3rem 4.2rem 3.8rem;
 }
 .recommend-item:nth-of-type(even) .recommend__text::before {
   content: "";
@@ -692,8 +700,7 @@ a {
     right: 0;
     left: 0;
     top: 0;
-    padding: 2rem 2rem 1.2rem;
-    margin-bottom: 5rem;
+    padding: 2rem 2rem 1.15rem;
     margin-top: 0.6rem;
     max-width: 100%;
   }
@@ -706,13 +713,12 @@ a {
   background-image: url(../img/course-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  padding: 8rem 0 9.7rem;
+  padding: 7.8rem 0 9.7rem;
   width: 100%;
 }
 @media (max-width: 767px) {
   #course {
-    padding: 5rem 0 6rem;
+    padding: 5rem 0 4.3rem;
   }
 }
 
@@ -723,12 +729,13 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 6.7rem;
+  margin-top: 6.9rem;
   width: 100%;
 }
 @media (max-width: 767px) {
   .course__list {
     display: block;
+    margin-top: 3.5rem;
   }
 }
 
@@ -751,7 +758,7 @@ a {
   font-size: 1.6rem;
   line-height: 1.56;
   text-align: center;
-  margin-top: 1.8rem;
+  margin-top: 2rem;
 }
 .course__ttl span {
   display: block;
@@ -847,7 +854,7 @@ a {
 }
 @media (max-width: 767px) {
   #news {
-    padding: 5rem 0;
+    padding: 5rem 0 5rem;
   }
 }
 
@@ -857,7 +864,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   gap: 6%;
-  margin-top: 7rem;
+  margin-top: 6.8rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -868,6 +875,11 @@ a {
 @media (max-width: 990px) {
   .news__inner {
     display: block;
+  }
+}
+@media (max-width: 767px) {
+  .news__inner {
+    margin-top: 3.5rem;
   }
 }
 
@@ -893,6 +905,11 @@ a {
     margin-bottom: 5rem;
   }
 }
+@media (max-width: 767px) {
+  .news__list {
+    margin-bottom: 5rem;
+  }
+}
 
 .news__ttl,
 .blog__ttl {
@@ -901,6 +918,12 @@ a {
   padding: 0.7rem 0 0.8rem 2rem;
   font-size: 2rem;
   line-height: 1.65;
+}
+@media (max-width: 767px) {
+  .news__ttl,
+  .blog__ttl {
+    padding: 1rem 0 0.8rem 2rem;
+  }
 }
 
 .news__items,
@@ -966,6 +989,11 @@ a {
   line-height: 1;
   -ms-flex-item-align: start;
       align-self: start;
+}
+@media (max-width: 767px) {
+  .news__date {
+    padding-top: 0.15rem;
+  }
 }
 
 .news__text .blog__text {
@@ -1040,6 +1068,11 @@ a {
   line-height: 1.65;
   padding: 0;
 }
+@media (max-width: 767px) {
+  .more__text {
+    right: 3.3rem;
+  }
+}
 
 .more img {
   position: absolute;
@@ -1052,12 +1085,27 @@ a {
   アクセス　access
    =========================== */
 #access {
-  padding: 8.3rem 0 7.8rem;
+  padding: 8.3rem 0 8rem;
   background-image: url(../img/access-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   z-index: 0;
+}
+@media (max-width: 767px) {
+  #access {
+    padding: 5.2rem 0 3.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #access .section__ttl {
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  #access .section__ttl .subttl {
+    letter-spacing: 1px;
+  }
 }
 
 #access .inner {
@@ -1073,6 +1121,7 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    margin-top: 3rem;
   }
 }
 
@@ -1088,6 +1137,7 @@ a {
   .access__map {
     width: 100%;
     max-width: none;
+    height: 30rem;
   }
 }
 
@@ -1106,6 +1156,11 @@ a {
   max-width: 32rem;
   width: 100%;
 }
+@media (max-width: 970px) {
+  .access__content {
+    padding: 4.8rem 1rem 4.5rem 6rem;
+  }
+}
 .access__content::before {
   content: "";
   position: absolute;
@@ -1119,7 +1174,7 @@ a {
   .access__content::before {
     right: 30rem;
     bottom: 0rem;
-    width: 15rem;
+    width: 11rem;
     height: 26.2rem;
   }
 }
@@ -1130,8 +1185,8 @@ a {
     width: 100%;
     top: auto;
     left: auto;
-    margin-top: 2rem;
-    padding: 2rem;
+    margin-top: 2.8rem;
+    padding: 1.8rem 2rem 1.9rem;
   }
   .access__content::before {
     display: none;
@@ -1143,6 +1198,11 @@ a {
   line-height: 1.65;
   margin-bottom: 0.7rem;
 }
+@media (max-width: 767px) {
+  .access__company-name {
+    margin-bottom: 0.6rem;
+  }
+}
 
 .access__address {
   font-size: 1.6rem;
@@ -1151,6 +1211,11 @@ a {
 }
 .access__address span {
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
+}
+@media (max-width: 767px) {
+  .access__address {
+    margin-bottom: 1.4rem;
+  }
 }
 
 .pc-only {
@@ -1180,6 +1245,11 @@ a {
           align-items: center;
   gap: 0.2rem;
   margin-bottom: 2.1rem;
+}
+@media (max-width: 767px) {
+  .access__tel {
+    margin-bottom: 1.6rem;
+  }
 }
 
 a {
@@ -1229,12 +1299,12 @@ a {
 Reservations / Contact
    =========================== */
 #contact {
-  padding: 8.2rem 0 3.2rem;
+  padding: 8.2rem 0;
   background-color: rgba(83, 7, 0, 0.1019607843);
 }
 @media (max-width: 767px) {
   #contact {
-    padding: 5rem 0;
+    padding: 5rem 0 3.2rem;
   }
 }
 
@@ -1274,6 +1344,14 @@ Reservations / Contact
         -ms-flex-align: start;
             align-items: flex-start;
   }
+}
+@media (max-width: 767px) {
+  .contact__item {
+    margin-bottom: 3rem;
+  }
+}
+.contact__item:last-of-type {
+  margin-bottom: 0;
 }
 
 @media (max-width: 855px) {
@@ -1487,7 +1565,7 @@ input[type=radio] {
 .contact__item--column > .contact__label {
   width: 100%;
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.7rem;
 }
 
 .contact__privacy-box {
@@ -1497,7 +1575,7 @@ input[type=radio] {
   background-color: #ffffff;
   overflow-y: scroll;
   border: 1px solid #ffffff;
-  padding: 4rem 4rem;
+  padding: 3.8rem 4rem;
   margin-inline: auto;
   margin-top: 0.5rem;
   width: 100%;
@@ -1520,6 +1598,7 @@ button {
 @media (max-width: 767px) {
   button {
     width: 100%;
+    margin-top: 5rem;
   }
 }
 button:hover {
@@ -1533,7 +1612,7 @@ footer
    =========================== */
 #footer {
   background-image: url(../img/footer-back.svg);
-  padding: 7.8rem 0 8.3rem;
+  padding: 7.8rem 0 8.1rem;
   text-align: center;
   color: #000000;
 }
