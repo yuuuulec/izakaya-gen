@@ -79,7 +79,7 @@ a {
   text-align: center;
   row-gap: 0.6rem;
   line-height: 1.1;
-  letter-spacing: 9px;
+  letter-spacing: 0.3em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,13 +89,9 @@ a {
     color: #000000;
     font-size: 2rem;
     line-height: 1.65;
-    letter-spacing: 4px;
+    letter-spacing: 0.2em;
     font-family: $EB;
     display: block;
-
-    @include sp {
-      letter-spacing: 4px;
-    }
   }
 }
 
@@ -113,9 +109,9 @@ a {
   align-items: center;
 
   @include header-sp {
-    top: -1rem;
+    top: -0.7rem;
     left: -2rem;
-    height: 6rem;
+    height: 5.7rem;
   }
 }
 
@@ -186,13 +182,13 @@ a {
   display: inline-block;
   align-items: center;
   height: 100%;
-  padding: 3.5rem 0;
+  padding: 3.35rem 0;
   position: relative;
   color: #ffffff;
   transition: opacity 0.8s ease;
 
   @include sp {
-    padding: 1.1rem 0 0 1.1rem;
+    padding: 1rem 1.3rem;
   }
 
   &:hover {
@@ -209,7 +205,7 @@ a {
   height: 100%;
   position: relative;
   color: #ffffff;
-  padding: 3.5rem 0 2rem;
+  padding: 3.45rem 0;
   transition: all 0.8s ease;
 
   @include sp {
@@ -387,9 +383,9 @@ a {
   font-size: 3rem;
   color: $mainColor;
   line-height: 118%;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.55rem;
   white-space: nowrap;
-  margin-left: 5.8rem;
+  margin-left: 5.6rem;
   writing-mode: vertical-rl;
 
   @include sp {
@@ -401,7 +397,7 @@ a {
 
 .feature__ttl span {
   display: block;
-  margin-left: 2rem;
+  margin-left: 1.8rem;
 
   @include sp {
     margin-left: 2.1rem;
@@ -445,14 +441,14 @@ a {
   background-color: $bgColor;
 
   @include sp {
-    padding: 5rem 0;
+    padding: 5.4rem 0 4.8rem;
   }
 }
 
 .recommend__list {
   margin-top: 6.1rem;
   @include sp {
-      margin-top: 3.8rem;
+      margin-top: 3.5rem;
   }
 }
 
@@ -480,7 +476,7 @@ a {
   
     @include sp {
       flex-direction: column;
-      margin-bottom: 5.2rem;
+      margin-bottom: 5rem;
     }
   }
 }
@@ -504,7 +500,7 @@ a {
 .caption {
   font-size: 1.6rem;
   line-height: 1.56;
-  margin-top: 1.8rem;
+  margin-top: 1.9rem;
 
   @include sp {
     margin-top: 0.6rem;
@@ -532,7 +528,7 @@ font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.56;
   text-align: left;
-  margin-top: 14.4rem;
+  margin-top: 14.5rem;
   padding: 4.9rem 2rem 4.3rem 4.1rem;
   width: 100%;
 
@@ -576,7 +572,6 @@ font-weight: 600;
   }
 }
 
-
 .recommend__text .pc-only {
   display: block;
 
@@ -597,7 +592,7 @@ font-weight: 600;
 
 .recommend-item:nth-of-type(even) .recommend__text {
   margin-top: 14.6rem;
-  padding: 4.9rem 3rem 4.2rem 3.8rem;
+  padding: 4.8rem 3.2rem 4.2rem 3.8rem;
 
   &::before {
     content: "";
@@ -631,8 +626,6 @@ font-weight: 600;
     max-width: 100%;
   }
 }
-
-
 /* ===========================
   コース　course
    =========================== */
@@ -640,18 +633,18 @@ font-weight: 600;
   background-image: url(../img/course-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 7.8rem 0 9.7rem;
+  padding: 8rem 0 9.7rem;
   width: 100%;
 
   @include sp {
-    padding: 5rem 0 4.3rem;
+    padding: 5.3rem 0 6rem;
   }
 }
 
 .course__list {
   display: flex;
   justify-content: space-between;
-  margin-top: 6.9rem;
+  margin-top: 6.4rem;
   width: 100%;
 
   @include sp {
@@ -670,6 +663,13 @@ font-weight: 600;
 
   @include sp {
     width: 100%;
+  }
+}
+
+.course__item:last-child .course__ttl {
+
+  @include sp {
+      margin-bottom: 0;
   }
 }
 
@@ -765,7 +765,7 @@ font-weight: 600;
    =========================== */
 #news {
   background-color: $bgColor;
-  padding: 8rem 0;
+  padding: 8.2rem 0;
 
   @include sp {
     padding: 5rem 0 5rem;
@@ -776,7 +776,7 @@ font-weight: 600;
   padding: 0;
   display: flex;
   gap: 6%;
-  margin-top: 6.8rem;
+  margin-top: 6.7rem;
   justify-content: space-between;
   align-items: stretch;
 
@@ -785,7 +785,7 @@ font-weight: 600;
   }
 
   @include sp {
-    margin-top: 3.5rem;
+    margin-top: 3.8rem;
   }
 }
 
@@ -812,7 +812,7 @@ font-weight: 600;
 .blog__ttl {
   background-color: $mainColor;
   color: $fontColor;
-  padding: 0.7rem 0 0.8rem 2rem;
+  padding: 0.9rem 0 0.9rem 2rem;
   font-size: 2rem;
   line-height: 1.65;
 
@@ -958,17 +958,6 @@ font-weight: 600;
   }
 }
 
-#access .section__ttl {
-  @include sp {
-    letter-spacing: 0;
-    white-space: nowrap;
-  
-    .subttl {
-      letter-spacing: 1px;
-    }
-  }
-}
-
 #access .inner {
   display: flex;
   margin-top: 7rem;
@@ -1004,9 +993,9 @@ font-weight: 600;
 .access__content {
   background-color: $mainColor;
   color: $fontColor;
-  padding: 4.8rem 2rem 4.5rem 4rem;
+  padding: 4.9rem 2rem 4.5rem 4rem;
   position: relative;
-  margin-top: 19.6rem;
+  margin-top: 19.4rem;
   max-width: 32rem;
   width: 100%;
 
@@ -1029,7 +1018,7 @@ font-weight: 600;
       right: 30rem;
       bottom: 0rem;
       width: 11rem;
-      height: 26.2rem;
+      height: 25.2rem;
     }
   }
 
@@ -1061,7 +1050,7 @@ font-weight: 600;
 .access__address {
   font-size: 1.6rem;
   line-height: 1.56;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.3rem;
 
  & span {
     font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
@@ -1152,11 +1141,15 @@ Reservations / Contact
   background-color: $bgColor;
 
   @include sp {
-    padding: 5rem 0 3.2rem;
+    padding: 5rem 0 5rem;
   }
 }
 
 #contact .section__ttl {
+  @include sp {
+      letter-spacing: 0;
+  }
+
   & span {
     margin-bottom: 0rem;
   }
@@ -1169,13 +1162,17 @@ Reservations / Contact
 }
 
 .contact__lead {
-  margin: 3.5rem 0 3.7rem;
+  margin: 3.2rem 0 3.7rem;
+
+  @include sp {
+    margin: 3.3rem 0 3.1rem;
+  }
 }
 
 .contact__item {
   display: flex;
   align-items: center;
-  margin-bottom: 5.1rem;
+  margin-bottom: 5.15rem;
   font-size: 2rem;
   line-height: 1.65;
   width: 100%;
@@ -1186,7 +1183,7 @@ Reservations / Contact
   }
 
   @include sp {
-    margin-bottom: 3rem;
+    margin-bottom: 3.1rem;
   }
 
   &:last-of-type {
@@ -1305,8 +1302,7 @@ input[type="radio"] {
 #message {
   width: 100%;
   max-width: 80rem;
-  height: 20.3rem;
-  margin-bottom: 0.2rem;
+  height: 20rem;
   border: none;
   resize: vertical;
 }
@@ -1318,6 +1314,7 @@ input[type="radio"] {
 
   @media (max-width: 600px) {
     grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem
   }
 
   @media (max-width: 440px) {
@@ -1330,13 +1327,12 @@ input[type="radio"] {
   font-size: 1.8rem;
   display: flex;
   align-items: center;
-  margin-right: 3.5rem;
+  margin-right: 3.6rem;
   white-space: nowrap;
 
   @include sp {
     font-size: 1.6rem;
-    width: 100%;
-    margin-right: 1.6rem;
+    margin-right: 1.1rem;
   }
 }
 
@@ -1346,18 +1342,30 @@ input[type="radio"] {
   width: 2rem;
   height: 2rem;
   margin-right: 2rem;
+
+  @include sp {
+    margin-right: 1rem;
+  }
 }
 
 .contact__item--column {
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 4.8rem;
+  margin-bottom: 5.2rem;
+
+  @include sp {
+    margin-bottom: 2.8rem;
+  }
 }
 
 .contact__item--column>.contact__label {
   width: 100%;
   display: block;
   margin-bottom: 0.7rem;
+
+  @include sp {
+    margin-bottom: 0.45rem;
+  }
 }
 
 .contact__privacy-box {
@@ -1367,10 +1375,18 @@ input[type="radio"] {
   background-color: $fontColor;
   overflow-y: scroll;
   border: 1px solid $fontColor;
-  padding: 3.8rem 4rem;
+  padding: 3.7rem 4rem;
   margin-inline: auto;
-  margin-top: 0.5rem;
+  margin-top: 0.1rem;
   width: 100%;
+
+@include sp {
+  margin-top: 0;
+  font-size: 1.6rem;
+  padding: 2.55rem 5rem 0 3rem;
+  height: 32.3rem;
+  line-height: 2.06;
+}
 }
 
 button {
@@ -1403,7 +1419,7 @@ footer
    =========================== */
 #footer {
   background-image: url(../img/footer-back.svg);
-  padding: 7.8rem 0 8.1rem;
+  padding: 7.9rem 0 8.1rem;
   text-align: center;
   color: #000000;
 
@@ -1425,8 +1441,16 @@ footer
     left: 50%;
     transform: translateX(-50%);
     background-color: #000000;
-    width: 79%;
+    width: 78%;
     height: 1px;
+
+    @include sp {
+          width: 99%;
+    }
+  }
+
+  @include sp {
+    padding-bottom: 2rem;
   }
 }
 
@@ -1442,6 +1466,7 @@ footer
   text-align: center;
   color: #000000;
   transition: opacity 0.8s ease;
+  padding: 1rem;
 
   &:hover {
     opacity: 0.5;
@@ -1451,14 +1476,17 @@ footer
 .footer__list {
   display: flex;
   flex-wrap: wrap;
-  margin: 3.6rem 0 3.2rem;
-  gap: 2.4rem;
+  margin: 2.5rem 0 2.5rem;
+  gap: 0.4rem;
   justify-content: center;
   align-items: center;
   text-align: center;
+  line-height: 1;
 
   @include sp {
-    margin: 2rem 0;
+    margin-top: 2rem;
+    gap: 0.4rem;
+    line-height: 0.8;
   }
 }
 
@@ -1494,6 +1522,10 @@ footer
   font-size: 2rem;
   line-height: 1.65;
   font-family: $EB;
+
+  @include sp {
+    padding-top: 1rem;
+  }
 }
 
 .copyright .sp-only {
