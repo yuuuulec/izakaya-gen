@@ -17,7 +17,7 @@ $(".hamburger").click(
         $(".header__nav").toggleClass("active");
     });
 
-//スクロールした時に背景色をつける
+//header スクロールした時に背景色をつける
 $(function() {
     const header = $('#header');
     const target =$('#feature').offset().top;
@@ -72,4 +72,14 @@ $(document).ready(function(){
             $('.page-top').fadeOut();
         }
     });
+});
+
+//スクロールした時にふわっとでる 
+$(window).on('load', function () {
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 80,
+    easing: 'ease-in-out'
+  });
 });
