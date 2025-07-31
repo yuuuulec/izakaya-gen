@@ -596,7 +596,7 @@ section {
     margin-bottom: 0.9rem;
   }
 }
-@media (max-width: 330) {
+@media (max-width: 330px) {
   .recommend__ttl {
     font-size: 1.5rem;
     line-height: 1;
@@ -804,8 +804,8 @@ section {
   max-height: 80%;
   background: #fff;
   padding: 2.5rem;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.502);
-          box-shadow: rgba(0, 0, 0, 0.502);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.502);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.502);
   z-index: 10000;
 }
 @media (max-width: 767px) {

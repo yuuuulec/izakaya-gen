@@ -521,7 +521,7 @@ section {
     margin-bottom: 0.9rem;
   }
 
-  @media (max-width: 330) {
+  @media (max-width: 330px) {
 font-size: 1.5rem;
 line-height: 1;
 }
@@ -718,7 +718,7 @@ line-height: 1;
   max-height: 80%;
   background: #fff;
   padding: 2.5rem;
-  box-shadow: rgba(0, 0, 0, 0.502);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.502);
   z-index: 10000;
 
   @include sp {
