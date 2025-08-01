@@ -493,7 +493,7 @@ section {
    =========================== */
 #recommend {
   padding: 8rem 0;
-  background-color: rgba(83, 7, 0, 0.1019607843);
+  background-color: rgba(83, 7, 0, 0.1);
 }
 @media (max-width: 767px) {
   #recommend {
@@ -850,7 +850,7 @@ section {
    お知らせ　news
    =========================== */
 #news {
-  background-color: rgba(83, 7, 0, 0.1019607843);
+  background-color: rgba(83, 7, 0, 0.1);
   padding: 8.2rem 0;
 }
 @media (max-width: 767px) {
@@ -1294,7 +1294,7 @@ Reservations / Contact
    =========================== */
 #contact {
   padding: 8.2rem 0;
-  background-color: rgba(83, 7, 0, 0.1019607843);
+  background-color: rgba(83, 7, 0, 0.1);
 }
 @media (max-width: 767px) {
   #contact {
