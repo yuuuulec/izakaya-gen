@@ -23,7 +23,7 @@ $(function() {
     const target =$('#feature').offset().top;
 
     $(window).on('scroll' , function () {
-        if($ (window).scrollTop() >= target) {
+        if($ (window).scrollTop() >= target - 100) {
             header.addClass('header-scroll');
         }
         else {
