@@ -73,8 +73,12 @@ section {
 }
 
 .custom-scroll {
-  scroll-margin-top: 3rem;
+  scroll-margin-top: 2rem;
+
+  @media (max-width: 875px) {
+    scroll-margin-top: 2rem;
 }
+} 
 
 /* ===========================
   共通
@@ -253,7 +257,7 @@ section {
     width: 100%;
 
     @media (max-width: 875px) {
-      content: none;
+      display: none;
     }
   }
 }
@@ -1294,6 +1298,7 @@ input[type="radio"] {
   background-image: url(../img/dropdown.svg);
   background-repeat: no-repeat;
   background-position: right 1.5rem top 2rem;
+  color: #000000;
 }
 
 #name,
