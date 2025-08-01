@@ -58,6 +58,10 @@ section {
   }
 }
 
+.custom-scroll {
+  scroll-margin-top: 3rem;
+}
+
 /* ===========================
   共通
    =========================== */
@@ -85,6 +89,7 @@ section {
 .section__ttl .subttl {
   color: #000000;
   font-size: 2rem;
+  font-weight: 500;
   line-height: 1.65;
   letter-spacing: 0.2em;
   font-family: "EB Garamond", "Georgia", "Times New Roman", "Noto Serif JP", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
@@ -113,6 +118,12 @@ section {
     top: -0.7rem;
     left: -2rem;
     height: 5.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .inner {
+    padding: 0;
   }
 }
 
@@ -216,7 +227,7 @@ section {
 }
 @media (max-width: 875px) {
   .header__logo a {
-    padding: 1.8rem 1.2rem;
+    padding: 1rem 4.2rem;
   }
 }
 .header__logo a:hover {
@@ -585,6 +596,7 @@ section {
 
 .recommend__ttl {
   font-size: 2.5rem;
+  font-weight: 600;
   line-height: 1.4;
   margin-bottom: 1.4rem;
 }
@@ -609,6 +621,7 @@ section {
   width: 100%;
   color: #ffffff;
   font-size: 1.6rem;
+  font-weight: 400;
   line-height: 1.56;
   text-align: left;
   position: relative;
@@ -1048,6 +1061,8 @@ section {
 }
 .more {
   position: relative;
+  font-style: "EB Garamond", "Georgia", "Times New Roman", "Noto Serif JP", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
+  font-weight: 500;
 }
 
 .more a {
@@ -1205,6 +1220,7 @@ section {
 }
 .access__address span {
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
+  font-weight: 500;
 }
 @media (max-width: 767px) {
   .access__address {
@@ -1257,6 +1273,7 @@ a {
 .access__number {
   font-size: 2.5rem;
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
+  font-weight: 500;
   line-height: 1;
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
@@ -1788,6 +1805,7 @@ footer
   height: 10rem;
   color: #ffffff;
   font-size: 2rem;
+  font-weight: 500;
   line-height: 1.65;
   font-family: "EB Garamond", "Georgia", "Times New Roman", "Noto Serif JP", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
 }

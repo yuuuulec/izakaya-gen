@@ -75,11 +75,35 @@ $(document).ready(function(){
 });
 
 //スクロールした時にふわっとでる 
-$(window).on('load', function () {
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 80,
-    easing: 'ease-in-out'
+
+function initAOS() {
+    const windowWidth = window.innerWidth;
+  
+    $('.course__item').each(function (i) {
+      $(this).attr('data-aos', 'fade-up');
+  
+      if (windowWidth < 768) {
+        $(this).attr('data-aos-delay', i * 100);
+      } else {
+        $(this).attr('data-aos-delay', 0);
+      }
+    });
+  
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 80,
+      easing: 'ease-in-out',
+    });
+  }
+  
+  $(document).ready(function () {
+    initAOS();
+  
+    $(window).on('resize orientationchange', function () {
+      initAOS();
+      AOS.refresh();
+    });
   });
-});
+
+  
