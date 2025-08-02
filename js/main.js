@@ -20,17 +20,25 @@ $(".hamburger").click(
 //header スクロールした時に背景色をつける
 $(function() {
     const header = $('#header');
-    const target =$('#feature').offset().top;
+    const feature = $('#feature');
 
-    $(window).on('scroll' , function () {
-        if($ (window).scrollTop() >= target - 100) {
+    function checkScroll() {
+        const scrollTop = $(window).scrollTop();
+        const target = feature.offset().top;
+
+        let offset = 20;
+
+        if (scrollTop >= target - offset) {
             header.addClass('header-scroll');
-        }
-        else {
+        } else {
             header.removeClass('header-scroll');
         }
-        });
-    });
+    }
+
+    $(window).on('scroll', checkScroll);
+    $(window).on('resize', checkScroll);
+    checkScroll();  
+});
 
 
 

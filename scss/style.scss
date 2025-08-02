@@ -75,13 +75,12 @@ section {
 }
 
 .custom-scroll {
-  scroll-margin-top: 2rem;
+  scroll-margin-top: 1rem;
 
   @media (max-width: 875px) {
-    scroll-margin-top: 2rem;
+    scroll-margin-top: 0rem;
 }
 } 
-
 /* ===========================
   共通
    =========================== */
@@ -1211,7 +1210,7 @@ Reservations / Contact
 }
 
 
-.contact__item--radio {
+.contact__item--radio {  
   @media (max-width: 855px) {
     display: flex;
     flex-direction: row;
@@ -1259,6 +1258,7 @@ Reservations / Contact
   font-size: 1.8rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 input[type="radio"] {
@@ -1301,6 +1301,7 @@ input[type="radio"] {
   background-repeat: no-repeat;
   background-position: right 1.5rem top 2rem;
   color: #000000;
+  cursor: pointer;
 }
 
 #name,
@@ -1349,6 +1350,11 @@ input[type="radio"] {
   align-items: center;
   margin-right: 3.6rem;
   white-space: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    color: #555555;
+  }
 
   @include sp {
     font-size: 1.6rem;
@@ -1357,14 +1363,34 @@ input[type="radio"] {
 }
 
 .contact__checkbox input {
+  appearance: none; 
   background-color: $fontColor;
-  appearance: none;
   width: 2rem;
   height: 2rem;
   margin-right: 2rem;
+  cursor: pointer;
+  border: none;
+  position: relative;
 
   @include sp {
     margin-right: 1rem;
+  }
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  &:checked {
+    background-color: $fontColor;    
+  }
+
+  &:checked::after {
+    content: '✔';
+    color: $mainColor;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 0.1rem;
+    left: 0.3rem;
   }
 }
 
@@ -1392,6 +1418,7 @@ input[type="radio"] {
   font-size: 1.8rem;
   line-height: 1.72;
   height: 30rem;
+  cursor: pointer;
   background-color: $fontColor;
   overflow-y: scroll;
   border: 1px solid $fontColor;
