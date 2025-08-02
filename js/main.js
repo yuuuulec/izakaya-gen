@@ -44,24 +44,35 @@ $(function() {
 
 // モーダル
 $(function () {
-    // 画像をクリックした時
-    $(`.course__item img`).on(`click`, function () {
-        const modalSrc = $(this).data(`modal`);
-        const name = $(this).data('name');
-        const price = $(this).data('price');
+    function openModalFrom($trigger) {
+        const $img = $trigger.closest('.course__item').find('img');
+        const modalSrc = $img.data('modal');
+        const name = $img.data('name');
+        const price = $img.data('price');
 
-        $(`#modalImage`).attr(`src`, modalSrc);
+        $('#modalImage').attr('src', modalSrc);
         $('#modalName').text(name);
         $('#modalPrice').text(price);
-        $(`#modal`).fadeIn();
+        $('#modal').fadeIn();
+    }
+
+    // 画像をクリックした時
+    $('.course__item img').on('click', function () {
+        openModalFrom($(this));
+    });
+
+    // テキストをクリックした時
+    $('.course__ttl').on('click', function () {
+        openModalFrom($(this));
     });
 
     // 閉じる処理
-    $('#modalClose, #modalOverlay').on(`click`, function () {
-        $(`#modal`).fadeOut();
-        $(`#modalImage`).attr(`src`, '');
+    $('#modalClose, #modalOverlay').on('click', function () {
+        $('#modal').fadeOut();
+        $('#modalImage').attr('src', '');
     });
 });
+
 
 // トップへ戻るボタン
 $('.page-top').on('click',function(e){
