@@ -54,11 +54,13 @@ $(function () {
         $('#modalName').text(name);
         $('#modalPrice').text(price);
         $('#modal').fadeIn();
+        $('body').addClass('modal-open');
     }
 
     // 画像をクリックした時
     $('.course__item img').on('click', function () {
         openModalFrom($(this));
+        $('html, body').css('overflow', 'hidden');
     });
 
     // テキストをクリックした時
@@ -70,7 +72,10 @@ $(function () {
     $('#modalClose, #modalOverlay').on('click', function () {
         $('#modal').fadeOut();
         $('#modalImage').attr('src', '');
+        $('body').removeClass('modal-open'); 
+        $('html, body').removeAttr('style');
     });
+
 });
 
 

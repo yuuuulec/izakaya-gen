@@ -22,6 +22,12 @@ body {
   scroll-behavior: smooth;
 }
 
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 img {
   display: block;
   width: 100%;
@@ -641,7 +647,7 @@ section {
   bottom: 0;
   right: 30rem;
   width: 20rem;
-  height: 25rem;
+  height: 24rem;
   background-color: #530700;
   z-index: -1;
 }
@@ -761,7 +767,7 @@ section {
   cursor: pointer;
 }
 .course__item:hover {
-  opacity: 0.5;
+  opacity: 0.5 !important;
 }
 @media (max-width: 767px) {
   .course__item {
