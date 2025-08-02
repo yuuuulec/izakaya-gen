@@ -79,8 +79,9 @@ section {
 
   @media (max-width: 875px) {
     scroll-margin-top: 0rem;
+  }
 }
-} 
+
 /* ===========================
   共通
    =========================== */
@@ -132,6 +133,7 @@ section {
     padding: 0;
   }
 }
+
 .header-scroll {
   background-color: #3b2f2f;
 }
@@ -669,7 +671,7 @@ section {
 .course__item {
   width: 21.7%;
   transition: opacity 0.8s ease;
-
+  cursor: pointer;
 
   &:hover {
     opacity: 0.5;
@@ -706,11 +708,6 @@ section {
     margin: 1rem 0 2rem;
     text-align: left;
   }
-}
-
-.course__item img,
-.course__item .course__ttl {
-  cursor: pointer;
 }
 
 .modal {
@@ -1210,7 +1207,7 @@ Reservations / Contact
 }
 
 
-.contact__item--radio {  
+.contact__item--radio {
   @media (max-width: 855px) {
     display: flex;
     flex-direction: row;
@@ -1363,7 +1360,7 @@ input[type="radio"] {
 }
 
 .contact__checkbox input {
-  appearance: none; 
+  appearance: none;
   background-color: $fontColor;
   width: 2rem;
   height: 2rem;
@@ -1381,7 +1378,7 @@ input[type="radio"] {
   }
 
   &:checked {
-    background-color: $fontColor;    
+    background-color: $fontColor;
   }
 
   &:checked::after {

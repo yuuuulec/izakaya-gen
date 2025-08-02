@@ -758,6 +758,7 @@ section {
   width: 21.7%;
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
+  cursor: pointer;
 }
 .course__item:hover {
   opacity: 0.5;
@@ -794,11 +795,6 @@ section {
     margin: 1rem 0 2rem;
     text-align: left;
   }
-}
-
-.course__item img,
-.course__item .course__ttl {
-  cursor: pointer;
 }
 
 .modal {
