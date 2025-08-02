@@ -61,11 +61,11 @@ section {
 }
 
 .custom-scroll {
-  scroll-margin-top: 2rem;
+  scroll-margin-top: 1rem;
 }
 @media (max-width: 875px) {
   .custom-scroll {
-    scroll-margin-top: 2rem;
+    scroll-margin-top: 0rem;
   }
 }
 
@@ -1455,6 +1455,7 @@ Reservations / Contact
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 input[type=radio] {
@@ -1505,6 +1506,7 @@ input[type=radio] {
   background-repeat: no-repeat;
   background-position: right 1.5rem top 2rem;
   color: #000000;
+  cursor: pointer;
 }
 
 #name,
@@ -1561,6 +1563,10 @@ input[type=radio] {
           align-items: center;
   margin-right: 3.6rem;
   white-space: nowrap;
+  cursor: pointer;
+}
+.contact__checkbox:hover {
+  color: #555555;
 }
 @media (max-width: 767px) {
   .contact__checkbox {
@@ -1570,18 +1576,36 @@ input[type=radio] {
 }
 
 .contact__checkbox input {
-  background-color: #ffffff;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  background-color: #ffffff;
   width: 2rem;
   height: 2rem;
   margin-right: 2rem;
+  cursor: pointer;
+  border: none;
+  position: relative;
 }
 @media (max-width: 767px) {
   .contact__checkbox input {
     margin-right: 1rem;
   }
+}
+.contact__checkbox input:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+.contact__checkbox input:checked {
+  background-color: #ffffff;
+}
+.contact__checkbox input:checked::after {
+  content: "✔";
+  color: #530700;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 0.1rem;
+  left: 0.3rem;
 }
 
 .contact__item--column {
@@ -1615,6 +1639,7 @@ input[type=radio] {
   font-size: 1.8rem;
   line-height: 1.72;
   height: 30rem;
+  cursor: pointer;
   background-color: #ffffff;
   overflow-y: scroll;
   border: 1px solid #ffffff;
