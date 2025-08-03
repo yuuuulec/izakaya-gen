@@ -766,12 +766,12 @@ html:has(dialog[open]) {
 
 .course__item {
   width: 21.7%;
+  cursor: pointer;
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
-  cursor: pointer;
 }
 .course__item:hover {
-  opacity: 0.5 !important;
+  opacity: 0.5;
 }
 @media (max-width: 767px) {
   .course__item {
@@ -1540,6 +1540,9 @@ input[type=radio] {
   min-height: 20rem;
   border: none;
   resize: vertical;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact__checkboxes {

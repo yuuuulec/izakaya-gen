@@ -40,8 +40,6 @@ $(function() {
     checkScroll();  
 });
 
-
-
 // モーダル
 $(function () {
     let scrollPosition = 0;
@@ -121,20 +119,11 @@ $(document).ready(function(){
 });
 
 //スクロールした時にふわっとでる 
-
 function initAOS() {
     const windowWidth = window.innerWidth;
   
-    $('.course__item').each(function (i) {
-      $(this).attr('data-aos', 'fade-up');
-  
-      if (windowWidth < 768) {
-        $(this).attr('data-aos-delay', i * 100);
-      } else {
-        $(this).attr('data-aos-delay', 0);
-      }
-    });
-  
+    $('.course__list').attr('data-aos', 'fade-up');
+    
     AOS.init({
       duration: 1000,
       once: true,

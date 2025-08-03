@@ -670,6 +670,7 @@ html:has(dialog[open]) {
   gap: 4rem;
   width: 100%;
 
+
   @include sp {
     display: block;
     margin-top: 3.5rem;
@@ -678,11 +679,11 @@ html:has(dialog[open]) {
 
 .course__item {
   width: 21.7%;
+  cursor: pointer;  
   transition: opacity 0.8s ease;
-  cursor: pointer;
 
   &:hover {
-    opacity: 0.5!important;
+    opacity: 0.5;
   }
 
   @include sp {
@@ -1331,6 +1332,9 @@ input[type="radio"] {
   min-height: 20rem;
   border: none;
   resize: vertical;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact__checkboxes {
