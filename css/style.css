@@ -22,6 +22,12 @@ body {
   scroll-behavior: smooth;
 }
 
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 img {
   display: block;
   width: 100%;
@@ -67,6 +73,10 @@ section {
   .custom-scroll {
     scroll-margin-top: 0rem;
   }
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
 }
 
 /* ===========================
@@ -641,7 +651,7 @@ section {
   bottom: 0;
   right: 30rem;
   width: 20rem;
-  height: 25rem;
+  height: 24rem;
   background-color: #530700;
   z-index: -1;
 }
@@ -756,9 +766,9 @@ section {
 
 .course__item {
   width: 21.7%;
+  cursor: pointer;
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
-  cursor: pointer;
 }
 .course__item:hover {
   opacity: 0.5;
@@ -1530,6 +1540,9 @@ input[type=radio] {
   min-height: 20rem;
   border: none;
   resize: vertical;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact__checkboxes {

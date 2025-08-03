@@ -40,10 +40,10 @@ $(function() {
     checkScroll();  
 });
 
-
-
 // モーダル
 $(function () {
+    let scrollPosition = 0;
+
     function openModalFrom($trigger) {
         const $img = $trigger.closest('.course__item').find('img');
         const modalSrc = $img.data('modal');
@@ -53,23 +53,48 @@ $(function () {
         $('#modalImage').attr('src', modalSrc);
         $('#modalName').text(name);
         $('#modalPrice').text(price);
+
+        scrollPosition = $(window).scrollTop();
+        $('body').css({
+            position: 'fixed',
+            top: `-${scrollPosition}px`,
+            width: '100%'
+        });
+
         $('#modal').fadeIn();
+        $('body').addClass('modal-open');
     }
 
-    // 画像をクリックした時
+    // 画像クリック
     $('.course__item img').on('click', function () {
         openModalFrom($(this));
     });
 
-    // テキストをクリックした時
+    // テキストクリック
     $('.course__ttl').on('click', function () {
-        openModalFrom($(this));
+        const $item = $(this).closest('.course__item');
+        const $img = $item.find('img');
+        openModalFrom($img);
     });
 
-    // 閉じる処理
+    // **ここから閉じる処理**
     $('#modalClose, #modalOverlay').on('click', function () {
-        $('#modal').fadeOut();
-        $('#modalImage').attr('src', '');
+        $('#modal').fadeOut(200, function () {
+            $('#modalImage').attr('src', '');
+            $('body').removeClass('modal-open');
+
+            // bodyの固定解除
+            $('body').css({
+                position: '',
+                top: '',
+                width: ''
+            });
+
+            // スクロール位置を戻すのはsetTimeoutで遅らせて実行
+            setTimeout(() => {
+                $(window).scrollTop(scrollPosition);
+            }, 0);
+        });
     });
 });
 
@@ -94,20 +119,11 @@ $(document).ready(function(){
 });
 
 //スクロールした時にふわっとでる 
-
 function initAOS() {
     const windowWidth = window.innerWidth;
   
-    $('.course__item').each(function (i) {
-      $(this).attr('data-aos', 'fade-up');
-  
-      if (windowWidth < 768) {
-        $(this).attr('data-aos-delay', i * 100);
-      } else {
-        $(this).attr('data-aos-delay', 0);
-      }
-    });
-  
+    $('.course__list').attr('data-aos', 'fade-up');
+    
     AOS.init({
       duration: 1000,
       once: true,
