@@ -90,10 +90,12 @@ $(function () {
                 width: ''
             });
 
-            // スクロール位置を戻すのはsetTimeoutで遅らせて実行
-            setTimeout(() => {
-                $(window).scrollTop(scrollPosition);
-            }, 0);
+            // スクロール位置を戻すときに smooth を一時的に解除
+        setTimeout(() => {
+            $('html, body').css('scroll-behavior', 'auto'); 
+            $(window).scrollTop(scrollPosition);            
+            $('html, body').css('scroll-behavior', '');      
+        }, 0);
         });
     });
 });
@@ -108,7 +110,6 @@ $('.page-top').on('click',function(e){
 // トップへ戻るボタン途中で表示させる
 $(document).ready(function(){
     $('.page-top').hide();
-
     $(window).on('scroll',function(){
         if($(this).scrollTop() >700) {
             $('.page-top').fadeIn();
