@@ -1299,6 +1299,9 @@ a {
   font-size: 1.6rem;
   line-height: 1.5625;
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "游明朝体", serif;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .access__number {
