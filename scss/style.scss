@@ -911,27 +911,27 @@ html:has(dialog[open]) {
   line-height: 1.38;
 }
 
-// @keyframes shake-right-loop {
-//   0% {
-//     transform: translateX(0);
-//   }
+@keyframes shake-right-loop {
+  0% {
+    transform: translateX(0);
+  }
 
-//   25% {
-//     transform: translateX(4px);
-//   }
+  25% {
+    transform: translateX(4px);
+  }
 
-//   50% {
-//     transform: translateX(0);
-//   }
+  50% {
+    transform: translateX(0);
+  }
 
-//   75% {
-//     transform: translateX(2px);
-//   }
+  75% {
+    transform: translateX(2px);
+  }
 
-//   100% {
-//     transform: translateX(0);
-//   }
-// }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 .more {
   position: relative;
