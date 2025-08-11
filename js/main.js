@@ -1,11 +1,12 @@
 // FVスライダー
 $(function () {
-    $("#slider-pc,#slider-sp").slick({
+    $("#slider").slick({
         autoplay: true,
-        autoplaySpeed: 3000,
-        speed: 1000,
+        autoplaySpeed: 6000,
+        speed: 1500,
         dots: false,
         arrows: false,
+        pauseOnHover: false, 
         prevArrow: '<button type="button" class="slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-next"></button>'
     });
@@ -15,6 +16,10 @@ $(".hamburger").click(
     function() {
     $(this).toggleClass("active");
         $(".header__nav").toggleClass("active");
+    });
+    $(".header__nav a").click(function() {
+        $(".hamburger").removeClass("active");
+        $(".header__nav").removeClass("active");
     });
 
 //header スクロールした時に背景色をつける
@@ -58,7 +63,8 @@ $(function () {
         $('body').css({
             position: 'fixed',
             top: `-${scrollPosition}px`,
-            width: '100%'
+            width: '100%',
+            // paddingRight: `${scrollbarWidth}px`
         });
 
         $('#modal').fadeIn();
@@ -87,7 +93,7 @@ $(function () {
             $('body').css({
                 position: '',
                 top: '',
-                width: ''
+                width: '',
             });
 
             // スクロール位置を戻すときに smooth を一時的に解除
@@ -95,7 +101,7 @@ $(function () {
             $('html, body').css('scroll-behavior', 'auto'); 
             $(window).scrollTop(scrollPosition);            
             $('html, body').css('scroll-behavior', '');      
-        }, 0);
+        }, 50);
         });
     });
 });
