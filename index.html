@@ -7,17 +7,22 @@
     <meta property="og:title" content="和風居酒屋　源">
     <meta property="og:description" content="素材の味を活かした本来の和食をご提供。五感を刺激する厳選した食材をお楽しみください。">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://test.madebyyuu.com/03/img/FV1-pc.jpg" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Zen+Old+Mincho:wght@500&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="./img/favicon.ico" type="image/svg+xml">
+
     <title>和風居酒屋　源</title>
     <meta name="description" content="余計な味付けをせず素材の味を楽しむ。それが本来の和食だと考えています。五感を刺激する厳選した食材をお楽しみください">
 </head>
@@ -49,26 +54,41 @@
                 </ul>
             </nav>
         </div>
+        <!-- ハンバーガーメニュー -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
-    <h2 class="catchcopy">五感を楽しむ<br>和の時間</h2>
-    <!-- ハンバーガーメニュー -->
-    <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <div id="slider-pc">
-        <div class="header__img"><img src="./img/FV1-pc.jpg" alt="料理と日本酒" loading="lazy"></div>
-        <div class="header__img"><img src="./img/FV2-pc.jpg" alt="楽しそうに食事する女性" loading="lazy"></div>
-        <div class="header__img"><img src="./img/FV3-pc.jpg" alt="いくらの軍艦" loading="lazy"></div>
-    </div>
-    <div id="slider-sp">
-        <div class="header__img"><img src="./img/FV1-sp.jpg" alt="料理と日本酒" loading="lazy"></div>
-        <div class="header__img"><img src="./img/FV2-sp.jpg" alt="楽しそうに食事する女性" loading="lazy"></div>
-        <div class="header__img"><img src="./img/FV3-sp.jpg" alt="いくらの軍艦" loading="lazy"></div>
-    </div>
+    
+    <section class="slider">
+        <h2 class="catchcopy">五感を楽しむ<br>和の時間</h2>
+
+        <div id="slider">
+            <div class="header__img">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./img/FV1-sp.jpg">
+                    <img src="./img/FV1-pc.jpg" alt="料理と日本酒" loading="lazy">
+                </picture>
+            </div>
+            <div class="header__img">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./img/FV2-sp.jpg">
+                    <img src="./img/FV2-pc.jpg" alt="楽しそうに食事する女性" loading="lazy">
+                </picture>
+            </div>
+            <div class="header__img">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./img/FV3-sp.jpg">
+                    <img src="./img/FV3-pc.jpg" alt="いくらの軍艦" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </section>
+
     <main>
-        <section id="feature" class="custom-scroll">
+        <section id="feature">
             <div class="feature__inner inner">
                 <h2 class="feature__ttl" data-aos="fade-up"><span>五感を刺激する</span><span>本来の和食を</span></h2>
                 <div class="feature__container" data-aos="fade-up">
@@ -254,7 +274,7 @@
                                 <a href=""><span class="news__date">0000.00</span>
                                     <span class="blog__text">飲食店経営でやって良かったこと10選</span></a>
                             </li>
-                            <li class="more">
+                            <li class=" more">
                                 <a href=""><span class="more__text">more</span><img src="./img/more.svg" alt="矢印"
                                         loading="lazy"></a>
                             </li>
@@ -313,7 +333,7 @@ Reservations / Contact
                         <label for="name" class="contact__label">お名前 *</label>
                         <input type="text" id="name" placeholder="例：北村太郎" required>
                     </div>
-                    <div class="contact__item contact__item--radio">
+                    <div class="contact__item contact__item--radios">
                         <label class="contact__label label__short">種別</label>
                         <div class="contact__radios">
                             <label class="contact__radio">
@@ -343,7 +363,7 @@ Reservations / Contact
                         <textarea name="message" id="message" required></textarea>
                     </div>
                     <div class="contact__item contact__item--column contact__item-mgb">
-                        <label class="contact__label contact__select">何を見て当居酒屋を知りましたか？ (複数回答可)　*</label>
+                        <label class="contact__label contact__select">何を見て当居酒屋を知りましたか？<span class="no-break"> (複数回答可)　*</span></label>
                         <div class="contact__checkboxes">
                             <label class="contact__checkbox">
                                 <input type="checkbox" name="know[]" value="インターネット">インターネット
@@ -373,7 +393,7 @@ Reservations / Contact
                     </div>
                     <div class="contact__item contact__item--column contact__item">
                         <label class="contact__label contact__privacy">個人情報保護方針</label>
-                        <div class="contact__privacy-box">
+                        <div class="contact__privacy-box" data-simplebar>
                             <p>
                                 個人情報取扱事業者の氏名又は名称(法24条1項1号)</p>
                             <P>和風居酒屋　源</P>
@@ -381,6 +401,8 @@ Reservations / Contact
                             <p>個人情報の取り扱い</p>
                             <p>弊社は、個人情報保護に関連する法令を遵守し、お客様からご提供いただく個人情報を、細心の注意を払って取り扱っております。このプライバシーポリシーでは、当社におけるお客様の個人情報の取扱いについてご説明しております。
                             </p>
+                            <br><br>
+
                             <p>個人情報の利用目的(法18条、15条)
                                 弊社は建築物の設計、施工を主とした当社業務ならびにアフターサービスをさせていただく上で、お客様の個人情報を原則として次の利用目的の範囲内で利用させていただきます。なお、アンケート用紙・ウェブサイトの他のページ等で特に利用目的を定めている場合は、その利用目的を含みます。
                             </p>
@@ -411,7 +433,7 @@ footer
    =========================== */ -->
     <footer id="footer" class="footer">
         <div class="footer__inner inner">
-            <p class="company__name">和風居酒屋　源</p>
+            <a href="#"><p class="company__name">和風居酒屋　源</p></a>
             <div class="footer__nav">
                 <ul class="footer__list">
                     <li class="footer__item">
@@ -484,6 +506,7 @@ footer
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
