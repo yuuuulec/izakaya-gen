@@ -96,15 +96,13 @@ $(function () {
                 width: '',
             });
 
-            // スクロール位置を戻すときに smooth を一時的に解除
-        setTimeout(() => {
+    // スクロール位置を戻す
             $('html, body').css('scroll-behavior', 'auto'); 
-            $(window).scrollTop(scrollPosition);            
-            $('html, body').css('scroll-behavior', '');      
-        }, 50);
+            $(window).scrollTop(scrollPosition);
+            $('html, body').css('scroll-behavior', '');
+        });
         });
     });
-});
 
 
 // トップへ戻るボタン
