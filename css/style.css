@@ -260,7 +260,9 @@ html:has(dialog[open]) {
 }
 @media (max-width: 875px) {
   .header__logo a {
-    padding: 2rem 4.2rem 1.3rem;
+    top: 0;
+    left: 4.2rem;
+    padding: 2rem 0 1.3rem;
   }
 }
 .header__logo a:hover {
@@ -1563,14 +1565,9 @@ input[type=radio]:checked::before {
           appearance: none;
   background-image: url(../img/dropdown.svg);
   background-repeat: no-repeat;
-  background-position: right 2rem top 1.5rem;
+  background-position: right 2rem top 2rem;
   color: #000000;
   cursor: pointer;
-}
-@media (max-width: 767px) {
-  #course__select {
-    background-position: right 2rem top 2rem;
-  }
 }
 
 #name,

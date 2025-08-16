@@ -123,7 +123,7 @@ $(document).ready(function(){
     });
 });
 
-//スクロールした時にふわっとでる 
+//スクロールした時に下からふわっとでる 
 function initAOS() {
     const windowWidth = window.innerWidth;
   
