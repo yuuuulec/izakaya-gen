@@ -1311,9 +1311,10 @@ Reservations / Contact
 
 .contact__radio {
   font-size: 1.8rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
+  line-height: 1;
 }
 
 input[type="radio"] {
