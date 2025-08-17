@@ -1574,11 +1574,7 @@ input[type=radio]:checked::before {
           appearance: none;
   background-image: url(../img/dropdown.svg);
   background-repeat: no-repeat;
-<<<<<<< HEAD
-  background-position: right 2rem top 2rem;
-=======
   background-position: right 2rem top 2.1rem;
->>>>>>> develop002
   color: #000000;
   cursor: pointer;
 }
