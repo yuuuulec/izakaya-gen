@@ -960,7 +960,8 @@ span#modalPrice {
 
 .more {
   text-align: right;
-  padding: 2rem 0 ;
+  padding: 2rem;
+  background-color: $fontColor;
 }
 
 .more a {
@@ -1316,9 +1317,10 @@ Reservations / Contact
 
 .contact__radio {
   font-size: 1.8rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
+  line-height: 1;
 }
 
 input[type="radio"] {
