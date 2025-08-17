@@ -1166,7 +1166,7 @@ span#modalPrice {
   pointer-events: none;
   max-width: 60rem;
   width: 100%;
-  padding-bottom: 5.8rem;
+  padding-bottom: 5.5rem;
 }
 @media (max-width: 767px) {
   .access__map {
@@ -1351,7 +1351,7 @@ a {
 Reservations / Contact
    =========================== */
 #contact {
-  padding: 8.2rem 0;
+  padding: 8.3rem 0;
   background-color: rgba(83, 7, 0, 0.1);
 }
 @media (max-width: 767px) {
@@ -1656,6 +1656,8 @@ input[type=radio]:checked::before {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  line-height: 1;
+  margin-bottom: 1.2rem;
 }
 .contact__checkbox:hover {
   color: #555555;
@@ -1677,6 +1679,9 @@ input[type=radio]:checked::before {
   cursor: pointer;
   border: none;
   position: relative;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
 }
 @media (max-width: 767px) {
   .contact__checkbox input {
@@ -1743,7 +1748,7 @@ input[type=radio]:checked::before {
 }
 
 .contact__item-mgb {
-  margin-bottom: 4.5rem;
+  margin-bottom: 4rem;
 }
 @media (max-width: 767px) {
   .contact__item-mgb {
@@ -1923,7 +1928,7 @@ footer
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 2.6rem 0 1.5rem;
+  margin: 2.7rem 0 1.4rem;
   gap: 0.4rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
