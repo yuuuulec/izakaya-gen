@@ -1228,7 +1228,7 @@ span#modalPrice {
     width: 100%;
     top: auto;
     left: auto;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     padding: 2rem 0 2rem 2rem;
   }
   .access__content::before {
@@ -1666,6 +1666,7 @@ input[type=radio]:checked::before {
   .contact__checkbox {
     font-size: 1.6rem;
     gap: 0.1rem;
+    margin-bottom: 0.7rem;
   }
 }
 
@@ -1733,7 +1734,7 @@ input[type=radio]:checked::before {
 
 @media (max-width: 767px) {
   .contact__item--column > .contact__label.contact__select {
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1752,7 +1753,7 @@ input[type=radio]:checked::before {
 }
 @media (max-width: 767px) {
   .contact__item-mgb {
-    margin-bottom: 2.8rem;
+    margin-bottom: 2.3rem;
   }
 }
 
@@ -1839,7 +1840,7 @@ button {
   button {
     max-width: 33.5rem;
     width: 100%;
-    margin-top: 5.2rem;
+    margin-top: 5.1rem;
   }
 }
 @media (max-width: 365px) {
