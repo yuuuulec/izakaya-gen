@@ -1594,8 +1594,10 @@ input[type="radio"]:checked::before {
 .contact__privacy-box .simplebar-scrollbar::before {
   background-color: #9B9B9B;
   height: 30px;
-  width: 100%;
-  margin: 0;
+  right: 0;
+  left: 0;
+  top:0;
+  bottom: 0;
   border-radius: 0;
 }
 
@@ -1785,10 +1787,6 @@ footer
   cursor: pointer;
   transition: all 0.3s ease;
 
-  &:hover {
-    transform: scale(1.1);
-  }
-
   @include sp {
     width: 5rem;
     height: 5rem;
@@ -1798,7 +1796,7 @@ footer
 }
 
 .page-top {
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 
   &:hover {
     opacity: 0.5;

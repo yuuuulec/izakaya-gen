@@ -1808,8 +1808,10 @@ input[type=radio]:checked::before {
 .contact__privacy-box .simplebar-scrollbar::before {
   background-color: #9B9B9B;
   height: 30px;
-  width: 100%;
-  margin: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
   border-radius: 0;
 }
 
@@ -2038,10 +2040,6 @@ footer
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.page-top a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
 @media (max-width: 767px) {
   .page-top a {
     width: 5rem;
@@ -2052,8 +2050,8 @@ footer
 }
 
 .page-top {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 .page-top:hover {
   opacity: 0.5;
