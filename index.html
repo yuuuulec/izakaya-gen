@@ -71,7 +71,7 @@
             <div class="header__img">
                 <picture>
                     <source media="(max-width: 767px)" srcset="./img/FV1-sp.jpg">
-                    <img src="./img/FV1-pc.jpg" alt="料理と日本酒">
+                    <img src="./img/FV1-pc.jpg" class="header__img-first" alt="料理と日本酒">
                 </picture>
             </div>
             <div class="header__img">
@@ -83,7 +83,7 @@
             <div class="header__img">
                 <picture>
                     <source media="(max-width: 767px)" srcset="./img/FV3-sp.jpg">
-                    <img src="./img/FV3-pc.jpg" alt="いくらの軍艦">
+                    <img src="./img/FV-3-pc.jpg" alt="いくらの軍艦">
                 </picture>
             </div>
         </div>
@@ -364,8 +364,7 @@ Reservations / Contact
                         <textarea name="message" id="message" required></textarea>
                     </div>
                     <div class="contact__item contact__item--column contact__item-mgb">
-                        <label class="contact__label contact__select">何を見て当居酒屋を知りましたか？<span class="no-break">
-                                (複数回答可)　*</span></label>
+                        <label class="contact__label contact__select">何を見て当居酒屋を知りましたか？ (複数回答可)<span class="no-break">　*</span></label>
                         <div class="contact__checkboxes">
                             <label class="contact__checkbox">
                                 <input type="checkbox" name="know[]" value="インターネット">インターネット
@@ -421,6 +420,48 @@ Reservations / Contact
                                 <br>・当社が建築したお客様宅のアフターメンテナンスを行うため
                                 <br>・当社がお客様に提供するサービスにおいて利用するため
                                 <br>・お客様に特別なサービスや新しい商品などの情報を的確にお知らせするため
+                                <br>・お客様に合ったサービスを提供するため
+                                <br>・当社の建築した住宅の利用状況や利用環境などに関する調査を実施して客観的にお客様の満足度を把握するため
+                                <br>・必要に応じてお客様に連絡を行うため
+                                <br>・会計監査上の確認作業を行うため
+                            </p><br>
+
+                            <p>
+                                個人情報の安全対策(法20条)
+                            <br>お客様の個人情報を安全に管理・運営するよう鋭意努力しており、個人情報への外部からの不正なアクセス、個人情報の紛失・毀損・破壊・改ざん・漏えい、社外への不正な流出などへの危険防止に対する合理的かつ適切な安全対策を行っています。
+                            <br>また個人情報を取り扱う部門ごとに情報管理責任者を置き、個人情報の適切な管理に努めるとともに、情報セキュリティに関する規程を設けて社員への周知徹底を実施しています。
+                            </p><br>
+
+                            <p>第三者への提供(法23条)
+                                個人情報は、以下のいずれかに該当する場合を除いて、いかなる第三者にも開示・提供いたしません。
+                                <br>・お客さまの同意がある場合。
+                                <br>・お客様個人を識別することができない状態で開示する場合。
+                                <br>・業務を円滑に進める等の理由で外部事業者に取扱いを委託する場合。(この場合には、十分な保護水準を備えている委託先を選定し、漏えいや再提供を防止するために契約により義務づける等の方法によって、適切な管理を実施します)
+                                <br>・法令等により開示を要求された場合
+                                <br>・人の生命、身体又は財産の保護のために必要であって、お客様の同意を得ることが困難である場合
+                                <br>・国の機関や地方公共団体又はその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、お客様の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがある場合
+                            </p><br>
+
+                            <p>
+                                個人情報の開示手続(法25条)
+                                お客様本人の個人情報に関する保有データの開示請求があった場合には、ご本人であることを運転免許証・パスポート等の身分証明書で確認させていただいた上、本人確認が終了後、速やかに開示させていただきます。
+                            </p><br>
+
+                            <p>
+                                個人情報の訂正等(法26条)
+                                前項の開示手続きにより、弊社が保有する保有個人データ内容に事実と異なる記載がある場合には、訂正、変更又は削除の手続きを取らせて頂きます。
+                            </p><br>
+
+                            <p>
+                                プライバシーポリシーに関するお問合せ先
+                                弊社の個人情報の取扱いに関するお問合せは、下記までお問い合せください。
+                            </p><br>
+
+                            <p class="contact__privacy-box-company">社名 和風居酒屋　源
+                                <br>住所 東京都中央区港○丁目○-○
+                                <br>電話 000-000-0000
+                                <br>FAX 000-000-0000
+                                <br>メールアドレス info@example.com
                             </p>
                         </div>
                         <button type="submit" class="submit__btn">内容に同意して送信</button>
@@ -490,7 +531,7 @@ footer
 
     <!-- トップへ戻るボタン -->
     <div class="page-top">
-        <a href="#"><img src="./img/icon-to-top.svg" alt="矢印"></a>
+        <a href="#"><img src="./img/to-top.svg" alt="矢印"></a>
     </div>
 
     <!-- モーダル -->
