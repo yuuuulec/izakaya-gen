@@ -207,6 +207,12 @@ html:has(dialog[open]) {
     text-align: left;
     font-size: 1.8rem;
     line-height: calc(33 / 18);
+
+    a {
+      line-height: 1;
+      padding: 1.6rem 2rem;
+      width: 100%;
+    }
   }
 }
 
@@ -234,15 +240,9 @@ html:has(dialog[open]) {
   transition: opacity 0.8s ease;
 
   @media (max-width: 875px) {
-<<<<<<< HEAD
     top: 0;
     left: 4.2rem;
     padding: 2rem 0 1.3rem;
-=======
-    padding: 2rem 0 1.3rem;
-    top:0;
-    left: 4.2rem;
->>>>>>> develop002
   }
 
   &:hover {
