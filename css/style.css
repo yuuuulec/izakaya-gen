@@ -555,7 +555,7 @@ html:has(dialog[open]) {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin-bottom: 8.4rem;
+  margin-bottom: 8rem;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
@@ -568,6 +568,7 @@ html:has(dialog[open]) {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 4rem;
   }
 }
 @media (max-width: 767px) {
@@ -585,7 +586,12 @@ html:has(dialog[open]) {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   margin-top: 0;
-  margin-bottom: 8.1rem;
+  margin-bottom: 8rem;
+}
+@media (max-width: 970px) {
+  .recommend-item:nth-of-type(even) {
+    margin-bottom: 4rem;
+  }
 }
 @media (max-width: 767px) {
   .recommend-item:nth-of-type(even) {
@@ -713,6 +719,11 @@ html:has(dialog[open]) {
   background-color: #530700;
   z-index: -1;
 }
+@media (max-width: 970px) {
+  .recommend-item:nth-of-type(even) .recommend__text {
+    margin-top: 0;
+  }
+}
 @media (max-width: 767px) {
   .recommend-item:nth-of-type(even) .recommend__text {
     right: 0;
@@ -755,7 +766,7 @@ html:has(dialog[open]) {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-top: 6.9rem;
-  gap: 4rem;
+  gap: 3.7037037037vw;
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -903,6 +914,9 @@ span#modalPrice {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 .news__inner > * {
   -webkit-box-flex: 1;
@@ -932,26 +946,23 @@ span#modalPrice {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  height: 100%;
 }
 @media (max-width: 767px) {
   .news__list,
   .blog__list {
+    display: block;
     width: 100%;
   }
 }
 
-@media (max-width: 767px) {
-  .news__list {
-    margin-bottom: 5.1rem;
-  }
-}
 @media (max-width: 767px) {
   .news__list {
     margin-bottom: 5.1rem;
@@ -990,7 +1001,6 @@ span#modalPrice {
 .news__item,
 .blog__item {
   position: relative;
-  padding: 2.1rem 0 1.2rem;
 }
 .news__item::after,
 .blog__item::after {
@@ -1016,6 +1026,7 @@ span#modalPrice {
   transition: opacity 0.8s ease;
   max-width: 43rem;
   width: 100%;
+  padding: 2.1rem 0 1.2rem;
 }
 @media (max-width: 767px) {
   .news__item a,
@@ -1102,6 +1113,9 @@ span#modalPrice {
   background-color: #ffffff;
   line-height: 1;
   font-size: 2rem;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .more a {
@@ -1739,8 +1753,8 @@ input[type=radio]:checked::before {
   }
 }
 
-.no-break {
-  white-space: nowrap;
+.inline-block {
+  display: inline-block;
 }
 
 @media (max-width: 767px) {
@@ -1777,7 +1791,7 @@ input[type=radio]:checked::before {
 @media (max-width: 767px) {
   .contact__privacy-box {
     font-size: 1.6rem;
-    padding: 3rem 5rem 0 3rem;
+    padding: 3rem 5rem;
     max-height: 32.3rem;
     line-height: 2.06;
     margin-top: 0;
@@ -1820,19 +1834,21 @@ input[type=radio]:checked::before {
 
 /* スクロールバーのつまみ */
 .contact__privacy-box .simplebar-scrollbar::before {
-  background-color: #9B9B9B;
-  height: 30px;
+  background-color: rgb(155, 155, 155);
   right: 0;
   left: 0;
   top: 0;
   bottom: 0;
   border-radius: 0;
+  opacity: 1 !important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 
 /* スクロールバーのトラック背景 */
 .contact__privacy-box .simplebar-track.simplebar-vertical {
   right: 10px;
-  background-color: #E3E3E3;
+  background-color: rgb(227, 227, 227);
   width: 10px;
 }
 
@@ -2072,4 +2088,9 @@ footer
 
 .page-top img {
   width: 2.3rem;
+}
+@media (max-width: 767px) {
+  .page-top img {
+    width: 1.7rem;
+  }
 }/*# sourceMappingURL=style.css.map */

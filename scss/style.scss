@@ -498,7 +498,7 @@ img {
 .recommend-item {
   display: flex;
   position: relative;
-  margin-bottom: 8.4rem;
+  margin-bottom: 8rem;
   align-items: end;
 
   &:nth-of-type(3) {
@@ -507,6 +507,7 @@ img {
 
   @media (max-width: 970px) {
     justify-content: center;
+    margin-bottom: 4rem;
   }
 
   @include sp {
@@ -517,7 +518,11 @@ img {
   &:nth-of-type(even) {
     flex-direction: row-reverse;
     margin-top: 0;
-    margin-bottom: 8.1rem;
+    margin-bottom: 8rem;
+
+    @media (max-width: 970px) {
+      margin-bottom: 4rem;
+    }
 
     @include sp {
       flex-direction: column;
@@ -617,7 +622,7 @@ img {
   text-align: right;
   margin-top: 2rem;
 
-  @include sp {
+ @include sp {
     text-align: left;
     margin-top: 0.5rem;
   }
@@ -636,6 +641,10 @@ img {
     height: 24.5rem;
     background-color: $mainColor;
     z-index: -1;
+  }
+
+  @media (max-width: 970px) {
+    margin-top: 0;
   }
 
   @include sp {
@@ -673,7 +682,7 @@ img {
   display: flex;
   justify-content: flex-start;
   margin-top: 6.9rem;
-  gap: 4rem;
+  gap: calc(40 / 1080 * 100vw);
   width: 100%;
 
 
@@ -815,7 +824,7 @@ span#modalPrice {
   gap: 6%;
   margin-top: 6.5rem;
   justify-content: space-between;
-  // align-items: stretch;
+  align-items: stretch;
 
   > * {
     flex: 1 1 0; 
@@ -835,19 +844,17 @@ span#modalPrice {
 .news__list,
 .blog__list {
 flex: 1;
+display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
 
  @include sp {
+  display: block;
     width: 100%;
   }
 }
 
 .news__list {
-  @include sp {
-    margin-bottom: 5.1rem;
-  }
-
   @include sp {
     margin-bottom: 5.1rem;
   }
@@ -879,7 +886,6 @@ flex: 1;
 .news__item,
 .blog__item {
   position: relative;
-  padding: 2.1rem 0 1.2rem;
 
   @include sp {
     // padding-bottom: 1.4rem;
@@ -907,6 +913,7 @@ flex: 1;
   transition: opacity 0.8s ease;
   max-width: 43rem;
   width: 100%;
+  padding: 2.1rem 0 1.2rem;
 
   @include sp {
     grid-template-columns: 7.2rem 1fr;
@@ -966,6 +973,7 @@ flex: 1;
   background-color: $fontColor;
   line-height: 1;
   font-size: 2rem;
+  align-items: stretch;
 }
 
 .more a {
@@ -1526,10 +1534,9 @@ input[type="radio"]:checked::before {
   }
 }
 
-.no-break {
-  white-space: nowrap;
+.inline-block {
+  display: inline-block;
 }
-
 
 // 「個人情報保護方針」のラベル
 .contact__item--column>.contact__label.contact__privacy {
@@ -1563,7 +1570,7 @@ input[type="radio"]:checked::before {
 
   @include sp {
     font-size: 1.6rem;
-    padding: 3rem 5rem 0 3rem;
+    padding: 3rem 5rem;
     max-height: 32.3rem;
     line-height: 2.06;
     margin-top: 0;
@@ -1607,19 +1614,20 @@ input[type="radio"]:checked::before {
 
 /* スクロールバーのつまみ */
 .contact__privacy-box .simplebar-scrollbar::before {
-  background-color: #9B9B9B;
-  height: 30px;
+  background-color: rgba(155, 155, 155, 1);
   right: 0;
   left: 0;
   top:0;
   bottom: 0;
   border-radius: 0;
+  opacity: 1!important;
+  transition: none !important;
 }
 
 /* スクロールバーのトラック背景 */
 .contact__privacy-box .simplebar-track.simplebar-vertical {
   right: 10px;
-  background-color: #E3E3E3;
+  background-color: rgba(227, 227, 227, 1);
   width: 10px;
 }
 
@@ -1820,5 +1828,9 @@ footer
 
 .page-top img {
   width: 2.3rem;
+
+  @include sp {
+    width: 1.7rem;
+  }
 }
 
