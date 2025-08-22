@@ -123,77 +123,44 @@ $(document).ready(function(){
     });
 });
 
-// =======================================
-// AOSとヘッダー背景色切り替えの初期化
-// =======================================
 
-// 1. AOS（スクロールアニメーション）とヘッダー背景の切り替え処理をまとめる
+
+// AOS 初期化 & ヘッダー背景に色をつける
+
 function initPageEffects() {
-
-    // 2. 画面幅を取得（今回は参考用で使わない）
-    const windowWidth = window.innerWidth;
-  
-    // 3. .course__list に AOS の属性を付与 → 下からふわっと出るアニメーション
     $('.course__list').attr('data-aos', 'fade-up');
-  
-    // 4. AOSを初期化
     AOS.init({
-      duration: 1000,     // 5. アニメーションの時間は1000ms（1秒）
-      once: true,         // 6. 1回だけアニメーション（スクロール戻っても再生しない）
-      offset: 80,         // 7. 画面下から80px手前でアニメーション開始
-      easing: 'ease-in-out' // 8. アニメーションの動き方を滑らかに設定
+      duration: 1000,
+      once: true,
+      offset: 80,
+      easing: 'ease-in-out'
     });
   }
   
-  // =======================================
-  // ヘッダー背景色切り替え関数
-  // =======================================
   function toggleHeaderBg() {
-  
-    // 9. header要素を取得
     const header = document.querySelector('header');
-  
-    // 10. #featureセクションを取得
     const feature = document.querySelector('#feature');
-  
-    // 11. どちらか存在しない場合は処理を中断
     if (!header || !feature) return;
   
-    // 12. header の画面上での位置を取得（上端 top、下端 bottom など）
     const headerRect = header.getBoundingClientRect();
-  
-    // 13. #feature の画面上での位置を取得
     const featureRect = feature.getBoundingClientRect();
   
-    // 14. 判定：ヘッダーが完全に #feature に入ったか？
+    // ヘッダーが #feature 内に完全に収まったら背景ON
     if (headerRect.top >= featureRect.top && headerRect.bottom <= featureRect.bottom) {
-  
-      // 15. 完全に入った場合 → 背景色用クラスを追加
       header.classList.add('header--bg');
     } else {
-  
-      // 16. 条件を満たさない場合 → 背景色用クラスを削除
       header.classList.remove('header--bg');
     }
   }
   
-  // =======================================
-  // ページ読み込み時に処理を開始
-  // =======================================
   $(document).ready(function () {
-  
-    // 17. AOS初期化とアニメーション設定
     initPageEffects();
   
-    // 18. ウィンドウサイズ変更やスマホの向き変更時にも再初期化
     $(window).on('resize orientationchange', function () {
-      initPageEffects();  // AOSを再初期化
-      AOS.refresh();      // アニメーション位置を再計算
+      initPageEffects();
+      AOS.refresh();
     });
   
-    // 19. スクロールするたびにヘッダー背景色をチェック
-    $(window).on('scroll', function () {
-      toggleHeaderBg();
-    });
+    $(window).on('scroll', toggleHeaderBg);
   });
   

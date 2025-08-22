@@ -914,6 +914,7 @@ display: flex;
   max-width: 43rem;
   width: 100%;
   padding: 2.1rem 0 1.2rem;
+  align-items: stretch;
 
   @include sp {
     grid-template-columns: 7.2rem 1fr;
