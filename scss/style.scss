@@ -74,7 +74,7 @@ a {
   }
 
   @media (max-width: 355px) {
-padding: 0 1.5rem;
+    padding: 0 1.5rem;
   }
 }
 
@@ -235,7 +235,7 @@ html:has(dialog[open]) {
 
   @media (max-width: 875px) {
     padding: 2rem 0 1.3rem;
-    top:0;
+    top: 0;
     left: 4.2rem;
   }
 
@@ -316,22 +316,22 @@ html:has(dialog[open]) {
 }
 
 .header__img-first {
-position: relative;
-
-&::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  pointer-events: none;
-  z-index: 1;
-  mix-blend-mode: multiply;
-}
-
-img {
   position: relative;
-  z-index: 0;
-}
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  img {
+    position: relative;
+    z-index: 0;
+  }
 }
 
 /* ===========================
@@ -622,7 +622,7 @@ img {
   text-align: right;
   margin-top: 2rem;
 
- @include sp {
+  @include sp {
     text-align: left;
     margin-top: 0.5rem;
   }
@@ -826,8 +826,8 @@ span#modalPrice {
   justify-content: space-between;
   align-items: stretch;
 
-  > * {
-    flex: 1 1 0; 
+  >* {
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
   }
@@ -843,13 +843,14 @@ span#modalPrice {
 
 .news__list,
 .blog__list {
-flex: 1;
-display: flex;
+  flex: 0 0 43rem;
+  max-width: 43rem;
+  display: flex;
   flex-direction: column;
   height: 100%;
 
- @include sp {
-  display: block;
+  @include sp {
+    display: block;
     width: 100%;
   }
 }
@@ -1587,8 +1588,9 @@ input[type="radio"]:checked::before {
 }
 
 .contact__privacy-box li {
- list-style: disc;
+  list-style: disc;
 }
+
 .contact__privacy-box {
   /* Firefox用 */
   scrollbar-width: none;
@@ -1618,10 +1620,10 @@ input[type="radio"]:checked::before {
   background-color: rgba(155, 155, 155, 1);
   right: 0;
   left: 0;
-  top:0;
+  top: 0;
   bottom: 0;
   border-radius: 0;
-  opacity: 1!important;
+  opacity: 1 !important;
   transition: none !important;
 }
 
@@ -1834,4 +1836,3 @@ footer
     width: 1.7rem;
   }
 }
-

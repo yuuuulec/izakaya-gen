@@ -943,9 +943,10 @@ span#modalPrice {
 
 .news__list,
 .blog__list {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 43rem;
+          flex: 0 0 43rem;
+  max-width: 43rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
