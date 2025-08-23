@@ -768,7 +768,7 @@ html:has(dialog[open]) {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-top: 6.9rem;
-  gap: 3.7%;
+  gap: 4.5%;
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -967,7 +967,7 @@ span#modalPrice {
 
 @media (max-width: 767px) {
   .news__list {
-    margin-bottom: 5.1rem;
+    margin-bottom: 4.9rem;
   }
 }
 
@@ -1383,7 +1383,7 @@ Reservations / Contact
 }
 @media (max-width: 767px) {
   .contact__lead {
-    margin: 3.3rem 0 3.2rem;
+    margin: 3.7rem 0 3.2rem;
   }
 }
 
@@ -1796,6 +1796,8 @@ input[type=radio]:checked::before {
 
 .contact__privacy-box li {
   list-style: disc inside;
+  text-indent: -1em;
+  padding-left: 1em;
 }
 
 .contact__privacy-box {
@@ -1857,7 +1859,7 @@ button {
   button {
     max-width: 33.5rem;
     width: 100%;
-    margin-top: 5.1rem;
+    margin-top: 5rem;
   }
 }
 @media (max-width: 365px) {
@@ -1905,7 +1907,7 @@ footer
 .company__name::after {
   content: "";
   position: absolute;
-  bottom: -2.6rem;
+  bottom: -2.8rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
