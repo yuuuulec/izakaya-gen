@@ -1683,7 +1683,8 @@ footer
     height: 1px;
 
     @include sp {
-      min-width: 31.5rem;
+      width: calc(315 / 375 * 100vw);
+      max-width: none;
       bottom: -2.1rem;
 
     }

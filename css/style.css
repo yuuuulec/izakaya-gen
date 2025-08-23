@@ -1916,7 +1916,8 @@ footer
 }
 @media (max-width: 767px) {
   .company__name::after {
-    min-width: 31.5rem;
+    width: 84vw;
+    max-width: none;
     bottom: -2.1rem;
   }
 }
