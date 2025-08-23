@@ -404,7 +404,9 @@ html:has(dialog[open]) {
   margin-inline: auto;
 
   @include sp {
+    background-image: url(../img/feature-back-sp.svg);
     padding: 6.3rem 0 5.5rem;
+
   }
 }
 
@@ -675,6 +677,7 @@ html:has(dialog[open]) {
 
   @include sp {
     padding: 5.3rem 0 6rem;
+    background-image: url(../img/course-back-sp.svg);
   }
 }
 
@@ -826,7 +829,7 @@ span#modalPrice {
   justify-content: flex-start;
   align-items: stretch;
 
-  > * {
+  >* {
     flex: 0 0 calc(50% - 3%);
     max-width: 43rem;
     display: flex;
@@ -836,16 +839,19 @@ span#modalPrice {
 
   @include sp {
     display: block;
+    margin-top: 3.6rem;
   }
 
-  @include sp {
-    margin-top: 3.6rem;
+  >* {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
   }
 }
 
 .news__list,
 .blog__list {
- 
+
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -909,7 +915,7 @@ span#modalPrice {
   align-items: stretch;
 
   @media (max-width: 880px) {
-  grid-template-columns: 8rem 1fr;
+    grid-template-columns: 8rem 1fr;
   }
 
   @include sp {
@@ -994,6 +1000,7 @@ span#modalPrice {
 
   @include sp {
     padding: 5.2rem 0 3.3rem;
+    background-image: url(../img/access-back-sp.svg);
   }
 }
 
@@ -1654,6 +1661,7 @@ footer
 
   @include sp {
     padding: 5.1rem 0 4.1rem;
+    background-image: url(../img/footer-back-sp.svg);
   }
 }
 
@@ -1707,6 +1715,7 @@ footer
     margin-top: 4rem;
   }
 }
+
 .footer__list {
   display: flex;
   flex-wrap: wrap;

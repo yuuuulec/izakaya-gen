@@ -436,6 +436,7 @@ html:has(dialog[open]) {
 }
 @media (max-width: 767px) {
   #feature {
+    background-image: url(../img/feature-back-sp.svg);
     padding: 6.3rem 0 5.5rem;
   }
 }
@@ -755,6 +756,7 @@ html:has(dialog[open]) {
 @media (max-width: 767px) {
   #course {
     padding: 5.3rem 0 6rem;
+    background-image: url(../img/course-back-sp.svg);
   }
 }
 
@@ -935,12 +937,13 @@ span#modalPrice {
 @media (max-width: 767px) {
   .news__inner {
     display: block;
-  }
-}
-@media (max-width: 767px) {
-  .news__inner {
     margin-top: 3.6rem;
   }
+}
+.news__inner > * {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 .news__list,
@@ -1136,6 +1139,7 @@ span#modalPrice {
 @media (max-width: 767px) {
   #access {
     padding: 5.2rem 0 3.3rem;
+    background-image: url(../img/access-back-sp.svg);
   }
 }
 
@@ -1886,6 +1890,7 @@ footer
 @media (max-width: 767px) {
   #footer {
     padding: 5.1rem 0 4.1rem;
+    background-image: url(../img/footer-back-sp.svg);
   }
 }
 
