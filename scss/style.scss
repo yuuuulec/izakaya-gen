@@ -823,13 +823,15 @@ span#modalPrice {
   display: flex;
   gap: 6%;
   margin-top: 6.5rem;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: stretch;
 
-  >* {
-    flex: 1 1 0;
+  > * {
+    flex: 0 0 calc(50% - 3%);
+    max-width: 43rem;
     display: flex;
     flex-direction: column;
+    margin: 0;
   }
 
   @include sp {
@@ -843,8 +845,7 @@ span#modalPrice {
 
 .news__list,
 .blog__list {
-  flex: 0 0 43rem;
-  max-width: 43rem;
+ 
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -907,6 +908,10 @@ span#modalPrice {
   padding: 2.1rem 0 1.2rem;
   align-items: stretch;
 
+  @media (max-width: 880px) {
+  grid-template-columns: 8rem 1fr;
+  }
+
   @include sp {
     grid-template-columns: 7.2rem 1fr;
     max-width: none;
@@ -963,46 +968,15 @@ span#modalPrice {
   text-align: right;
   padding: 2rem;
   background-color: $fontColor;
-  line-height: 1;
-  font-size: 2rem;
-  align-items: stretch;
 }
 
 .more a {
-  font-family: $EB;
-  color: $mainColor;
   display: inline-block;
   position: relative;
-  vertical-align: top;
   top: 0.4rem;
-  padding: 0 3.7rem 1rem 0.5rem;
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url(../img/more.svg);
-    background-repeat: no-repeat;
-    top: 1rem;
-    right: 0;
-    margin: auto;
-    width: 8rem;
-    height: 2rem;
-  }
-
 
   &:hover {
     animation: shake-right-loop 0.6s ease-in-out infinite;
-  }
-}
-
-.more__text {
-  position: absolute;
-  right: 3.6rem;
-  bottom: 2.4rem;
-
-
-  @include sp {
-    right: 3.6rem;
   }
 }
 
