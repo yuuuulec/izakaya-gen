@@ -6,24 +6,24 @@ $(function () {
         speed: 1500,
         dots: false,
         arrows: false,
-        pauseOnHover: false, 
+        pauseOnHover: false,
         prevArrow: '<button type="button" class="slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-next"></button>'
     });
 });
 // ハンバーガーメニュー
 $(".hamburger").click(
-    function() {
-    $(this).toggleClass("active");
+    function () {
+        $(this).toggleClass("active");
         $(".header__nav").toggleClass("active");
     });
-    $(".header__nav a").click(function() {
-        $(".hamburger").removeClass("active");
-        $(".header__nav").removeClass("active");
-    });
+$(".header__nav a").click(function () {
+    $(".hamburger").removeClass("active");
+    $(".header__nav").removeClass("active");
+});
 
 //header スクロールした時に背景色をつける
-$(function() {
+$(function () {
     const header = $('#header');
     const feature = $('#feature');
 
@@ -31,7 +31,7 @@ $(function() {
         const scrollTop = $(window).scrollTop();
         const target = feature.offset().top;
 
-        let offset = 20;
+        let offset = 0;
 
         if (scrollTop >= target - offset) {
             header.addClass('header-scroll');
@@ -42,7 +42,7 @@ $(function() {
 
     $(window).on('scroll', checkScroll);
     $(window).on('resize', checkScroll);
-    checkScroll();  
+    checkScroll();
 });
 
 // モーダル
@@ -96,71 +96,52 @@ $(function () {
                 width: '',
             });
 
-    // スクロール位置を戻す
-            $('html, body').css('scroll-behavior', 'auto'); 
+            // スクロール位置を戻す
+            $('html, body').css('scroll-behavior', 'auto');
             $(window).scrollTop(scrollPosition);
             $('html, body').css('scroll-behavior', '');
         });
-        });
     });
+});
 
 
 // トップへ戻るボタン
-$('.page-top').on('click',function(e){
+$('.page-top').on('click', function (e) {
     e.preventDefault();
-    $('html,body').animate({scrollTop: 0}, 300)
-    });
+    $('html,body').animate({ scrollTop: 0 }, 300)
+});
 
 // トップへ戻るボタン途中で表示させる
-$(document).ready(function(){
+$(document).ready(function () {
     $('.page-top').hide();
-    $(window).on('scroll',function(){
-        if($(this).scrollTop() >700) {
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 700) {
             $('.page-top').fadeIn();
-        }else {
+        } else {
             $('.page-top').fadeOut();
         }
     });
 });
 
+//スクロールした時に下からふわっとでる 
+function initAOS() {
+    const windowWidth = window.innerWidth;
 
-
-// AOS 初期化 & ヘッダー背景に色をつける
-
-function initPageEffects() {
     $('.course__list').attr('data-aos', 'fade-up');
+
     AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 80,
-      easing: 'ease-in-out'
+        duration: 1000,
+        once: true,
+        offset: 80,
+        easing: 'ease-in-out',
     });
-  }
-  
-  function toggleHeaderBg() {
-    const header = document.querySelector('header');
-    const feature = document.querySelector('#feature');
-    if (!header || !feature) return;
-  
-    const headerRect = header.getBoundingClientRect();
-    const featureRect = feature.getBoundingClientRect();
-  
-    // ヘッダーが #feature 内に完全に収まったら背景ON
-    if (headerRect.top >= featureRect.top && headerRect.bottom <= featureRect.bottom) {
-      header.classList.add('header--bg');
-    } else {
-      header.classList.remove('header--bg');
-    }
-  }
-  
-  $(document).ready(function () {
-    initPageEffects();
-  
+}
+
+$(document).ready(function () {
+    initAOS();
+
     $(window).on('resize orientationchange', function () {
-      initPageEffects();
-      AOS.refresh();
+        initAOS();
+        AOS.refresh();
     });
-  
-    $(window).on('scroll', toggleHeaderBg);
-  });
-  
+});
