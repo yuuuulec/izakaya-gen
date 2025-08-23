@@ -887,21 +887,11 @@ span#modalPrice {
 .news__item,
 .blog__item {
   position: relative;
+  border-bottom: 1px solid $mainColor;
 
   @include sp {
     // padding-bottom: 1.4rem;
   }
-}
-
-.news__item::after,
-.blog__item::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0.1rem;
-  right: 0.1rem;
-  height: 0.1rem;
-  background-color: $mainColor;
 }
 
 .news__item a,
