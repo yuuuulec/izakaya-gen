@@ -255,6 +255,8 @@ html:has(dialog[open]) {
   color: #ffffff;
   padding: 3.45rem 0;
   transition: all 0.8s ease;
+  display: flex;
+  align-items: center;
 
   @media (max-width: 875px) {
     background-color: $mainColor;
@@ -262,6 +264,7 @@ html:has(dialog[open]) {
     width: 100%;
     line-height: 1;
     border: 2px solid $mainColor;
+    
   }
 
   &:hover {
@@ -270,6 +273,7 @@ html:has(dialog[open]) {
       background-color: #000000;
       color: $fontColor;
       opacity: 1;
+      border: 2px solid #000000;
     }
   }
 
