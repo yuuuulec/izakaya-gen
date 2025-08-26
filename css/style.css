@@ -1661,6 +1661,9 @@ input[type=radio]:checked::before {
   cursor: pointer;
   padding: 0;
   line-height: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .contact__checkbox:hover {
   color: #555555;
@@ -1803,9 +1806,18 @@ input[type=radio]:checked::before {
 }
 
 .contact__privacy-box li {
-  list-style: disc inside;
-  text-indent: -1em;
-  padding-left: 1em;
+  padding-left: 2em;
+  position: relative;
+}
+.contact__privacy-box li::after {
+  position: absolute;
+  content: "";
+  top: 1.4rem;
+  left: 0.6rem;
+  width: 0.6rem;
+  aspect-ratio: 1/1;
+  background-color: #000;
+  border-radius: 50%;
 }
 
 .contact__privacy-box {
