@@ -1319,6 +1319,7 @@ input[type="radio"] {
   -moz-appearance: none;
   background-color: #fff;
   position: relative;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked::before {
@@ -1404,7 +1405,9 @@ input[type="radio"]:checked::before {
 
 .contact__checkboxes {
   display: grid;
-  grid-template-columns: repeat(4, 16.7rem);
+  // grid-template-columns: repeat(4, 16.7rem);
+  grid-template-columns: repeat(4, minmax(min-content, 1fr));
+
   row-gap: 2rem;
   column-gap: 3.5rem;
 
@@ -1434,7 +1437,7 @@ input[type="radio"]:checked::before {
 
 .contact__checkbox {
   font-size: 1.8rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 2rem;
   white-space: nowrap;
@@ -1823,7 +1826,7 @@ footer
 }
 
 .page-top img {
-  width: 2.3rem;
+  width: 2.315rem;
 
   @include sp {
     width: 1.7rem;

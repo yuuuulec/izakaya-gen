@@ -1507,6 +1507,7 @@ input[type=radio] {
   -moz-appearance: none;
   background-color: #fff;
   position: relative;
+  cursor: pointer;
 }
 
 input[type=radio]:checked::before {
@@ -1607,7 +1608,8 @@ input[type=radio]:checked::before {
 
 .contact__checkboxes {
   display: grid;
-  grid-template-columns: repeat(4, 16.7rem);
+  grid-template-columns: repeat(4, minmax(-webkit-min-content, 1fr));
+  grid-template-columns: repeat(4, minmax(min-content, 1fr));
   row-gap: 2rem;
   -webkit-column-gap: 3.5rem;
      -moz-column-gap: 3.5rem;
@@ -1648,9 +1650,9 @@ input[type=radio]:checked::before {
 
 .contact__checkbox {
   font-size: 1.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2094,7 +2096,7 @@ footer
 }
 
 .page-top img {
-  width: 2.3rem;
+  width: 2.315rem;
 }
 @media (max-width: 767px) {
   .page-top img {
