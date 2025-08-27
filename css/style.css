@@ -285,19 +285,25 @@ html:has(dialog[open]) {
 }
 
 .header__item a {
-  display: inline-block;
   height: 100%;
   position: relative;
   color: #ffffff;
   padding: 3.45rem 0;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 875px) {
   .header__item a {
     background-color: #530700;
     padding: 1.8rem 2rem;
     width: 100%;
+    height: 100%;
     line-height: 1;
     border: 2px solid #530700;
   }
@@ -307,6 +313,7 @@ html:has(dialog[open]) {
     background-color: #000000;
     color: #ffffff;
     opacity: 1;
+    border: 2px solid #000000;
   }
 }
 .header__item a::after {
@@ -1505,6 +1512,7 @@ input[type=radio] {
   -moz-appearance: none;
   background-color: #fff;
   position: relative;
+  cursor: pointer;
 }
 
 input[type=radio]:checked::before {
@@ -1605,7 +1613,8 @@ input[type=radio]:checked::before {
 
 .contact__checkboxes {
   display: grid;
-  grid-template-columns: repeat(4, 16.7rem);
+  grid-template-columns: repeat(4, minmax(-webkit-min-content, 1fr));
+  grid-template-columns: repeat(4, minmax(min-content, 1fr));
   row-gap: 2rem;
   -webkit-column-gap: 3.5rem;
      -moz-column-gap: 3.5rem;
@@ -1646,9 +1655,9 @@ input[type=radio]:checked::before {
 
 .contact__checkbox {
   font-size: 1.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1657,6 +1666,9 @@ input[type=radio]:checked::before {
   cursor: pointer;
   padding: 0;
   line-height: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .contact__checkbox:hover {
   color: #555555;
@@ -1799,9 +1811,30 @@ input[type=radio]:checked::before {
 }
 
 .contact__privacy-box li {
-  list-style: disc inside;
-  text-indent: -1em;
-  padding-left: 1em;
+  padding-left: 2rem;
+  position: relative;
+}
+.contact__privacy-box li::after {
+  position: absolute;
+  content: "";
+  top: 1.4rem;
+  left: 0.6rem;
+  width: 0.6rem;
+  aspect-ratio: 1/1;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.contact__privacy-box ul {
+  margin-bottom: 2rem;
+}
+
+.contact__privacy-box p {
+  margin-bottom: 2rem;
+}
+
+.contact__privacy-box-company p {
+  margin-bottom: 0;
 }
 
 .contact__privacy-box {
@@ -2054,19 +2087,6 @@ footer
    トップへ戻るボタン
    =========================== */
 .page-top a {
-  background-color: #530700;
-  width: 6.8rem;
-  height: 6.8rem;
-  border-radius: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: fixed;
   right: 6rem;
   bottom: 6rem;
@@ -2076,8 +2096,6 @@ footer
 }
 @media (max-width: 767px) {
   .page-top a {
-    width: 5rem;
-    height: 5rem;
     right: 2rem;
     bottom: 6rem;
   }
@@ -2092,10 +2110,10 @@ footer
 }
 
 .page-top img {
-  width: 2.3rem;
+  width: 6.8rem;
 }
 @media (max-width: 767px) {
   .page-top img {
-    width: 1.7rem;
+    width: 5rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -259,17 +259,19 @@ html:has(dialog[open]) {
 }
 
 .header__item a {
-  display: inline-block;
   height: 100%;
   position: relative;
   color: #ffffff;
   padding: 3.45rem 0;
   transition: all 0.8s ease;
+  display: flex;
+  align-items: center;
 
   @media (max-width: 875px) {
     background-color: $mainColor;
     padding: 1.8rem 2rem;
     width: 100%;
+    height: 100%;
     line-height: 1;
     border: 2px solid $mainColor;
   }
@@ -280,6 +282,7 @@ html:has(dialog[open]) {
       background-color: #000000;
       color: $fontColor;
       opacity: 1;
+      border: 2px solid #000000;
     }
   }
 
@@ -1325,6 +1328,7 @@ input[type="radio"] {
   -moz-appearance: none;
   background-color: #fff;
   position: relative;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked::before {
@@ -1410,7 +1414,9 @@ input[type="radio"]:checked::before {
 
 .contact__checkboxes {
   display: grid;
-  grid-template-columns: repeat(4, 16.7rem);
+  // grid-template-columns: repeat(4, 16.7rem);
+  grid-template-columns: repeat(4, minmax(min-content, 1fr));
+
   row-gap: 2rem;
   column-gap: 3.5rem;
 
@@ -1440,13 +1446,14 @@ input[type="radio"]:checked::before {
 
 .contact__checkbox {
   font-size: 1.8rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 2rem;
   white-space: nowrap;
   cursor: pointer;
   padding: 0;
   line-height: 1;
+  width: fit-content;
 
   &:hover {
     color: #555555;
@@ -1574,9 +1581,31 @@ input[type="radio"]:checked::before {
 }
 
 .contact__privacy-box li {
-  list-style: disc inside;
-  text-indent: -1em;
-  padding-left: 1em;
+  padding-left: 2rem;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 1.4rem;
+    left: 0.6rem;
+    width: 0.6rem;
+    aspect-ratio: 1/1;
+    background-color: #000;
+    border-radius: 50%;
+  }
+}
+
+.contact__privacy-box ul {
+  margin-bottom: 2rem;
+}
+
+.contact__privacy-box p {
+  margin-bottom: 2rem;
+}
+
+.contact__privacy-box-company p{
+  margin-bottom: 0;
 }
 
 .contact__privacy-box {
@@ -1799,13 +1828,6 @@ footer
    トップへ戻るボタン
    =========================== */
 .page-top a {
-  background-color: $mainColor;
-  width: 6.8rem;
-  height: 6.8rem;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   right: 6rem;
   bottom: 6rem;
@@ -1813,8 +1835,6 @@ footer
   transition: all 0.3s ease;
 
   @include sp {
-    width: 5rem;
-    height: 5rem;
     right: 2rem;
     bottom: 6rem;
   }
@@ -1829,9 +1849,9 @@ footer
 }
 
 .page-top img {
-  width: 2.3rem;
+  width: 6.8rem;
 
   @include sp {
-    width: 1.7rem;
+    width: 5rem;
   }
 }
