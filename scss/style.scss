@@ -976,7 +976,7 @@ span#modalPrice {
   text-align: right;
   padding: 2.3rem;
   background-color: $fontColor;
-  padding: 2.9rem 2rem 2rem;
+  padding: 2.9rem 2rem 2.2rem;
 }
 
 .more a {
@@ -1501,7 +1501,7 @@ input[type="radio"]:checked::before {
 .contact__item--column>.contact__label {
   width: 100%;
   display: block;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 
   @include sp {
     margin-bottom: 0.2rem;
@@ -1571,7 +1571,7 @@ input[type="radio"]:checked::before {
 
 .contact__privacy-box li {
   padding-left: 2rem;
-  position: relative;
+  position: relative;  
   margin: 0;  
 
   &::after {
@@ -1579,15 +1579,11 @@ input[type="radio"]:checked::before {
     content: '';
     top: 1.4rem;
     left: 0.6rem;
-    width: 0.6rem;
+    width: 0.4rem;
     aspect-ratio: 1/1;
     background-color: #000;
     border-radius: 50%;
   }
-}
-
-.contact__privacy-box ul {
-  margin-bottom: 2rem;
 }
 
 .contact__privacy-box p {
@@ -1598,8 +1594,8 @@ input[type="radio"]:checked::before {
   margin: 0!important;
 }
 
-.mgt-40 {
-  margin-top: 4rem;
+.mgt-30 {
+  margin-top: 3rem;
 }
 
 .contact__privacy-box-company p{
@@ -1712,7 +1708,7 @@ footer
   &::after {
     content: "";
     position: absolute;
-    bottom: -2.6rem;
+    bottom: -2.8rem;
     left: 50%;
     transform: translateX(-50%);
     background-color: #000000;
