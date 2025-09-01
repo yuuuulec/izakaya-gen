@@ -826,7 +826,7 @@ span#modalPrice {
    =========================== */
 #news {
   background-color: $bgColor;
-  padding: 8.2rem 0;
+  padding: 8.2rem 0 7.8rem;
 
   @include sp {
     padding: 5rem 0 5rem;
@@ -986,14 +986,11 @@ span#modalPrice {
   text-align: right;
   padding: 2.3rem;
   background-color: $fontColor;
+  padding: 2.9rem 2rem 2.2rem;
 }
 
 .more a {
   display: inline-block;
-  position: relative;
-  bottom: -0.6rem;
-    left: 0.5rem;
-  
 
   @include sp {
     bottom: -0.6rem;
@@ -1335,6 +1332,8 @@ input[type="radio"] {
   background-color: #fff;
   position: relative;
   cursor: pointer;
+  vertical-align: middle;
+  clip-path: circle(50%);
 }
 
 input[type="radio"]:checked::before {
@@ -1347,6 +1346,7 @@ input[type="radio"]:checked::before {
   background-color: #000;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .sp-only {
@@ -1461,10 +1461,6 @@ input[type="radio"]:checked::before {
   line-height: 1;
   width: fit-content;
 
-  &:hover {
-    color: #555555;
-  }
-
   @include sp {
     font-size: 1.6rem;
     column-gap: 0.1rem;
@@ -1485,10 +1481,6 @@ input[type="radio"]:checked::before {
 
   @include sp {
     margin-right: 1rem;
-  }
-
-  &:hover {
-    filter: brightness(1.1);
   }
 
   &:checked {
@@ -1519,7 +1511,7 @@ input[type="radio"]:checked::before {
 .contact__item--column>.contact__label {
   width: 100%;
   display: block;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 
   @include sp {
     margin-bottom: 0.2rem;
@@ -1564,6 +1556,7 @@ input[type="radio"]:checked::before {
   margin-top: 0.1rem;
   box-sizing: border-box;
   overflow-wrap: break-word;
+  line-height: calc(31 / 18 );
 
   @include sp {
     padding: 3rem 5rem 5rem 3rem;
@@ -1588,30 +1581,35 @@ input[type="radio"]:checked::before {
 
 .contact__privacy-box li {
   padding-left: 2rem;
-  position: relative;
+  position: relative;  
+  margin: 0;  
 
   &::after {
     position: absolute;
     content: '';
     top: 1.4rem;
     left: 0.6rem;
-    width: 0.6rem;
+    width: 0.4rem;
     aspect-ratio: 1/1;
     background-color: #000;
     border-radius: 50%;
   }
 }
 
-.contact__privacy-box ul {
-  margin-bottom: 2rem;
-}
-
 .contact__privacy-box p {
   margin-bottom: 3rem;
 }
 
+.contact__privacy-box p.mg0 {
+  margin: 0;
+}
+
+.mgt-30 {
+  margin-top: 3rem;
+}
+
 .contact__privacy-box-company p{
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .contact__privacy-box {
@@ -1720,7 +1718,7 @@ footer
   &::after {
     content: "";
     position: absolute;
-    bottom: -2.6rem;
+    bottom: -2.8rem;
     left: 50%;
     transform: translateX(-50%);
     background-color: #000000;
@@ -1839,6 +1837,8 @@ footer
   bottom: 6rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  clip-path: circle(50%);
+
 
   @include sp {
     right: 2rem;

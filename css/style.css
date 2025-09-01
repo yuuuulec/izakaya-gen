@@ -910,7 +910,7 @@ span#modalPrice {
    =========================== */
 #news {
   background-color: rgba(83, 7, 0, 0.1);
-  padding: 8.2rem 0;
+  padding: 8.2rem 0 7.8rem;
 }
 @media (max-width: 767px) {
   #news {
@@ -1124,13 +1124,11 @@ span#modalPrice {
   text-align: right;
   padding: 2.3rem;
   background-color: #ffffff;
+  padding: 2.9rem 2rem 2.2rem;
 }
 
 .more a {
   display: inline-block;
-  position: relative;
-  bottom: -0.6rem;
-  left: 0.5rem;
 }
 @media (max-width: 767px) {
   .more a {
@@ -1519,6 +1517,8 @@ input[type=radio] {
   background-color: #fff;
   position: relative;
   cursor: pointer;
+  vertical-align: middle;
+  clip-path: circle(50%);
 }
 
 input[type=radio]:checked::before {
@@ -1532,6 +1532,7 @@ input[type=radio]:checked::before {
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .sp-only {
@@ -1676,9 +1677,6 @@ input[type=radio]:checked::before {
   width: -moz-fit-content;
   width: fit-content;
 }
-.contact__checkbox:hover {
-  color: #555555;
-}
 @media (max-width: 767px) {
   .contact__checkbox {
     font-size: 1.6rem;
@@ -1706,10 +1704,6 @@ input[type=radio]:checked::before {
   .contact__checkbox input {
     margin-right: 1rem;
   }
-}
-.contact__checkbox input:hover {
-  -webkit-filter: brightness(1.1);
-          filter: brightness(1.1);
 }
 .contact__checkbox input:checked {
   background-color: #ffffff;
@@ -1743,7 +1737,7 @@ input[type=radio]:checked::before {
 .contact__item--column > .contact__label {
   width: 100%;
   display: block;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 }
 @media (max-width: 767px) {
   .contact__item--column > .contact__label {
@@ -1789,6 +1783,7 @@ input[type=radio]:checked::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-wrap: break-word;
+  line-height: 1.7222222222;
 }
 @media (max-width: 767px) {
   .contact__privacy-box {
@@ -1819,28 +1814,33 @@ input[type=radio]:checked::before {
 .contact__privacy-box li {
   padding-left: 2rem;
   position: relative;
+  margin: 0;
 }
 .contact__privacy-box li::after {
   position: absolute;
   content: "";
   top: 1.4rem;
   left: 0.6rem;
-  width: 0.6rem;
+  width: 0.4rem;
   aspect-ratio: 1/1;
   background-color: #000;
   border-radius: 50%;
-}
-
-.contact__privacy-box ul {
-  margin-bottom: 2rem;
 }
 
 .contact__privacy-box p {
   margin-bottom: 3rem;
 }
 
+.contact__privacy-box p.mg0 {
+  margin: 0;
+}
+
+.mgt-30 {
+  margin-top: 3rem;
+}
+
 .contact__privacy-box-company p {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .contact__privacy-box {
@@ -1951,7 +1951,7 @@ footer
 .company__name::after {
   content: "";
   position: absolute;
-  bottom: -2.6rem;
+  bottom: -2.8rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -2099,6 +2099,7 @@ footer
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  clip-path: circle(50%);
 }
 @media (max-width: 767px) {
   .page-top a {
