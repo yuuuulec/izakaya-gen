@@ -1121,6 +1121,11 @@ span#modalPrice {
   background-color: #ffffff;
   padding: 2.9rem 2rem 2.2rem;
 }
+@media (max-width: 767px) {
+  .more {
+    padding: 2.9rem 1.9rem 1.8rem;
+  }
+}
 
 .more a {
   display: inline-block;
@@ -1394,7 +1399,7 @@ Reservations / Contact
 }
 @media (max-width: 767px) {
   .contact__lead {
-    margin: 3.7rem 0 3.2rem;
+    margin: 3.7rem 0 2.8rem;
   }
 }
 
