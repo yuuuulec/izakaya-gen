@@ -1930,7 +1930,7 @@ footer
 }
 @media (max-width: 767px) {
   #footer {
-    padding: 5.1rem 0 4.1rem;
+    padding: 5.1rem 0 3.8rem;
     background-image: url(../img/footer-back-sp.svg);
   }
 }
