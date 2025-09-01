@@ -1826,8 +1826,8 @@ input[type=radio]:checked::before {
   margin-bottom: 3rem;
 }
 
-.mg0 {
-  margin: 0 !important;
+.contact__privacy-box p.mg0 {
+  margin: 0;
 }
 
 .mgt-30 {
