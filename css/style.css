@@ -270,6 +270,7 @@ html:has(dialog[open]) {
 }
 @media (max-width: 875px) {
   .header__logo a {
+    padding: 2rem 0 1.3rem;
     top: 0;
     left: 4.2rem;
     padding: 2rem 0 1.3rem;
@@ -1865,12 +1866,27 @@ input[type=radio]:checked::before {
 /* iOS・Chrome用の角丸リセット＆デザイン指定 */
 #contact input[type=text],
 #contact input[type=email],
-#contact textarea,
-#contact select {
+#contact textarea {
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
+  outline: none;
+}
+
+#contact select,
+#contact #course__select {
+  border-radius: 0 !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+       appearance: none !important;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  padding: 0.8rem 2rem;
+  font-size: 1.8rem;
+  line-height: 1.38;
+  cursor: pointer;
+  outline: none;
 }
 
 .contact__privacy-box {
