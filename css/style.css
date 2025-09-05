@@ -1872,6 +1872,7 @@ input[type=radio]:checked::before {
   -moz-appearance: none;
        appearance: none;
   outline: none;
+<<<<<<< HEAD
 }
 
 #contact select,
@@ -1887,6 +1888,8 @@ input[type=radio]:checked::before {
   line-height: 1.38;
   cursor: pointer;
   outline: none;
+=======
+>>>>>>> develop002
 }
 
 .contact__privacy-box {
