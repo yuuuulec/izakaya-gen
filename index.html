@@ -23,7 +23,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Zen+Old+Mincho:wght@500&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="./img/favicon.ico" type="image/svg+xml">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 
     <title>和風居酒屋　源</title>
     <meta name="description" content="余計な味付けをせず素材の味を楽しむ。それが本来の和食だと考えています。五感を刺激する厳選した食材をお楽しみください">
@@ -226,6 +226,20 @@
                     </li>
                 </ul>
             </div>
+            <!-- モーダル -->
+    <div class="modal" id="modal">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" id="modalImage">
+            <div class="modal__text" id="modalText">
+                <p class="modal__title">
+                    <span class="modal__name" id="modalName"></span>
+                    <span class="modal__price" id="modalPrice"></span>
+                </p>
+            </div>
+            <span class="modal__close" id="modalClose">&times;</span>
+        </div>
+    </div>
         </section>
         <!-- /* ===========================
    お知らせ　news
@@ -484,6 +498,7 @@ footer
     <footer id="footer" class="footer">
         <div class="footer__inner inner">
             <a href="#" class="company__name">和風居酒屋　源</a>
+            <span class="company__line"></span>
             <div class="footer__nav">
                 <ul class="footer__list">
                     <li class="footer__item">
@@ -544,20 +559,6 @@ footer
         </a>
     </div>
 
-    <!-- モーダル -->
-    <div class="modal" id="modal">
-        <div class="modal__overlay" id="modalOverlay"></div>
-        <div class="modal__content">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" id="modalImage">
-            <div class="modal__text" id="modalText">
-                <p class="modal__title">
-                    <span class="modal__name" id="modalName"></span>
-                    <span class="modal__price" id="modalPrice"></span>
-                </p>
-            </div>
-            <span class="modal__close" id="modalClose">&times;</span>
-        </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
