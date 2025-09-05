@@ -1723,10 +1723,12 @@ input[type=radio]:checked::before {
 .contact__checkbox input:checked::after {
   content: "✔";
   color: #530700;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   position: absolute;
-  top: 0.1rem;
-  left: 0.3rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   pointer-events: none;
 }
 
@@ -1862,8 +1864,8 @@ input[type=radio]:checked::before {
 #contact select {
   border-radius: 0;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 
 .contact__privacy-box {

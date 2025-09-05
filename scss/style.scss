@@ -1420,7 +1420,6 @@ input[type="radio"]:checked::before {
 
 .contact__checkboxes {
   display: grid;
-  // grid-template-columns: repeat(4, 16.7rem);
   grid-template-columns: repeat(4, minmax(min-content, 1fr));
 
   row-gap: 2rem;
@@ -1492,10 +1491,11 @@ input[type="radio"]:checked::before {
   &:checked::after {
     content: '✔';
     color: $mainColor;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     position: absolute;
-    top: 0.1rem;
-    left: 0.3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     pointer-events: none;
   }
 }
@@ -1620,6 +1620,7 @@ input[type="radio"]:checked::before {
 #contact textarea,
 #contact select {
   border-radius: 0;
+  -webkit-appearance: none;
   appearance: none;
 }
 
