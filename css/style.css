@@ -1900,11 +1900,20 @@ input[type=radio]:checked::before {
        appearance: none !important;
   border: 1px solid #ffffff;
   background-color: #ffffff;
+  background-clip: padding-box;
   padding: 0.8rem 2rem;
   font-size: 1.8rem;
   line-height: 1.38;
   cursor: pointer;
   outline: none;
+}
+
+#contact select:focus,
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .contact__privacy-box {

@@ -1621,7 +1621,6 @@ input[type="radio"]:checked::before {
   margin: 0;
 }
 
-
 /* iOS・Chrome用の角丸リセット＆デザイン指定 */
 #contact input[type="text"],
 #contact input[type="email"],
@@ -1639,6 +1638,7 @@ input[type="radio"]:checked::before {
   appearance: none !important;
   border: 1px solid $fontColor;
   background-color: $fontColor;
+  background-clip: padding-box;
   padding: 0.8rem 2rem;         
   font-size: 1.8rem;
   line-height: 1.38;
@@ -1647,8 +1647,19 @@ input[type="radio"]:checked::before {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+>>>>>>> develop002
+=======
+#contact select:focus,
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
 >>>>>>> develop002
 .contact__privacy-box {
   /* Firefox用 */
