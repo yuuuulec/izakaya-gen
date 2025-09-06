@@ -1625,9 +1625,9 @@ input[type="radio"]:checked::before {
 #contact input[type="text"],
 #contact input[type="email"],
 #contact textarea {
-  border-radius: 0;
-  -webkit-appearance: none;
-  appearance: none;
+  border-radius: 0!important;
+  -webkit-appearance: none!important;
+  appearance: none!important;
   outline: none;
 }
 
