@@ -809,8 +809,8 @@ span#modalPrice {
   color: #333;
   cursor: pointer;
   z-index: 10001;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: fit-content;
+  // height: 1.5rem;
   z-index: -1;
   line-height: 1;
   display: flex;
