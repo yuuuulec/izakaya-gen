@@ -885,14 +885,18 @@ span#modalPrice {
 
 .modal__close {
   position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
   top: 0.3rem;
   right: 0.4rem;
   color: #333;
   cursor: pointer;
-  z-index: 10001;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
   width: 1.5rem;
   height: 1.5rem;
-  z-index: -1;
   line-height: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2007,14 +2011,12 @@ footer
   background-color: #000000;
   margin-top: 2.6rem;
   margin-inline: auto;
-  width: 66.8518518519vw;
   max-width: 72.2rem;
   height: 1px;
   pointer-events: none;
 }
 @media (max-width: 767px) {
   .company__line {
-    width: 84vw;
     max-width: none;
     margin-top: 2rem;
   }
