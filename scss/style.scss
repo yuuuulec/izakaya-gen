@@ -810,6 +810,7 @@ span#modalPrice {
   width: 1.5rem;
   height: 1.5rem;
   line-height: 1;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1389,7 +1390,7 @@ input[type="radio"]:checked::before {
   appearance: none;
   background-image: url(../img/dropdown.svg);
   background-repeat: no-repeat;
-  background-position: right 2rem top 2.1rem;
+  background-position: right 2rem top 2rem;
   color: #000000;
   cursor: pointer;
 }
