@@ -804,15 +804,27 @@ span#modalPrice {
 
 .modal__close {
   position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
   top: 0.3rem;
   right: 0.4rem;
   color: #333;
   cursor: pointer;
+<<<<<<< HEAD
   z-index: 10001;
   width: fit-content;
   // height: 1.5rem;
   z-index: -1;
+=======
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+>>>>>>> develop002
   line-height: 1;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1392,7 +1404,7 @@ input[type="radio"]:checked::before {
   appearance: none;
   background-image: url(../img/dropdown.svg);
   background-repeat: no-repeat;
-  background-position: right 2rem top 2.1rem;
+  background-position: right 2rem top 2rem;
   color: #000000;
   cursor: pointer;
 }
@@ -1775,13 +1787,11 @@ footer
   background-color: #000000;
   margin-top: 2.6rem;
   margin-inline: auto;
-  width: calc(722 / 1080 * 100vw);
   max-width: 72.2rem;
   height: 1px;
   pointer-events: none;
 
   @include sp {
-    width: calc(315 / 375 * 100vw);
     max-width: none;
     margin-top: 2rem;
   }
