@@ -1904,7 +1904,6 @@ input[type=radio]:checked::before {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
        appearance: none !important;
-<<<<<<< HEAD
   border: 1px solid #ffffff;
   background-color: #ffffff;
   padding: 0.8rem 2rem;
@@ -1919,8 +1918,6 @@ input[type=radio]:checked::before {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
-=======
->>>>>>> 256dafb14eb7c5c9bf707b3e947fb90472449275
   border: 1px solid #ffffff;
   background-color: #ffffff;
   background-clip: padding-box;
