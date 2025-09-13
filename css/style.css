@@ -1567,7 +1567,7 @@ Reservations / Contact
 
 @media (max-width: 767px) {
   .contact__item {
-    margin-bottom: 3.1rem;
+    margin-bottom: 3.2rem;
   }
 }
 
@@ -1607,11 +1607,14 @@ Reservations / Contact
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
+@media (max-width: 767px) {
+  .contact__label-wrapper {
+    width: auto;
+  }
+}
 
 .contact__label {
   display: inline-block;
-  white-space: nowrap;
-  cursor: pointer;
 }
 
 .contact__item input {
@@ -1902,9 +1905,15 @@ input[type=radio]:checked::before {
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-align: start;
+<<<<<<< HEAD
   -ms-flex-align: start;
   align-items: flex-start;
   margin-bottom: 5.2rem;
+=======
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 5rem;
+>>>>>>> fcb623f246c5fa902ffe35b7e74b67ec81bb139b
 }
 
 @media (max-width: 767px) {
@@ -1921,6 +1930,15 @@ input[type=radio]:checked::before {
 
 @media (max-width: 767px) {
   .contact__item--column>.contact__label {
+    margin-bottom: 0.2rem;
+  }
+}
+
+label[for=message] {
+  margin-bottom: 1.3rem;
+}
+@media (max-width: 767px) {
+  label[for=message] {
     margin-bottom: 0.2rem;
   }
 }
@@ -2127,7 +2145,7 @@ button {
   display: block;
   margin-inline: auto;
   padding: 1rem 6rem 1.3rem;
-  margin-top: 8rem;
+  margin-top: 7.7rem;
   text-align: center;
   background-color: #530700;
   color: #ffffff;
@@ -2141,7 +2159,7 @@ button {
   button {
     max-width: 33.5rem;
     width: 100%;
-    margin-top: 5.2rem;
+    margin-top: 5rem;
   }
 }
 
@@ -2199,7 +2217,7 @@ footer
 .company__line {
   display: block;
   background-color: #000000;
-  margin-top: 2.6rem;
+  margin-top: 2.8rem;
   margin-inline: auto;
   max-width: 72.2rem;
   height: 1px;

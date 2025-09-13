@@ -1282,7 +1282,7 @@ Reservations / Contact
   }
 
   @include sp {
-    margin-bottom: 3.1rem;
+    margin-bottom: 3.2rem;
   }
 
   &:last-of-type {
@@ -1306,6 +1306,10 @@ Reservations / Contact
 .contact__label-wrapper {
   width: 17rem;
   flex-shrink: 0;
+
+  @include sp {
+    width: auto;
+  }
 }
 
 .contact__label {
@@ -1316,8 +1320,6 @@ Reservations / Contact
 width: 15rem;
 =======
   display: inline-block;
-  white-space: nowrap;
-  cursor: pointer;
 }
 
 .contact__item input {
@@ -1544,7 +1546,7 @@ input[type="radio"]:checked::before {
 .contact__item--column {
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 5.2rem;
+  margin-bottom: 5rem;
 
   @include sp {
     margin-bottom: 2.8rem;
@@ -1555,6 +1557,13 @@ input[type="radio"]:checked::before {
   width: 100%;
   display: block;
   margin-bottom: 1rem;
+
+  @include sp {
+    margin-bottom: 0.2rem;
+  }
+}
+label[for="message"] {
+  margin-bottom: 1.3rem; 
 
   @include sp {
     margin-bottom: 0.2rem;
@@ -1744,7 +1753,7 @@ button {
   display: block;
   margin-inline: auto;
   padding: 1rem 6rem 1.3rem;
-  margin-top: 8rem;
+  margin-top: 7.7rem;
   text-align: center;
   background-color: $mainColor;
   color: $fontColor;
@@ -1755,7 +1764,7 @@ button {
   @include sp {
     max-width: 33.5rem;
     width: 100%;
-    margin-top: 5.2rem;
+    margin-top: 5rem;
   }
 
   @media (max-width: 365px) {
@@ -1807,7 +1816,7 @@ footer
 .company__line {
   display: block;
   background-color: #000000;
-  margin-top: 2.6rem;
+  margin-top: 2.8rem;
   margin-inline: auto;
   max-width: 72.2rem;
   height: 1px;
