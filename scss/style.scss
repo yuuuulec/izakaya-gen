@@ -1288,8 +1288,9 @@ Reservations / Contact
     align-items: flex-start;
   }
 }
+
 .contact__label-wrapper {
-  width: 17rem;        
+  width: 17rem;
   flex-shrink: 0;
 }
 
@@ -1303,7 +1304,7 @@ Reservations / Contact
   flex: 1;
 
   @include sp {
-    width: 100%; 
+    width: 100%;
   }
 }
 
@@ -1637,21 +1638,21 @@ input[type="radio"]:checked::before {
 #contact input[type="text"],
 #contact input[type="email"],
 #contact textarea {
-  border-radius: 0!important;
-  -webkit-appearance: none!important;
-  appearance: none!important;
+  border-radius: 0 !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
   outline: none;
 }
 
 #contact select,
 #contact #course__select {
-  border-radius: 0 !important;       
-  -webkit-appearance: none !important; 
+  border-radius: 0 !important;
+  -webkit-appearance: none !important;
   appearance: none !important;
   border: 1px solid $fontColor;
   background-color: $fontColor;
   background-clip: padding-box;
-  padding: 0.8rem 2rem;         
+  padding: 0.8rem 2rem;
   font-size: 1.8rem;
   line-height: 1.38;
   cursor: pointer;
