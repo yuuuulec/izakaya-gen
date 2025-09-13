@@ -1306,6 +1306,9 @@ Reservations / Contact
 
 .contact__label {
   width: 17rem;
+
+  @media (max-width: 870px) {
+width: 15rem;
 }
 
 .label__short {
