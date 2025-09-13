@@ -1607,6 +1607,7 @@ Reservations / Contact
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
+
 @media (max-width: 767px) {
   .contact__label-wrapper {
     width: auto;
@@ -1905,15 +1906,12 @@ input[type=radio]:checked::before {
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-align: start;
-<<<<<<< HEAD
   -ms-flex-align: start;
   align-items: flex-start;
   margin-bottom: 5.2rem;
-=======
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   margin-bottom: 5rem;
->>>>>>> fcb623f246c5fa902ffe35b7e74b67ec81bb139b
 }
 
 @media (max-width: 767px) {
@@ -1937,6 +1935,7 @@ input[type=radio]:checked::before {
 label[for=message] {
   margin-bottom: 1.3rem;
 }
+
 @media (max-width: 767px) {
   label[for=message] {
     margin-bottom: 0.2rem;
