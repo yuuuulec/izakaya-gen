@@ -769,7 +769,7 @@ html:has(dialog[open]) {
   @include sp {
     max-width: 84%;
     height: auto;
-    padding: 2rem 2rem 1rem;
+    padding: 2rem 2.1rem 1.4rem 2rem;
   }
 }
 
@@ -815,9 +815,8 @@ span#modalPrice {
   align-items: center;
   justify-content: center;
 
-
   @include sp {
-    top: 0.1rem;
+    top: 0.6rem;
     right: 0.5rem;
   }
 }
@@ -1289,9 +1288,23 @@ Reservations / Contact
     align-items: flex-start;
   }
 }
+.contact__label-wrapper {
+  width: 17rem;        
+  flex-shrink: 0;
+}
 
 .contact__label {
-  width: 17rem;
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.contact__item input {
+  flex: 1;
+
+  @include sp {
+    width: 100%; 
+  }
 }
 
 .label__short {
@@ -1299,6 +1312,7 @@ Reservations / Contact
     width: 4rem;
   }
 }
+
 
 .contact__item--radio .contact__label {
   @include sp {
