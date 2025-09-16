@@ -775,6 +775,7 @@ html:has(dialog[open]) {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-top: 6.9rem;
+  gap: 4.35%;
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -789,10 +790,7 @@ html:has(dialog[open]) {
   cursor: pointer;
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
-  margin-right: 3.7037037037vw;
-}
-.course__item:last-child {
-  margin-right: 0;
+  width: 21.74%;
 }
 .course__item:hover {
   opacity: 0.5;
