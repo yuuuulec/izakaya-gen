@@ -695,7 +695,6 @@ html:has(dialog[open]) {
   display: flex;
   justify-content: flex-start;
   margin-top: 6.9rem;
-  gap: calc(40 / 1080 * 100vw);
   width: 100%;
 
   @include sp {
@@ -706,9 +705,13 @@ html:has(dialog[open]) {
 }
 
 .course__item {
-  width: 21.7%;
   cursor: pointer;
   transition: opacity 0.8s ease;
+  margin-right: calc(40 / 1080 * 100vw);
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover {
     opacity: 0.5;
