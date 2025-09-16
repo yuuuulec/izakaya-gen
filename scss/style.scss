@@ -695,14 +695,10 @@ html:has(dialog[open]) {
   display: flex;
   justify-content: flex-start;
   margin-top: 6.9rem;
-<<<<<<< HEAD
   gap: 4rem;
   width: 100%;
-=======
   gap: 4.35%;
   width: 100%;    
-
->>>>>>> develop002
 
   @include sp {
     display: block;
@@ -714,11 +710,8 @@ html:has(dialog[open]) {
 .course__item {
   cursor: pointer;
   transition: opacity 0.8s ease;
-<<<<<<< HEAD
   width: 21.7%;
-=======
   width: 21.74%;
->>>>>>> develop002
 
   &:hover {
     opacity: 0.5;
@@ -728,7 +721,6 @@ html:has(dialog[open]) {
     width: 100%;
   }
 }
-
 
 .course__item:last-child .course__ttl {
 
