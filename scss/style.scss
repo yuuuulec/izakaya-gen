@@ -695,6 +695,7 @@ html:has(dialog[open]) {
   display: flex;
   justify-content: flex-start;
   margin-top: 6.9rem;
+  gap: 4rem;
   width: 100%;
 
   @include sp {
@@ -707,11 +708,7 @@ html:has(dialog[open]) {
 .course__item {
   cursor: pointer;
   transition: opacity 0.8s ease;
-  margin-right: calc(40 / 1080 * 100vw);
-
-  &:last-child {
-    margin-right: 0;
-  }
+  width: 21.7%;
 
   &:hover {
     opacity: 0.5;
@@ -814,18 +811,10 @@ span#modalPrice {
   right: 0.4rem;
   color: #333;
   cursor: pointer;
-<<<<<<< HEAD
   z-index: 10001;
   width: fit-content;
   // height: 1.5rem;
   z-index: -1;
-=======
-  z-index: -1;
-  margin: 0;
-  padding: 0;
-  width: 1.5rem;
-  height: 1.5rem;
->>>>>>> develop002
   line-height: 1;
   overflow: hidden;
   display: flex;
