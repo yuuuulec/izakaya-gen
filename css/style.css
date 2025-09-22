@@ -68,7 +68,7 @@ a {
 section {
   scroll-margin-top: 9rem;
 }
-@media (max-width: 875px) {
+@media (max-width: 980px) {
   section {
     scroll-margin-top: 5rem;
   }
@@ -137,7 +137,7 @@ html:has(dialog[open]) {
   position: fixed;
   top: 0;
   left: 0;
-  height: 9rem;
+  height: 9.1rem;
   width: 100%;
   z-index: 10;
   display: -webkit-box;
@@ -149,11 +149,11 @@ html:has(dialog[open]) {
   -webkit-transition: background-color 0.8s ease;
   transition: background-color 0.8s ease;
 }
-@media (max-width: 875px) {
+@media (max-width: 980px) {
   #header {
     top: -0.7rem;
     left: -2rem;
-    height: 5.7rem;
+    height: 5rem;
   }
 }
 
@@ -194,11 +194,17 @@ html:has(dialog[open]) {
 }
 
 .header__nav {
-  height: 9rem;
+  height: 100%;
   right: auto;
   min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-@media (max-width: 875px) {
+@media (max-width: 980px) {
   .header__nav {
     position: fixed;
     top: 5rem;
@@ -216,7 +222,10 @@ html:has(dialog[open]) {
   transition: right 0.3s ease;
 }
 
-@media (max-width: 875px) {
+.header__item {
+  height: 100%;
+}
+@media (max-width: 980px) {
   .header__item {
     width: 100%;
     text-align: left;
@@ -238,7 +247,7 @@ html:has(dialog[open]) {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-@media (max-width: 875px) {
+@media (max-width: 980px) {
   .header__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -252,38 +261,38 @@ html:has(dialog[open]) {
 }
 
 .header__logo a {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  padding: 3.35rem 0;
+  height: 9.1rem;
   position: relative;
   color: #ffffff;
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
 }
-@media (max-width: 875px) {
+@media (max-width: 980px) {
   .header__logo a {
-    padding: 2rem 0 1.3rem;
-    top: 0;
     left: 4.2rem;
+    height: auto;
   }
 }
 .header__logo a:hover {
   opacity: 0.5;
 }
-@media (max-width: 875px) {
+@media (max-width: 980px) {
   .header__logo a:hover {
     opacity: 0.5;
   }
 }
 
 .header__item a {
-  height: 100%;
+  height: 9.1rem;
   position: relative;
   color: #ffffff;
-  padding: 3.45rem 0;
+  padding: 0 1rem;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   display: -webkit-box;
@@ -293,17 +302,17 @@ html:has(dialog[open]) {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (max-width: 875px) {
+@media (max-width: 980px) {
   .header__item a {
     background-color: #530700;
-    padding: 1.8rem 2rem 2.1rem;
+    padding: 0 2rem;
     width: 100%;
     height: 100%;
     line-height: 1;
     border: 2px solid #530700;
   }
 }
-@media (max-width: 875px) {
+@media (max-width: 980px) {
   .header__item a:hover {
     background-color: #000000;
     color: #ffffff;
@@ -325,10 +334,14 @@ html:has(dialog[open]) {
 .header__item a:hover::after {
   width: 100%;
 }
-@media (max-width: 875px) {
+@media (max-width: 980px) {
   .header__item a:hover::after {
     display: none;
   }
+}
+
+.slider {
+  position: relative;
 }
 
 .catchcopy {
@@ -339,7 +352,7 @@ html:has(dialog[open]) {
   left: 5.7407407407vw;
   height: 12.962962963vh;
   font-size: 3.7037037037vw;
-  line-height: 6.4814814815vw;
+  line-height: 3.5;
   letter-spacing: 1.1111111111vw;
   z-index: 2;
 }
@@ -347,7 +360,7 @@ html:has(dialog[open]) {
   .catchcopy {
     font-size: 8vw;
     letter-spacing: 2.4vw;
-    line-height: 16vw;
+    line-height: 3.75;
     text-align: center;
     top: 64vw;
     left: 20.8vw;
@@ -387,7 +400,7 @@ html:has(dialog[open]) {
           box-sizing: border-box;
   z-index: 100001;
 }
-@media (max-width: 875px) {
+@media (max-width: 980px) {
   .hamburger {
     display: block;
   }
@@ -437,7 +450,7 @@ html:has(dialog[open]) {
   background-image: url(../img/feature-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 13.3rem 0 12rem;
+  padding: 12.6rem 0 12rem;
   width: 100%;
   margin-inline: auto;
 }
@@ -479,10 +492,8 @@ html:has(dialog[open]) {
 .feature__ttl {
   font-size: 3rem;
   color: #530700;
-  line-height: 118%;
-  letter-spacing: 0.55rem;
   white-space: nowrap;
-  margin-left: 5.6rem;
+  margin-left: 6rem;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -497,7 +508,7 @@ html:has(dialog[open]) {
 
 .feature__ttl span {
   display: block;
-  margin-left: 1.8rem;
+  margin-left: 2.5rem;
 }
 @media (max-width: 767px) {
   .feature__ttl span {
@@ -520,19 +531,26 @@ html:has(dialog[open]) {
 }
 
 .feature__dsc {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+span {
+  display: block;
   line-height: 1;
   letter-spacing: 0.7rem;
   white-space: nowrap;
   margin-left: 3rem;
 }
 @media (max-width: 767px) {
-  .feature__dsc {
+  span {
     font-size: 1.6rem;
     margin-left: 1rem;
     letter-spacing: 0.6rem;
   }
 }
-.feature__dsc:last-of-type {
+span:last-of-type {
   margin-left: 0;
 }
 
@@ -576,7 +594,6 @@ html:has(dialog[open]) {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 4rem;
   }
 }
 @media (max-width: 767px) {
@@ -596,11 +613,6 @@ html:has(dialog[open]) {
   margin-top: 0;
   margin-bottom: 8rem;
 }
-@media (max-width: 970px) {
-  .recommend-item:nth-of-type(even) {
-    margin-bottom: 4rem;
-  }
-}
 @media (max-width: 767px) {
   .recommend-item:nth-of-type(even) {
     -webkit-box-orient: vertical;
@@ -613,9 +625,8 @@ html:has(dialog[open]) {
 
 .recommend__img {
   display: block;
-  max-width: 60rem;
+  width: 65%;
   position: relative;
-  width: 100%;
   padding-bottom: 5rem;
 }
 @media (max-width: 767px) {
@@ -798,6 +809,7 @@ html:has(dialog[open]) {
 @media (max-width: 767px) {
   .course__item {
     width: 100%;
+    margin-bottom: 2rem;
   }
 }
 
@@ -824,7 +836,7 @@ html:has(dialog[open]) {
 }
 @media (max-width: 767px) {
   .course__ttl {
-    margin: 1rem 0 2rem;
+    margin-top: 1rem;
     text-align: left;
   }
 }
@@ -874,16 +886,17 @@ html:has(dialog[open]) {
   }
 }
 
-span#modalPrice {
-  margin-left: -0.5rem;
+@media (max-width: 767px) {
+  span#modalPrice {
+    margin-left: -0.5rem;
+  }
 }
-.modal__content img {
+span#modalPrice .modal__content img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-
-.modal__close {
+span#modalPrice .modal__close {
   position: absolute;
   background: none;
   border: none;
@@ -910,15 +923,15 @@ span#modalPrice {
           justify-content: center;
 }
 @media (max-width: 767px) {
-  .modal__close {
+  span#modalPrice .modal__close {
     top: 0.6rem;
     right: 0.5rem;
   }
 }
 
 /* ===========================
-   お知らせ　news
-   =========================== */
+ お知らせ　news
+ =========================== */
 #news {
   background-color: rgba(83, 7, 0, 0.1);
   padding: 8.2rem 0 7.8rem;
@@ -1028,6 +1041,7 @@ span#modalPrice {
   position: relative;
   border-bottom: 1px solid #530700;
 }
+
 .news__item a,
 .blog__item a {
   color: #000000;
@@ -1158,8 +1172,8 @@ span#modalPrice {
 }
 
 /* ===========================
-  アクセス　access
-   =========================== */
+アクセス　access
+ =========================== */
 #access {
   padding: 8.3rem 0 8rem;
   background-image: url(../img/access-back.svg);
@@ -1410,8 +1424,12 @@ Reservations / Contact
   line-height: 1.65;
 }
 
+form {
+  margin-top: 3.4rem;
+}
+
 .contact__lead {
-  margin: 3.4rem 0 3.7rem;
+  margin-bottom: 3.7rem;
 }
 @media (max-width: 767px) {
   .contact__lead {
@@ -1430,6 +1448,11 @@ Reservations / Contact
   font-size: 2rem;
   line-height: 1.65;
   width: 100%;
+}
+@media (max-width: 1024px) {
+  .contact__item {
+    margin-bottom: 3.2rem;
+  }
 }
 @media (max-width: 855px) {
   .contact__item {
@@ -1486,6 +1509,12 @@ Reservations / Contact
 @media (max-width: 767px) {
   .contact__label-wrapper {
     width: auto;
+  }
+}
+
+@media (max-width: 855px) {
+  .contact__item--radio .contact__label-wrapper {
+    width: 5rem;
   }
 }
 
@@ -1547,7 +1576,6 @@ input[type=radio] {
   width: 2rem;
   height: 2rem;
   margin-right: 1.9rem;
-  border: 2px solid #ffffff;
   border-radius: 50%;
   appearance: none;
   -webkit-appearance: none;
@@ -1825,7 +1853,6 @@ label[for=message] {
   max-height: 300px;
   overflow-y: auto;
   background-color: #ffffff;
-  border: 1px solid #ffffff;
   padding: 3.8rem 7rem 5rem 4rem;
   overflow-y: scroll;
   margin-inline: auto;
@@ -1910,7 +1937,6 @@ label[for=message] {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
        appearance: none !important;
-  border: 1px solid #ffffff;
   background-color: #ffffff;
   background-clip: padding-box;
   padding: 0.8rem 2rem;
@@ -2171,8 +2197,8 @@ footer
 }
 
 /* ===========================
-   トップへ戻るボタン
-   =========================== */
+ トップへ戻るボタン
+ =========================== */
 .page-top a {
   position: fixed;
   right: 6rem;
