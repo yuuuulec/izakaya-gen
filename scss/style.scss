@@ -223,7 +223,7 @@ html:has(dialog[open]) {
   @media (max-width: 980px) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0;
+    gap: 2rem;
   }
 }
 
@@ -592,7 +592,6 @@ span {
   text-align: left;
   position: relative;
   padding: 4.9rem 2rem 4.3rem 4.1rem;
-
   width: 100%;
 
   &::before {
@@ -706,7 +705,7 @@ span {
 .course__item {
   cursor: pointer;
   transition: opacity 0.8s ease;
-  width: 21.74%;
+  width: calc((100% - (4.35% * 3)) / 4);
 
   &:hover {
     opacity: 0.5;
@@ -1248,13 +1247,17 @@ Reservations / Contact
 
   form {
     margin-top: 3.4rem;
+
+    @include sp {
+      margin-top: 3.7rem;
+    }
   }
 
   .contact__lead {
     margin-bottom: 3.7rem;
 
     @include sp {
-      margin: 3.7rem 0 2.8rem;
+      margin-bottom: 2.8rem;
     }
   }
 

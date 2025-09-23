@@ -255,7 +255,7 @@ html:has(dialog[open]) {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 0;
+    gap: 2rem;
   }
 }
 
@@ -797,7 +797,7 @@ html:has(dialog[open]) {
   cursor: pointer;
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
-  width: 21.74%;
+  width: 21.7375%;
 }
 .course__item:hover {
   opacity: 0.5;
@@ -1423,13 +1423,18 @@ Reservations / Contact
 form {
   margin-top: 3.4rem;
 }
+@media (max-width: 767px) {
+  form {
+    margin-top: 3.7rem;
+  }
+}
 
 .contact__lead {
   margin-bottom: 3.7rem;
 }
 @media (max-width: 767px) {
   .contact__lead {
-    margin: 3.7rem 0 2.8rem;
+    margin-bottom: 2.8rem;
   }
 }
 
