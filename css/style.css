@@ -137,12 +137,15 @@ html:has(dialog[open]) {
   position: fixed;
   top: 0;
   left: 0;
-  height: 9.1rem;
+  height: 8rem;
   width: 100%;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -151,8 +154,6 @@ html:has(dialog[open]) {
 }
 @media (max-width: 980px) {
   #header {
-    top: -0.7rem;
-    left: -2rem;
     height: 5rem;
   }
 }
@@ -171,6 +172,7 @@ html:has(dialog[open]) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 8rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -181,8 +183,13 @@ html:has(dialog[open]) {
           box-sizing: border-box;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  height: 100%;
+  padding: 0 7rem 0 8rem;
   width: 100%;
+}
+@media (max-width: 980px) {
+  .header__container {
+    padding: 0 0 0 2.2rem;
+  }
 }
 
 .header__logo {
@@ -208,7 +215,7 @@ html:has(dialog[open]) {
   .header__nav {
     position: fixed;
     top: 5rem;
-    right: -35rem;
+    right: -100%;
     width: 30rem;
     text-align: left;
     background-color: #530700;
@@ -245,6 +252,7 @@ html:has(dialog[open]) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  gap: 0.2rem;
 }
 @media (max-width: 980px) {
   .header__list {
@@ -266,7 +274,7 @@ html:has(dialog[open]) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 9.1rem;
+  height: 8rem;
   position: relative;
   color: #ffffff;
   -webkit-transition: opacity 0.8s ease;
@@ -274,7 +282,6 @@ html:has(dialog[open]) {
 }
 @media (max-width: 980px) {
   .header__logo a {
-    left: 4.2rem;
     height: auto;
   }
 }
@@ -349,7 +356,6 @@ html:has(dialog[open]) {
   text-shadow: 0.5rem 0.5rem 0.5rem #000000;
   top: 31.4814814815vw;
   left: 5.7407407407vw;
-  height: 12.962962963vh;
   font-size: 3.7037037037vw;
   line-height: 1.75;
   letter-spacing: 1.1111111111vw;
@@ -359,7 +365,7 @@ html:has(dialog[open]) {
   .catchcopy {
     font-size: 8vw;
     letter-spacing: 2.4vw;
-    line-height: 3.75;
+    line-height: 2;
     text-align: center;
     top: 64vw;
     left: 20.8vw;
@@ -489,8 +495,8 @@ html:has(dialog[open]) {
   font-size: 3rem;
   color: #530700;
   white-space: nowrap;
-  letter-spacing: 0.4rem;
-  margin-left: 6.4rem;
+  letter-spacing: 0.5rem;
+  margin-left: 6rem;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -721,7 +727,6 @@ html:has(dialog[open]) {
 }
 
 .recommend-item:nth-of-type(even) .recommend__text {
-  margin-top: 14.6rem;
   padding: 4.8rem 3.2rem 4.2rem 3.8rem;
 }
 .recommend-item:nth-of-type(even) .recommend__text::before {
@@ -926,8 +931,8 @@ span#modalPrice .modal__close {
 }
 
 /* ===========================
- お知らせ　news
- =========================== */
+   お知らせ　news
+   =========================== */
 #news {
   background-color: rgba(83, 7, 0, 0.1);
   padding: 8.2rem 0 7.8rem;
@@ -1168,8 +1173,8 @@ span#modalPrice .modal__close {
 }
 
 /* ===========================
-アクセス　access
- =========================== */
+  アクセス　access
+   =========================== */
 #access {
   padding: 8.3rem 0 8rem;
   background-image: url(../img/access-back.svg);
@@ -1660,7 +1665,7 @@ input[type=radio]:checked::before {
   padding: 0.9rem 2rem 1.2rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .form__select {
@@ -1683,6 +1688,27 @@ input[type=radio]:checked::before {
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.6;
+}
+
+#name::-webkit-input-placeholder, #email::-webkit-input-placeholder {
+  font-size: 1.6rem;
+}
+
+#name::-moz-placeholder, #email::-moz-placeholder {
+  font-size: 1.6rem;
+}
+
+#name:-ms-input-placeholder, #email:-ms-input-placeholder {
+  font-size: 1.6rem;
+}
+
+#name::-ms-input-placeholder, #email::-ms-input-placeholder {
+  font-size: 1.6rem;
+}
+
+#name::placeholder,
+#email::placeholder {
+  font-size: 1.6rem;
 }
 
 .contact__checkboxes {
@@ -2043,13 +2069,13 @@ footer
    =========================== */
 #footer {
   background-image: url(../img/footer-back.svg);
-  padding: 7.8rem 0 7rem;
+  padding-top: 7.8rem;
   text-align: center;
   color: #000000;
 }
 @media (max-width: 767px) {
   #footer {
-    padding: 5.1rem 0 3.8rem;
+    padding-top: 5.1rem;
     background-image: url(../img/footer-back-sp.svg);
   }
 }
@@ -2204,8 +2230,8 @@ footer
 }
 
 /* ===========================
- トップへ戻るボタン
- =========================== */
+   トップへ戻るボタン
+   =========================== */
 .page-top a {
   position: fixed;
   right: 6rem;
