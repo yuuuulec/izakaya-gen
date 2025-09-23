@@ -242,7 +242,6 @@ html:has(dialog[open]) {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  gap: 2.2rem;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -348,11 +347,11 @@ html:has(dialog[open]) {
   color: #ffffff;
   position: absolute;
   text-shadow: 0.5rem 0.5rem 0.5rem #000000;
-  top: 31.2962962963vw;
+  top: 31.4814814815vw;
   left: 5.7407407407vw;
   height: 12.962962963vh;
   font-size: 3.7037037037vw;
-  line-height: 3.5;
+  line-height: 1.75;
   letter-spacing: 1.1111111111vw;
   z-index: 2;
 }
@@ -450,7 +449,7 @@ html:has(dialog[open]) {
   background-image: url(../img/feature-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 12.6rem 0 12rem;
+  padding: 13.4rem 0 11.5rem;
   width: 100%;
   margin-inline: auto;
 }
@@ -472,9 +471,6 @@ html:has(dialog[open]) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -493,7 +489,8 @@ html:has(dialog[open]) {
   font-size: 3rem;
   color: #530700;
   white-space: nowrap;
-  margin-left: 6rem;
+  letter-spacing: 0.4rem;
+  margin-left: 6.4rem;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -508,7 +505,7 @@ html:has(dialog[open]) {
 
 .feature__ttl span {
   display: block;
-  margin-left: 2.5rem;
+  margin-left: 2rem;
 }
 @media (max-width: 767px) {
   .feature__ttl span {
@@ -535,8 +532,7 @@ html:has(dialog[open]) {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
 }
-
-span {
+.feature__dsc span {
   display: block;
   line-height: 1;
   letter-spacing: 0.7rem;
@@ -544,13 +540,13 @@ span {
   margin-left: 3rem;
 }
 @media (max-width: 767px) {
-  span {
+  .feature__dsc span {
     font-size: 1.6rem;
     margin-left: 1rem;
     letter-spacing: 0.6rem;
   }
 }
-span:last-of-type {
+.feature__dsc span:last-of-type {
   margin-left: 0;
 }
 
@@ -2001,7 +1997,7 @@ button {
   cursor: pointer;
   display: block;
   margin-inline: auto;
-  padding: 1rem 6rem 1.3rem;
+  padding: 1.2rem 6rem;
   margin-top: 7.7rem;
   text-align: center;
   background-color: #530700;
@@ -2009,6 +2005,7 @@ button {
   font-size: 2rem;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
+  line-height: 1;
   border: 1px solid #530700;
 }
 @media (max-width: 767px) {
@@ -2095,11 +2092,11 @@ footer
 }
 
 .footer__nav {
-  margin-top: 2.6rem;
+  margin: 2.6rem 0 8rem;
 }
 @media (max-width: 767px) {
   .footer__nav {
-    margin-top: 2rem;
+    margin: 2rem 0 5rem;
   }
 }
 
@@ -2188,12 +2185,17 @@ footer
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 10rem;
+  height: 9.2rem;
   color: #ffffff;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.4;
   font-family: "EB Garamond", "Georgia", "Times New Roman", "Noto Serif JP", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
+}
+@media (max-width: 767px) {
+  .copyright {
+    height: 10rem;
+  }
 }
 
 /* ===========================
