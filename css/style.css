@@ -71,8 +71,12 @@ a {
 section {
   scroll-margin-top: 9rem;
 }
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
+=======
+@media (max-width: 980px) {
+>>>>>>> develop002
   section {
     scroll-margin-top: 5rem;
   }
@@ -144,24 +148,29 @@ html:has(dialog[open]) {
   position: fixed;
   top: 0;
   left: 0;
-  height: 9rem;
+  height: 8rem;
   width: 100%;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-transition: background-color 0.8s ease;
   transition: background-color 0.8s ease;
 }
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
+=======
+@media (max-width: 980px) {
+>>>>>>> develop002
   #header {
-    top: -0.7rem;
-    left: -2rem;
-    height: 5.7rem;
+    height: 5rem;
   }
 }
 
@@ -179,6 +188,7 @@ html:has(dialog[open]) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 8rem;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -188,9 +198,25 @@ html:has(dialog[open]) {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -ms-flex-wrap: nowrap;
+<<<<<<< HEAD
   flex-wrap: nowrap;
   height: 100%;
+=======
+      flex-wrap: nowrap;
+  padding: 0 7rem 0 8rem;
+>>>>>>> develop002
   width: 100%;
+}
+@media (max-width: 990px) {
+  .header__container {
+    padding: 0 7rem 0 5rem;
+  }
+}
+@media (max-width: 980px) {
+  .header__container {
+    padding: 0 0 0 2.2rem;
+    height: 5rem;
+  }
 }
 
 .header__logo {
@@ -202,16 +228,26 @@ html:has(dialog[open]) {
 }
 
 .header__nav {
-  height: 9rem;
+  height: 100%;
   right: auto;
   min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
+=======
+@media (max-width: 980px) {
+>>>>>>> develop002
   .header__nav {
     position: fixed;
     top: 5rem;
-    right: -35rem;
+    right: -100%;
     width: 30rem;
     text-align: left;
     background-color: #530700;
@@ -225,7 +261,10 @@ html:has(dialog[open]) {
   transition: right 0.3s ease;
 }
 
-@media (max-width: 875px) {
+.header__item {
+  height: 100%;
+}
+@media (max-width: 980px) {
   .header__item {
     width: 100%;
     text-align: left;
@@ -248,37 +287,59 @@ html:has(dialog[open]) {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  gap: 2.2rem;
   -webkit-box-pack: end;
+<<<<<<< HEAD
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 @media (max-width: 875px) {
+=======
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0.2rem;
+}
+@media (max-width: 980px) {
+>>>>>>> develop002
   .header__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: start;
+<<<<<<< HEAD
     -ms-flex-align: start;
     align-items: flex-start;
     gap: 0;
+=======
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 2rem;
+>>>>>>> develop002
   }
 }
 
 .header__logo a {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
+<<<<<<< HEAD
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
   padding: 3.35rem 0;
+=======
+      -ms-flex-align: center;
+          align-items: center;
+  height: 8rem;
+>>>>>>> develop002
   position: relative;
   color: #ffffff;
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
 }
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
   .header__logo a {
@@ -286,24 +347,33 @@ html:has(dialog[open]) {
     top: 0;
     left: 4.2rem;
     padding: 2rem 0 1.3rem;
+=======
+@media (max-width: 980px) {
+  .header__logo a {
+    height: auto;
+>>>>>>> develop002
   }
 }
 
 .header__logo a:hover {
   opacity: 0.5;
 }
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
+=======
+@media (max-width: 980px) {
+>>>>>>> develop002
   .header__logo a:hover {
     opacity: 0.5;
   }
 }
 
 .header__item a {
-  height: 100%;
+  height: 9.1rem;
   position: relative;
   color: #ffffff;
-  padding: 3.45rem 0;
+  padding: 0 1rem;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   display: -webkit-box;
@@ -313,19 +383,27 @@ html:has(dialog[open]) {
   -ms-flex-align: center;
   align-items: center;
 }
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
+=======
+@media (max-width: 980px) {
+>>>>>>> develop002
   .header__item a {
     background-color: #530700;
-    padding: 1.8rem 2rem 2.1rem;
+    padding: 0 2rem;
     width: 100%;
     height: 100%;
     line-height: 1;
     border: 2px solid #530700;
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
+=======
+@media (max-width: 980px) {
+>>>>>>> develop002
   .header__item a:hover {
     background-color: #000000;
     color: #ffffff;
@@ -349,22 +427,29 @@ html:has(dialog[open]) {
 .header__item a:hover::after {
   width: 100%;
 }
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
+=======
+@media (max-width: 980px) {
+>>>>>>> develop002
   .header__item a:hover::after {
     display: none;
   }
+}
+
+.slider {
+  position: relative;
 }
 
 .catchcopy {
   color: #ffffff;
   position: absolute;
   text-shadow: 0.5rem 0.5rem 0.5rem #000000;
-  top: 31.2962962963vw;
+  top: 31.4814814815vw;
   left: 5.7407407407vw;
-  height: 12.962962963vh;
   font-size: 3.7037037037vw;
-  line-height: 6.4814814815vw;
+  line-height: 1.75;
   letter-spacing: 1.1111111111vw;
   z-index: 2;
 }
@@ -373,7 +458,7 @@ html:has(dialog[open]) {
   .catchcopy {
     font-size: 8vw;
     letter-spacing: 2.4vw;
-    line-height: 16vw;
+    line-height: 2;
     text-align: center;
     top: 64vw;
     left: 20.8vw;
@@ -415,8 +500,12 @@ html:has(dialog[open]) {
   box-sizing: border-box;
   z-index: 100001;
 }
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
+=======
+@media (max-width: 980px) {
+>>>>>>> develop002
   .hamburger {
     display: block;
   }
@@ -469,7 +558,7 @@ html:has(dialog[open]) {
   background-image: url(../img/feature-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 13.3rem 0 12rem;
+  padding: 13.4rem 0 11.5rem;
   width: 100%;
   margin-inline: auto;
 }
@@ -490,11 +579,16 @@ html:has(dialog[open]) {
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
   -webkit-box-pack: center;
+<<<<<<< HEAD
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+=======
+      -ms-flex-pack: center;
+          justify-content: center;
+>>>>>>> develop002
   width: 100%;
 }
 
@@ -513,10 +607,9 @@ html:has(dialog[open]) {
 .feature__ttl {
   font-size: 3rem;
   color: #530700;
-  line-height: 118%;
-  letter-spacing: 0.55rem;
   white-space: nowrap;
-  margin-left: 5.6rem;
+  letter-spacing: 0.5rem;
+  margin-left: 5.8rem;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
@@ -532,12 +625,12 @@ html:has(dialog[open]) {
 
 .feature__ttl span {
   display: block;
-  margin-left: 1.8rem;
+  margin-left: 2rem;
 }
 
 @media (max-width: 767px) {
   .feature__ttl span {
-    margin-left: 2.1rem;
+    margin-left: 2.4rem;
   }
 }
 
@@ -558,6 +651,12 @@ html:has(dialog[open]) {
 }
 
 .feature__dsc {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+.feature__dsc span {
+  display: block;
   line-height: 1;
   letter-spacing: 0.7rem;
   white-space: nowrap;
@@ -565,14 +664,18 @@ html:has(dialog[open]) {
 }
 
 @media (max-width: 767px) {
-  .feature__dsc {
+  .feature__dsc span {
     font-size: 1.6rem;
     margin-left: 1rem;
     letter-spacing: 0.6rem;
   }
 }
+<<<<<<< HEAD
 
 .feature__dsc:last-of-type {
+=======
+.feature__dsc span:last-of-type {
+>>>>>>> develop002
   margin-left: 0;
 }
 
@@ -591,12 +694,21 @@ html:has(dialog[open]) {
 }
 
 .recommend__list {
-  margin-top: 6.1rem;
+  margin-top: 6.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 8.1rem;
 }
 
 @media (max-width: 767px) {
   .recommend__list {
     margin-top: 3.5rem;
+    row-gap: 4.9rem;
   }
 }
 
@@ -605,10 +717,16 @@ html:has(dialog[open]) {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+<<<<<<< HEAD
   margin-bottom: 8.5rem;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: end;
+=======
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+>>>>>>> develop002
 }
 
 .recommend-item:nth-of-type(3) {
@@ -618,9 +736,14 @@ html:has(dialog[open]) {
 @media (max-width: 970px) {
   .recommend-item {
     -webkit-box-pack: center;
+<<<<<<< HEAD
     -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 4rem;
+=======
+        -ms-flex-pack: center;
+            justify-content: center;
+>>>>>>> develop002
   }
 }
 
@@ -628,9 +751,18 @@ html:has(dialog[open]) {
   .recommend-item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+<<<<<<< HEAD
     -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 5.1rem;
+=======
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: static;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+>>>>>>> develop002
   }
 }
 
@@ -640,6 +772,7 @@ html:has(dialog[open]) {
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
   margin-top: 0;
+<<<<<<< HEAD
   margin-bottom: 8rem;
 }
 
@@ -647,43 +780,89 @@ html:has(dialog[open]) {
   .recommend-item:nth-of-type(even) {
     margin-bottom: 4rem;
   }
+=======
+>>>>>>> develop002
 }
 
 @media (max-width: 767px) {
   .recommend-item:nth-of-type(even) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+<<<<<<< HEAD
     -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 5rem;
+=======
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.recommend-item:nth-of-type(even) .caption {
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .recommend-item:nth-of-type(even) .caption {
+    text-align: left;
+>>>>>>> develop002
   }
 }
 
-.recommend__img {
-  display: block;
-  max-width: 60rem;
-  position: relative;
-  width: 100%;
-  padding-bottom: 5rem;
+.recommend__text {
+  padding: 5rem 0 4.2rem 4rem;
+}
+@media (max-width: 970px) {
+  .recommend__text {
+    padding: 2.5rem 0 2rem 2.5rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 840px) {
+  .recommend__text {
+    padding: 2.5rem 0 2rem 1rem;
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 767px) {
-  .recommend__img {
-    width: 100%;
-    max-width: 100%;
-    padding-bottom: 0;
+  .recommend__text {
+    margin-bottom: 5rem;
+    position: static;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
 }
 
 .caption {
   font-size: 1.6rem;
   line-height: 1.56;
-  margin-top: 1.9rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+  text-align: left;
 }
 
 @media (max-width: 767px) {
   .caption {
+    display: block;
     margin-top: 0.6rem;
+    position: static;
+  }
+}
+
+.recommend__img {
+  display: inline-block;
+  aspect-ratio: 2/1;
+  position: relative;
+  width: 65.2173913043%;
+}
+@media (max-width: 767px) {
+  .recommend__img {
+    position: static;
+    width: 100%;
+    max-width: none;
+    padding-bottom: 0;
+    margin-bottom: 0.6rem;
   }
 }
 
@@ -693,7 +872,15 @@ html:has(dialog[open]) {
   line-height: 1.4;
   margin-bottom: 1.4rem;
 }
+<<<<<<< HEAD
 
+=======
+@media (max-width: 890px) {
+  .recommend__ttl {
+    font-size: 2rem;
+  }
+}
+>>>>>>> develop002
 @media (max-width: 767px) {
   .recommend__ttl {
     font-size: 2rem;
@@ -711,39 +898,52 @@ html:has(dialog[open]) {
 
 .recommend__text {
   background-color: #530700;
-  max-width: 32rem;
-  width: 100%;
+  margin-top: 14.5rem;
   color: #ffffff;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.56;
-  text-align: left;
   position: relative;
-  padding: 4.9rem 2rem 4.3rem 4.1rem;
-  width: 100%;
+  padding: 5rem 0 4.2rem 4rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .recommend__text::before {
   content: "";
   position: absolute;
   bottom: 0;
-  right: 30rem;
-  width: 20rem;
-  height: 24rem;
+  right: 0;
+  width: 46.2962962963vw;
+  height: 23.1481481481vw;
+  max-width: 50rem;
+  max-height: 25rem;
   background-color: #530700;
   z-index: -1;
 }
+<<<<<<< HEAD
 
+=======
+@media (max-width: 970px) {
+  .recommend__text {
+    padding: 2.5rem 0 2rem 2.5rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 890px) {
+  .recommend__text {
+    padding: 2.5rem 0 2rem 1.5rem;
+    font-size: 1.3rem;
+  }
+}
+>>>>>>> develop002
 @media (max-width: 767px) {
   .recommend__text {
-    width: 100%;
-    top: 0;
     padding: 2.1rem 2rem 1.3rem;
-    max-width: none;
-    width: 100%;
-    z-index: auto;
-    margin-top: 0.6rem;
-    max-width: 100%;
+    margin: 0;
+    position: static;
+    font-size: 1.6rem;
   }
 
   .recommend__text::before {
@@ -758,6 +958,7 @@ html:has(dialog[open]) {
   }
 }
 
+<<<<<<< HEAD
 .recommend-item:nth-of-type(even) .caption {
   text-align: right;
   margin-top: 2rem;
@@ -809,11 +1010,16 @@ html:has(dialog[open]) {
     font-size: 1.5rem;
     line-height: 1.5;
   }
+=======
+.recommend-item:nth-of-type(even) .recommend__text::before {
+  left: 0;
+  right: auto;
+>>>>>>> develop002
 }
 
 /* ===========================
-  コース　course
-   =========================== */
+コース　course
+ =========================== */
 #course {
   background-image: url(../img/course-back.svg);
   background-repeat: no-repeat;
@@ -824,7 +1030,7 @@ html:has(dialog[open]) {
 
 @media (max-width: 767px) {
   #course {
-    padding: 5.3rem 0 6rem;
+    padding: 5.3rem 0 4rem;
     background-image: url(../img/course-back-sp.svg);
   }
 }
@@ -834,9 +1040,15 @@ html:has(dialog[open]) {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
+<<<<<<< HEAD
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-top: 6.9rem;
+=======
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 6.5rem;
+>>>>>>> develop002
   gap: 4.35%;
   width: 100%;
 }
@@ -853,7 +1065,7 @@ html:has(dialog[open]) {
   cursor: pointer;
   -webkit-transition: opacity 0.8s ease;
   transition: opacity 0.8s ease;
-  width: 21.74%;
+  width: 21.7375%;
 }
 
 .course__item:hover {
@@ -863,6 +1075,7 @@ html:has(dialog[open]) {
 @media (max-width: 767px) {
   .course__item {
     width: 100%;
+    margin-bottom: 2rem;
   }
 }
 
@@ -892,7 +1105,7 @@ html:has(dialog[open]) {
 
 @media (max-width: 767px) {
   .course__ttl {
-    margin: 1rem 0 2rem;
+    margin-top: 1rem;
     text-align: left;
   }
 }
@@ -944,17 +1157,22 @@ html:has(dialog[open]) {
   }
 }
 
-span#modalPrice {
-  margin-left: -0.5rem;
+@media (max-width: 767px) {
+  span#modalPrice {
+    margin-left: -0.5rem;
+  }
 }
+<<<<<<< HEAD
 
 .modal__content img {
+=======
+span#modalPrice .modal__content img {
+>>>>>>> develop002
   max-width: 100%;
   height: auto;
   display: block;
 }
-
-.modal__close {
+span#modalPrice .modal__close {
   position: absolute;
   background: none;
   border: none;
@@ -982,15 +1200,15 @@ span#modalPrice {
 }
 
 @media (max-width: 767px) {
-  .modal__close {
+  span#modalPrice .modal__close {
     top: 0.6rem;
     right: 0.5rem;
   }
 }
 
 /* ===========================
-   お知らせ　news
-   =========================== */
+ お知らせ　news
+ =========================== */
 #news {
   background-color: rgba(83, 7, 0, 0.1);
   padding: 8.2rem 0 7.8rem;
@@ -1256,8 +1474,8 @@ span#modalPrice {
 }
 
 /* ===========================
-  アクセス　access
-   =========================== */
+アクセス　access
+ =========================== */
 #access {
   padding: 8.3rem 0 8rem;
   background-image: url(../img/access-back.svg);
@@ -1278,9 +1496,15 @@ span#modalPrice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: end;
+=======
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+>>>>>>> develop002
   margin-top: 7rem;
 }
 
@@ -1296,12 +1520,13 @@ span#modalPrice {
 }
 
 .access__map {
-  height: auto;
   z-index: 1;
   pointer-events: none;
+  width: 65.2173913043vw;
+  max-height: 40rem;
   max-width: 60rem;
-  width: 100%;
-  padding-bottom: 5.5rem;
+  position: relative;
+  z-index: 11;
 }
 
 @media (max-width: 767px) {
@@ -1316,7 +1541,6 @@ span#modalPrice {
 .access__map iframe {
   aspect-ratio: 600/400;
   width: 100%;
-  height: 100%;
   border: none;
   outline: none;
   display: block;
@@ -1331,20 +1555,26 @@ span#modalPrice {
 .access__content {
   background-color: #530700;
   color: #ffffff;
-  padding: 5.2rem 0 4.2rem 4rem;
+  padding: 4.5rem 0 4.2rem 4rem;
   position: relative;
-  max-width: 32rem;
-  width: 100%;
+  z-index: 10;
+  width: 32.6086956522vw;
+  max-width: 26rem;
+  max-width: 50rem;
+  margin-top: 20rem;
 }
 
 .access__content::before {
   content: "";
   position: absolute;
-  right: 32rem;
-  bottom: 0rem;
-  width: 18rem;
-  height: 26.2rem;
+  right: 0;
+  bottom: 0;
+  width: 54.347826087vw;
+  height: 28.4782608696vw;
+  max-width: 50rem;
+  max-height: 26.2rem;
   background-color: #530700;
+<<<<<<< HEAD
 }
 
 @media (max-width: 970px) {
@@ -1354,11 +1584,19 @@ span#modalPrice {
     width: 11rem;
     height: 25.2rem;
   }
+=======
+  z-index: -1;
+>>>>>>> develop002
 }
 
 @media (max-width: 970px) {
   .access__content {
-    padding: 4.9rem 1rem 4.5rem 6rem;
+    padding: 1.5rem 0 5rem 2.3rem;
+  }
+}
+@media (max-width: 830px) {
+  .access__content {
+    padding: 1.5rem 0 3rem 2rem;
   }
 }
 
@@ -1369,7 +1607,7 @@ span#modalPrice {
     width: 100%;
     top: auto;
     left: auto;
-    margin-top: 1.7rem;
+    margin-top: 1.5rem;
     padding: 2rem 0 2rem 2rem;
   }
 
@@ -1529,13 +1767,22 @@ Reservations / Contact
   line-height: 1.65;
 }
 
+form {
+  margin-top: 3.4rem;
+}
+@media (max-width: 767px) {
+  form {
+    margin-top: 3.7rem;
+  }
+}
+
 .contact__lead {
-  margin: 3.4rem 0 3.7rem;
+  margin-bottom: 3.7rem;
 }
 
 @media (max-width: 767px) {
   .contact__lead {
-    margin: 3.7rem 0 2.8rem;
+    margin-bottom: 2.8rem;
   }
 }
 
@@ -1551,7 +1798,15 @@ Reservations / Contact
   line-height: 1.65;
   width: 100%;
 }
+<<<<<<< HEAD
 
+=======
+@media (max-width: 1024px) {
+  .contact__item {
+    margin-bottom: 3.2rem;
+  }
+}
+>>>>>>> develop002
 @media (max-width: 855px) {
   .contact__item {
     -webkit-box-orient: vertical;
@@ -1567,7 +1822,7 @@ Reservations / Contact
 
 @media (max-width: 767px) {
   .contact__item {
-    margin-bottom: 3.2rem;
+    margin-bottom: 3.1rem;
   }
 }
 
@@ -1614,6 +1869,17 @@ Reservations / Contact
   }
 }
 
+@media (max-width: 855px) {
+  .contact__item--radio .contact__label-wrapper {
+    width: 5rem;
+  }
+}
+@media (max-width: 767px) {
+  .contact__item--radio .contact__label-wrapper {
+    width: 6.3rem;
+  }
+}
+
 .contact__label {
   display: inline-block;
 }
@@ -1639,7 +1905,6 @@ Reservations / Contact
 @media (max-width: 767px) {
   .contact__item--radio .contact__label {
     margin-bottom: 0;
-    margin-right: 2.3rem;
   }
 }
 
@@ -1674,7 +1939,6 @@ input[type=radio] {
   width: 2rem;
   height: 2rem;
   margin-right: 1.9rem;
-  border: 2px solid #ffffff;
   border-radius: 50%;
   appearance: none;
   -webkit-appearance: none;
@@ -1762,8 +2026,13 @@ input[type=radio]:checked::before {
 #message {
   padding: 0.9rem 2rem 1.2rem;
   -webkit-box-sizing: border-box;
+<<<<<<< HEAD
   box-sizing: border-box;
   font-size: 1.6rem;
+=======
+          box-sizing: border-box;
+  font-size: 1.8rem;
+>>>>>>> develop002
 }
 
 .form__select {
@@ -1786,6 +2055,27 @@ input[type=radio]:checked::before {
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.6;
+}
+
+#name::-webkit-input-placeholder, #email::-webkit-input-placeholder {
+  font-size: 1.6rem;
+}
+
+#name::-moz-placeholder, #email::-moz-placeholder {
+  font-size: 1.6rem;
+}
+
+#name:-ms-input-placeholder, #email:-ms-input-placeholder {
+  font-size: 1.6rem;
+}
+
+#name::-ms-input-placeholder, #email::-ms-input-placeholder {
+  font-size: 1.6rem;
+}
+
+#name::placeholder,
+#email::placeholder {
+  font-size: 1.6rem;
 }
 
 .contact__checkboxes {
@@ -1973,7 +2263,6 @@ label[for=message] {
   max-height: 300px;
   overflow-y: auto;
   background-color: #ffffff;
-  border: 1px solid #ffffff;
   padding: 3.8rem 7rem 5rem 4rem;
   overflow-y: scroll;
   margin-inline: auto;
@@ -2061,6 +2350,7 @@ label[for=message] {
   border-radius: 0 !important;
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
+<<<<<<< HEAD
   appearance: none !important;
   border: 1px solid #ffffff;
   background-color: #ffffff;
@@ -2078,6 +2368,9 @@ label[for=message] {
   -moz-appearance: none !important;
   appearance: none !important;
   border: 1px solid #ffffff;
+=======
+       appearance: none !important;
+>>>>>>> develop002
   background-color: #ffffff;
   background-clip: padding-box;
   padding: 0.8rem 2rem;
@@ -2143,14 +2436,15 @@ button {
   cursor: pointer;
   display: block;
   margin-inline: auto;
-  padding: 1rem 6rem 1.3rem;
-  margin-top: 7.7rem;
+  padding: 1.4rem 6rem;
+  margin-top: 7.6rem;
   text-align: center;
   background-color: #530700;
   color: #ffffff;
   font-size: 2rem;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
+  line-height: 1;
   border: 1px solid #530700;
 }
 
@@ -2188,14 +2482,14 @@ footer
    =========================== */
 #footer {
   background-image: url(../img/footer-back.svg);
-  padding: 7.8rem 0 7rem;
+  padding-top: 7.8rem;
   text-align: center;
   color: #000000;
 }
 
 @media (max-width: 767px) {
   #footer {
-    padding: 5.1rem 0 3.8rem;
+    padding-top: 5.1rem;
     background-image: url(../img/footer-back-sp.svg);
   }
 }
@@ -2226,7 +2520,7 @@ footer
 @media (max-width: 767px) {
   .company__line {
     max-width: none;
-    margin-top: 2rem;
+    margin-top: 1.8rem;
   }
 }
 
@@ -2246,12 +2540,12 @@ footer
 }
 
 .footer__nav {
-  margin-top: 2.6rem;
+  margin: 2.6rem 0 7.2rem;
 }
 
 @media (max-width: 767px) {
   .footer__nav {
-    margin-top: 2rem;
+    margin: 2rem 0 4rem;
   }
 }
 
@@ -2340,19 +2634,30 @@ footer
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
+<<<<<<< HEAD
   -ms-flex-pack: center;
   justify-content: center;
   height: 10rem;
+=======
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 9.2rem;
+>>>>>>> develop002
   color: #ffffff;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.4;
   font-family: "EB Garamond", "Georgia", "Times New Roman", "Noto Serif JP", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
 }
+@media (max-width: 767px) {
+  .copyright {
+    height: 10rem;
+  }
+}
 
 /* ===========================
-   トップへ戻るボタン
-   =========================== */
+ トップへ戻るボタン
+ =========================== */
 .page-top a {
   position: fixed;
   right: 6rem;
