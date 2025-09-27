@@ -278,8 +278,12 @@ html:has(dialog[open]) {
   }
 }
 
+.header__item {
+  height: 8rem;
+}
+
 .header__item a {
-  height: 9.1rem;
+  height: 100%;
   position: relative;
   color: #ffffff;
   padding: 0 1rem;
@@ -1872,6 +1876,7 @@ button {
     display: flex;
     align-items: flex-start;
     margin-top: 7rem;
+    position: relative;
 
     @include sp {
       flex-direction: column;
@@ -1895,6 +1900,7 @@ button {
       max-width: none;
       padding-bottom: 0;
       height: auto;
+      max-height: none;
     }
   }
 
@@ -1918,11 +1924,10 @@ button {
     position: relative;
     z-index: 10;
     width: calc(300 / 920 * 100vw);
-    // height: calc(240 / 920 * 100vw);
     max-width: 26rem;
     max-width: 50rem;
     margin-top: 20rem;
-    // flex: 1;
+    
 
     &::before {
       content: "";
@@ -1939,10 +1944,18 @@ button {
 
     @media (max-width: 970px) {
       padding: 1.5rem 0 5rem 2.3rem;
+      margin-top: 22rem;
     }
+
+    @media (max-width: 890px) {
+      margin-top: 18rem;
+    }
+
 
     @media (max-width: 830px) {
       padding: 1.5rem 0 3rem 2rem;
+      margin-top: 16rem;
+
     }
 
     @include sp {
