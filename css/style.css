@@ -297,8 +297,12 @@ html:has(dialog[open]) {
   }
 }
 
+.header__item {
+  height: 8rem;
+}
+
 .header__item a {
-  height: 9.1rem;
+  height: 100%;
   position: relative;
   color: #ffffff;
   padding: 0 1rem;
@@ -1223,6 +1227,7 @@ span#modalPrice .modal__close {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-top: 7rem;
+  position: relative;
 }
 @media (max-width: 767px) {
   .access__inner {
@@ -1250,6 +1255,7 @@ span#modalPrice .modal__close {
     max-width: none;
     padding-bottom: 0;
     height: auto;
+    max-height: none;
   }
 }
 
@@ -1292,11 +1298,18 @@ span#modalPrice .modal__close {
 @media (max-width: 970px) {
   .access__content {
     padding: 1.5rem 0 5rem 2.3rem;
+    margin-top: 22rem;
+  }
+}
+@media (max-width: 890px) {
+  .access__content {
+    margin-top: 18rem;
   }
 }
 @media (max-width: 830px) {
   .access__content {
     padding: 1.5rem 0 3rem 2rem;
+    margin-top: 16rem;
   }
 }
 @media (max-width: 767px) {
