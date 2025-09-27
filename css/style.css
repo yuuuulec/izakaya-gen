@@ -154,9 +154,6 @@ html:has(dialog[open]) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -164,10 +161,14 @@ html:has(dialog[open]) {
   transition: background-color 0.8s ease;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
 =======
 @media (max-width: 980px) {
+>>>>>>> develop002
+=======
+@media (max-width: 940px) {
 >>>>>>> develop002
   #header {
     height: 5rem;
@@ -207,12 +208,12 @@ html:has(dialog[open]) {
 >>>>>>> develop002
   width: 100%;
 }
-@media (max-width: 990px) {
+@media (max-width: 1000px) {
   .header__container {
-    padding: 0 7rem 0 5rem;
+    padding: 0 3rem 0 3rem;
   }
 }
-@media (max-width: 980px) {
+@media (max-width: 940px) {
   .header__container {
     padding: 0 0 0 2.2rem;
     height: 5rem;
@@ -228,7 +229,6 @@ html:has(dialog[open]) {
 }
 
 .header__nav {
-  height: 100%;
   right: auto;
   min-width: 0;
   display: -webkit-box;
@@ -239,16 +239,19 @@ html:has(dialog[open]) {
           align-items: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
 =======
 @media (max-width: 980px) {
 >>>>>>> develop002
+=======
+@media (max-width: 940px) {
+>>>>>>> develop002
   .header__nav {
     position: fixed;
     top: 5rem;
     right: -100%;
-    width: 30rem;
     text-align: left;
     background-color: #530700;
     z-index: 999999;
@@ -259,12 +262,13 @@ html:has(dialog[open]) {
   right: 0;
   -webkit-transition: right 0.3s ease;
   transition: right 0.3s ease;
+  width: 30rem;
 }
 
 .header__item {
   height: 100%;
 }
-@media (max-width: 980px) {
+@media (max-width: 940px) {
   .header__item {
     width: 100%;
     text-align: left;
@@ -299,7 +303,11 @@ html:has(dialog[open]) {
           justify-content: flex-end;
   gap: 0.2rem;
 }
+<<<<<<< HEAD
 @media (max-width: 980px) {
+>>>>>>> develop002
+=======
+@media (max-width: 940px) {
 >>>>>>> develop002
   .header__list {
     -webkit-box-orient: vertical;
@@ -314,7 +322,12 @@ html:has(dialog[open]) {
 =======
         -ms-flex-align: start;
             align-items: flex-start;
+<<<<<<< HEAD
     gap: 2rem;
+>>>>>>> develop002
+=======
+    gap: 0;
+    width: 100%;
 >>>>>>> develop002
   }
 }
@@ -340,6 +353,7 @@ html:has(dialog[open]) {
   transition: opacity 0.8s ease;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
   .header__logo a {
@@ -352,6 +366,11 @@ html:has(dialog[open]) {
   .header__logo a {
     height: auto;
 >>>>>>> develop002
+=======
+@media (max-width: 940px) {
+  .header__logo a {
+    height: 5rem;
+>>>>>>> develop002
   }
 }
 
@@ -359,10 +378,14 @@ html:has(dialog[open]) {
   opacity: 0.5;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
 =======
 @media (max-width: 980px) {
+>>>>>>> develop002
+=======
+@media (max-width: 940px) {
 >>>>>>> develop002
   .header__logo a:hover {
     opacity: 0.5;
@@ -384,31 +407,38 @@ html:has(dialog[open]) {
   align-items: center;
 }
 <<<<<<< HEAD
-
-@media (max-width: 875px) {
-=======
-@media (max-width: 980px) {
->>>>>>> develop002
-  .header__item a {
-    background-color: #530700;
-    padding: 0 2rem;
-    width: 100%;
-    height: 100%;
-    line-height: 1;
-    border: 2px solid #530700;
-  }
-}
 <<<<<<< HEAD
 
 @media (max-width: 875px) {
 =======
 @media (max-width: 980px) {
 >>>>>>> develop002
+=======
+@media (max-width: 940px) {
+>>>>>>> develop002
+  .header__item a {
+    background-color: #530700;
+    padding-left: 2rem;
+    padding-right: 0;
+    width: 100%;
+    height: 5.7rem;
+    line-height: 1;
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+@media (max-width: 875px) {
+=======
+@media (max-width: 980px) {
+>>>>>>> develop002
+=======
+@media (max-width: 940px) {
+>>>>>>> develop002
   .header__item a:hover {
     background-color: #000000;
     color: #ffffff;
     opacity: 1;
-    border: 2px solid #000000;
   }
 }
 
@@ -426,12 +456,17 @@ html:has(dialog[open]) {
 
 .header__item a:hover::after {
   width: 100%;
+  opacity: 1;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 @media (max-width: 875px) {
 =======
 @media (max-width: 980px) {
+>>>>>>> develop002
+=======
+@media (max-width: 940px) {
 >>>>>>> develop002
   .header__item a:hover::after {
     display: none;
@@ -501,10 +536,14 @@ html:has(dialog[open]) {
   z-index: 100001;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 @media (max-width: 875px) {
 =======
 @media (max-width: 980px) {
+>>>>>>> develop002
+=======
+@media (max-width: 940px) {
 >>>>>>> develop002
   .hamburger {
     display: block;

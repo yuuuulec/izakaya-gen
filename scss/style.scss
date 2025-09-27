@@ -143,11 +143,10 @@ html:has(dialog[open]) {
   width: 100%;
   z-index: 10;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   transition: background-color 0.8s ease;
 
-  @media (max-width: 980px) {
+  @media (max-width: 940px) {
     height: 5rem;
   }
 }
@@ -172,12 +171,12 @@ html:has(dialog[open]) {
   padding: 0 7rem 0 8rem;
   width: 100%;
 
-  @media (max-width: 990px) {
-    padding: 0 7rem 0 5rem;
+  @media (max-width: 1000px) {
+    padding: 0 3rem 0 3rem;
   }
 
 
-  @media (max-width: 980px) {
+  @media (max-width: 940px) {
     padding: 0 0 0 2.2rem;
     height: 5rem;
   }
@@ -191,17 +190,15 @@ html:has(dialog[open]) {
 }
 
 .header__nav {
-  height: 100%;
   right: auto;
   min-width: 0;
   display: flex;
   align-items: center;
 
-  @media (max-width: 980px) {
+  @media (max-width: 940px) {
     position: fixed;
     top: 5rem;
     right: -100%;
-    width: 30rem;
     text-align: left;
     background-color: $mainColor;
     z-index: 999999;
@@ -211,12 +208,13 @@ html:has(dialog[open]) {
 .header__nav.active {
   right: 0;
   transition: right 0.3s ease;
+  width: 30rem;
 }
 
 .header__item {
   height: 100%;
 
-  @media (max-width: 980px) {
+  @media (max-width: 940px) {
     width: 100%;
     text-align: left;
     font-size: 1.8rem;
@@ -237,10 +235,11 @@ html:has(dialog[open]) {
   justify-content: flex-end;
   gap: 0.2rem;
 
-  @media (max-width: 980px) {
+  @media (max-width: 940px) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 0;
+    width: 100%;
   }
 }
 
@@ -253,6 +252,7 @@ html:has(dialog[open]) {
   transition: opacity 0.8s ease;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   @media (max-width: 875px) {
     padding: 2rem 0 1.3rem;
     top: 0;
@@ -262,12 +262,17 @@ html:has(dialog[open]) {
   @media (max-width: 980px) {
     height: auto;
 >>>>>>> develop002
+=======
+  @media (max-width: 940px) {
+    height: 5rem;
+>>>>>>> develop002
   }
+
 
   &:hover {
     opacity: 0.5;
 
-    @media (max-width: 980px) {
+    @media (max-width: 940px) {
       opacity: 0.5;
     }
   }
@@ -282,22 +287,23 @@ html:has(dialog[open]) {
   display: flex;
   align-items: center;
 
-  @media (max-width: 980px) {
+  @media (max-width: 940px) {
     background-color: $mainColor;
-    padding: 0 2rem;
+    padding-left: 2rem;
+    padding-right: 0;
     width: 100%;
-    height: 100%;
+    height: 5.7rem;
     line-height: 1;
-    border: 2px solid $mainColor;
+    // border: 2px solid $mainColor;
   }
 
   &:hover {
 
-    @media (max-width: 980px) {
+    @media (max-width: 940px) {
       background-color: #000000;
       color: $fontColor;
       opacity: 1;
-      border: 2px solid #000000;
+      // border: 2px solid #000000;
     }
   }
 
@@ -314,8 +320,9 @@ html:has(dialog[open]) {
 
   &:hover::after {
     width: 100%;
+    opacity: 1;
 
-    @media (max-width: 980px) {
+    @media (max-width: 940px) {
       display: none;
     }
   }
@@ -380,7 +387,7 @@ html:has(dialog[open]) {
   box-sizing: border-box;
   z-index: 100001;
 
-  @include header-sp {
+  @media (max-width: 940px) {
     display: block;
   }
 }
