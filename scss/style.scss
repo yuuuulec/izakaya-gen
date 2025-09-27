@@ -301,6 +301,7 @@ html:has(dialog[open]) {
 
   &:hover::after {
     width: 100%;
+    opacity: 1;
 
     @media (max-width: 940px) {
       display: none;
