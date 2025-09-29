@@ -1215,11 +1215,10 @@ span#modalPrice .modal__close {
   z-index: 1;
   pointer-events: none;
   width: 65.2173913043vw;
-  max-height: 40rem;
   max-width: 60rem;
   position: relative;
   z-index: 11;
-  padding-bottom: 6rem;
+  padding-bottom: 5.5rem;
 }
 @media (max-width: 767px) {
   .access__map {
@@ -1248,10 +1247,11 @@ span#modalPrice .modal__close {
 .access__content {
   background-color: #530700;
   color: #ffffff;
-  padding: 4.5rem 0 4.2rem 4rem;
+  padding: 5rem 0 4.2rem 4rem;
   position: relative;
   z-index: 10;
-  width: 32.6086956522vw;
+  width: 29.6296296296vw;
+  height: 24.2592592593vw;
   max-width: 26rem;
   max-width: 50rem;
   position: relative;
@@ -1270,19 +1270,8 @@ span#modalPrice .modal__close {
 }
 @media (max-width: 970px) {
   .access__content {
-    padding: 1.5rem 0 5rem 2rem;
+    padding: 2rem 0 0rem 2rem;
     font-size: 1.5rem;
-  }
-}
-@media (max-width: 890px) {
-  .access__content {
-    padding: 1.5rem 0 4rem 1.5rem;
-    font-size: 1.3rem;
-  }
-}
-@media (max-width: 830px) {
-  .access__content {
-    padding: 1.5rem 0 3rem 1rem;
   }
 }
 @media (max-width: 767px) {
@@ -1290,6 +1279,7 @@ span#modalPrice .modal__close {
     position: static;
     max-width: none;
     width: 100%;
+    height: auto;
     top: auto;
     left: auto;
     margin-top: 1.5rem;

@@ -1069,11 +1069,11 @@ html:has(dialog[open]) {
     z-index: 1;
     pointer-events: none;
     width: calc(600 / 920 * 100vw);
-    max-height: 40rem;
+    // max-height: 40rem;
     max-width: 60rem;
     position: relative;
     z-index: 11;
-    padding-bottom: 6rem;
+    padding-bottom: 5.5rem;
 
     @include sp {
       width: 100%;
@@ -1083,24 +1083,6 @@ html:has(dialog[open]) {
       max-height: none;
     }
   }
-
-  // .access__map {
-  //   height: auto;
-  //   z-index: 11;
-  //   pointer-events: none;
-  //   max-width: 60rem;
-  //   width: 100%;
-  //   padding-bottom: 5.5rem;
-  //   position: relative;
-  // }
-  // @media (max-width: 767px) {
-  //   .access__map {
-  //     width: 100%;
-  //     max-width: none;
-  //     padding-bottom: 0;
-  //     height: auto;
-  //   }
-  // }
 
   .access__map iframe {
     aspect-ratio: 600/400;
@@ -1119,14 +1101,15 @@ html:has(dialog[open]) {
   .access__content {
     background-color: $mainColor;
     color: $fontColor;
-    padding: 4.5rem 0 4.2rem 4rem;
+    padding: 5rem 0 4.2rem 4rem;
     position: relative;
     z-index: 10;
-    width: calc(300 / 920 * 100vw);
+    width: calc(320 / 1080 * 100vw);
+    height: calc(262 / 1080* 100vw);
+    // height: 27rem;
     max-width: 26rem;
     max-width: 50rem;
     position: relative;
-    // margin-top: 20rem;
     
 
     &::before {
@@ -1143,24 +1126,20 @@ html:has(dialog[open]) {
     }
 
     @media (max-width: 970px) {
-      padding: 1.5rem 0 5rem 2rem;
+      padding: 2rem 0 0rem 2rem;
       font-size: 1.5rem;
     }
 
-    @media (max-width: 890px) {
-      padding: 1.5rem 0 4rem 1.5rem;
-      font-size: 1.3rem;
-    }
-
-
-    @media (max-width: 830px) {
-      padding: 1.5rem 0 3rem 1rem;
-    }
+    // @media (max-width: 890px) {
+    //   padding: 4.5rem 0 4rem 1.5rem;
+    //   font-size: 1.3rem;
+    // }
 
     @include sp {
       position: static;
       max-width: none;
       width: 100%;
+      height: auto;
       top: auto;
       left: auto;
       margin-top: 1.5rem;
