@@ -527,7 +527,7 @@ html:has(dialog[open]) {
   display: flex;
   position: relative;
   // margin-bottom: 7.5rem;
-  align-items: flex-start;
+  align-items: flex-end;
 
   &:nth-of-type(3) {
     margin-bottom: 0;
@@ -563,26 +563,26 @@ html:has(dialog[open]) {
 }
 
 
-  .recommend__text {
-    padding: 5rem 0 4.2rem 4rem;
+  // .recommend__text {
+  //   padding: 5rem 0 4.2rem 4rem;
 
-    @media (max-width: 970px) {
-      padding: 2.5rem 0 2rem 2.5rem;
-      font-size: 1.5rem;
-    }
+  //   @media (max-width: 970px) {
+  //     padding: 2.5rem 0 2rem 2.5rem;
+  //     font-size: 1.5rem;
+  //   }
 
-    @media (max-width: 840px) {
-      padding: 2.5rem 0 2rem 1rem;
-      font-size: 1.3rem;
-    }
+  //   @media (max-width: 840px) {
+  //     padding: 2.5rem 0 2rem 1rem;
+  //     font-size: 1.3rem;
+  //   }
 
 
-    @include sp {
-      margin-bottom: 5rem;
-      position: static;
-      align-items: stretch;
-    }
-  }
+  //   @include sp {
+  //     margin-bottom: 5rem;
+  //     position: static;
+  //     align-items: stretch;
+  //   }
+  // }
 
   .caption {
     font-size: 1.6rem;
@@ -604,6 +604,7 @@ html:has(dialog[open]) {
     aspect-ratio: 2 / 1;
     position: relative;
     width: calc(600 / 920 * 100%);
+    padding-bottom: 5.3rem;
 
     @include sp {
       position: static;
@@ -638,7 +639,7 @@ html:has(dialog[open]) {
 
   .recommend__text {
     background-color: $mainColor;
-    margin-top: 14.5rem;
+    // margin-top: 14.5rem;
     // max-width: 32rem;
     color: $fontColor;
     font-size: 1.6rem;
@@ -1054,9 +1055,8 @@ html:has(dialog[open]) {
 
   .access__inner {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     margin-top: 7rem;
-    position: relative;
 
     @include sp {
       flex-direction: column;
@@ -1070,10 +1070,10 @@ html:has(dialog[open]) {
     pointer-events: none;
     width: calc(600 / 920 * 100vw);
     max-height: 40rem;
-    // height: calc(400 / 920 * 100vw);
     max-width: 60rem;
     position: relative;
     z-index: 11;
+    padding-bottom: 6rem;
 
     @include sp {
       width: 100%;
@@ -1084,19 +1084,38 @@ html:has(dialog[open]) {
     }
   }
 
+  // .access__map {
+  //   height: auto;
+  //   z-index: 11;
+  //   pointer-events: none;
+  //   max-width: 60rem;
+  //   width: 100%;
+  //   padding-bottom: 5.5rem;
+  //   position: relative;
+  // }
+  // @media (max-width: 767px) {
+  //   .access__map {
+  //     width: 100%;
+  //     max-width: none;
+  //     padding-bottom: 0;
+  //     height: auto;
+  //   }
+  // }
+
   .access__map iframe {
-    aspect-ratio: 600 / 400;
+    aspect-ratio: 600/400;
     width: 100%;
-    // height: 100%;
+    height: 100%;
     border: none;
     outline: none;
     display: block;
-
-    @include sp {
-      aspect-ratio: 315 / 300;
+  }
+  @media (max-width: 767px) {
+    .access__map iframe {
+      aspect-ratio: 315/300;
     }
   }
-
+  
   .access__content {
     background-color: $mainColor;
     color: $fontColor;
@@ -1106,7 +1125,8 @@ html:has(dialog[open]) {
     width: calc(300 / 920 * 100vw);
     max-width: 26rem;
     max-width: 50rem;
-    margin-top: 20rem;
+    position: relative;
+    // margin-top: 20rem;
     
 
     &::before {
@@ -1114,8 +1134,8 @@ html:has(dialog[open]) {
       position: absolute;
       right: 0;
       bottom: 0;
-      width: calc(500 / 920 * 100vw);
-      height: calc(262 / 920 * 100vw);
+      width: calc(500 / 1080 * 100vw);
+      height: calc(262 / 1080* 100vw);
       max-width: 50rem;
       max-height: 26.2rem;
       background-color: $mainColor;
@@ -1123,19 +1143,18 @@ html:has(dialog[open]) {
     }
 
     @media (max-width: 970px) {
-      padding: 1.5rem 0 5rem 2.3rem;
-      margin-top: 22rem;
+      padding: 1.5rem 0 5rem 2rem;
+      font-size: 1.5rem;
     }
 
     @media (max-width: 890px) {
-      margin-top: 18rem;
+      padding: 1.5rem 0 4rem 1.5rem;
+      font-size: 1.3rem;
     }
 
 
     @media (max-width: 830px) {
-      padding: 1.5rem 0 3rem 2rem;
-      margin-top: 16rem;
-
+      padding: 1.5rem 0 3rem 1rem;
     }
 
     @include sp {
