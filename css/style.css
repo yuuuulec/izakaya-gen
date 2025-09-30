@@ -720,11 +720,9 @@ html:has(dialog[open]) {
   content: "";
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 18rem;
   width: 100%;
   height: 100%;
-  max-width: 50rem;
-  max-height: 25rem;
   background-color: #530700;
   z-index: -1;
 }
@@ -759,8 +757,7 @@ html:has(dialog[open]) {
 }
 
 .recommend-item:nth-of-type(even) .recommend__text::before {
-  left: 0;
-  right: auto;
+  left: 18rem;
 }
 
 /* ===========================

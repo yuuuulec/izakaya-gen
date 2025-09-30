@@ -639,8 +639,6 @@ html:has(dialog[open]) {
 
   .recommend__text {
     background-color: $mainColor;
-    // margin-top: 14.5rem;
-    // max-width: 32rem;
     color: $fontColor;
     font-size: 1.6rem;
     font-weight: 400;
@@ -653,11 +651,9 @@ html:has(dialog[open]) {
       content: "";
       position: absolute;
       bottom: 0;
-      right: 0;
+      right: 18rem;
       width: 100%;
       height: 100%;
-      max-width: 50rem;
-      max-height: 25rem;
       background-color: $mainColor;
       z-index: -1;
     }
@@ -692,8 +688,7 @@ html:has(dialog[open]) {
   .recommend-item:nth-of-type(even) {
     .recommend__text {
       &::before {
-        left: 0;      // 左に寄せる
-        right: auto;  // 右側の設定を解除
+        left: 18rem;      // 左に寄せる
       }
     }
   }
