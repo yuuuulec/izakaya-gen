@@ -664,7 +664,7 @@ html:has(dialog[open]) {
     }
 
     @media (max-width: 890px) {
-      padding: 2.5rem 0 2rem 1.5rem;
+      padding: 2.6rem 0 2rem 1.5rem;
       font-size: 1.3rem;
     }
 
@@ -688,7 +688,7 @@ html:has(dialog[open]) {
   .recommend-item:nth-of-type(even) {
     .recommend__text {
       &::before {
-        left: 18rem;      // 左に寄せる
+        left: 18rem;     
       }
     }
   }
