@@ -582,7 +582,7 @@ html:has(dialog[open]) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 8.1rem;
+  row-gap: 8rem;
 }
 @media (max-width: 767px) {
   .recommend__list {
@@ -1262,7 +1262,7 @@ span#modalPrice .modal__close {
 }
 @media (max-width: 970px) {
   .access__content {
-    padding: 4rem 0 3.5rem 2rem;
+    padding: 4.1rem 0 3.5rem 2rem;
     font-size: 1.5rem;
   }
 }
@@ -1275,7 +1275,7 @@ span#modalPrice .modal__close {
     top: auto;
     left: auto;
     margin-top: 1.5rem;
-    padding: 2rem 0 3rem 2rem;
+    padding: 2rem 0 2rem 2rem;
   }
   .access__content::before {
     display: none;
