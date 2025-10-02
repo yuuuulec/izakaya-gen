@@ -722,7 +722,6 @@ html:has(dialog[open]) {
     gap: 4.35%;
     width: 100%;
 
-
     @include sp {
       display: block;
       margin-top: 3.5rem;
@@ -742,8 +741,13 @@ html:has(dialog[open]) {
     @include sp {
       width: 100%;
       margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
+}
 
 
   .course__item:last-child .course__ttl {
