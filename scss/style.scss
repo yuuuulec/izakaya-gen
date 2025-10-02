@@ -825,6 +825,7 @@ html:has(dialog[open]) {
     @include sp {
       margin-left: -0.5rem;
     }
+  }
 
     .modal__content img {
       max-width: 100%;
@@ -832,7 +833,7 @@ html:has(dialog[open]) {
       display: block;
     }
 
-    .modal__close {
+    .modal__content .modal__close {
       position: absolute;
       background: none;
       border: none;
@@ -857,10 +858,7 @@ html:has(dialog[open]) {
         right: 0.5rem;
       }
     }
-  }
-
-
-
+  
   /* ===========================
    お知らせ　news
    =========================== */
