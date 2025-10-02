@@ -29,11 +29,6 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: scroll;
-  @media (max-width: 880px) and (min-width: 768px) {
-    font-size: calc(10 / 880 * 100vw);
-  }
-  @include sp {
-    font-size: min(vw(10, 375), 500 / 375 * 10px);
 }
 
 body {
@@ -747,8 +742,6 @@ html:has(dialog[open]) {
       }
     }
   }
-}
-
 
   .course__item:last-child .course__ttl {
 
