@@ -29,6 +29,11 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: scroll;
+  @media (max-width: 880px) and (min-width: 768px) {
+    font-size: calc(10 / 880 * 100vw);
+  }
+  @include sp {
+    font-size: min(vw(10, 375), 500 / 375 * 10px);
 }
 
 body {
@@ -659,17 +664,17 @@ html:has(dialog[open]) {
     }
 
     @media (max-width: 970px) {
-      padding: 2.5rem 0 2rem 2.5rem;
+      padding: 5rem 0 4.2rem 2.5rem;
       font-size: 1.5rem;
     }
 
     @media (max-width: 890px) {
-      padding: 2.6rem 0 2rem 1.5rem;
+      padding: 5rem 0 4.2rem 1.5rem;
       font-size: 1.3rem;
     }
 
     @include sp {
-      padding: 2.1rem 2rem 1.3rem;
+      padding: 5rem 0 4.2rem 1.3rem;
       margin: 0;
       position: static;
       font-size: 1.6rem;
