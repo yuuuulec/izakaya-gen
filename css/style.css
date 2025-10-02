@@ -728,13 +728,13 @@ html:has(dialog[open]) {
 }
 @media (max-width: 970px) {
   .recommend__text {
-    padding: 2.5rem 0 2rem 2.5rem;
+    padding: 5rem 0 4.2rem 2.5rem;
     font-size: 1.5rem;
   }
 }
 @media (max-width: 890px) {
   .recommend__text {
-    padding: 2.6rem 0 2rem 1.5rem;
+    padding: 5rem 0 4.2rem 1.5rem;
     font-size: 1.3rem;
   }
 }
