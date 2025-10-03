@@ -587,7 +587,7 @@ html:has(dialog[open]) {
 @media (max-width: 767px) {
   .recommend__list {
     margin-top: 3.5rem;
-    row-gap: 4.9rem;
+    row-gap: 5.1rem;
   }
 }
 
@@ -740,7 +740,7 @@ html:has(dialog[open]) {
 }
 @media (max-width: 767px) {
   .recommend__text {
-    padding: 5rem 0 4.2rem 1.3rem;
+    padding: 2rem 0 1.2rem 2rem;
     margin: 0;
     position: static;
     font-size: 1.6rem;
@@ -772,7 +772,7 @@ html:has(dialog[open]) {
 }
 @media (max-width: 767px) {
   #course {
-    padding: 5.3rem 0 4rem;
+    padding: 5.3rem 0 6rem;
     background-image: url(../img/course-back-sp.svg);
   }
 }
@@ -977,7 +977,7 @@ html:has(dialog[open]) {
 @media (max-width: 767px) {
   .news__inner {
     display: block;
-    margin-top: 3.6rem;
+    margin-top: 3.8rem;
   }
 }
 .news__inner > * {
