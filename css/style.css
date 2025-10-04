@@ -157,7 +157,7 @@ html:has(dialog[open]) {
 
 @media (max-width: 767px) {
   .header .inner {
-    padding: 0;
+    padding-left: 2rem;
   }
 }
 
@@ -190,7 +190,7 @@ html:has(dialog[open]) {
 }
 @media (max-width: 940px) {
   .header__container {
-    padding: 0 0 0 2.2rem;
+    padding-left: 2.2rem;
     height: 5rem;
   }
 }
