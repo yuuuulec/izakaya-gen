@@ -101,6 +101,7 @@ html:has(dialog[open]) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  white-space: nowrap;
 }
 .section__ttl .subttl {
   color: #000000;
@@ -1419,6 +1420,7 @@ Reservations / Contact
 @media (max-width: 767px) {
   #contact .section__ttl {
     letter-spacing: 0;
+    white-space: nowrap;
   }
 }
 #contact .section__ttl span {
@@ -1526,7 +1528,7 @@ form {
 
 @media (max-width: 855px) {
   .contact__item--radio .contact__label-wrapper {
-    width: 5rem;
+    width: 10rem;
   }
 }
 @media (max-width: 767px) {
@@ -1567,6 +1569,11 @@ form {
   display: -ms-flexbox;
   display: flex;
   gap: 5.9rem;
+}
+@media (max-width: 855px) {
+  .contact__radios {
+    gap: 4rem;
+  }
 }
 @media (max-width: 767px) {
   .contact__radios {
@@ -1633,7 +1640,7 @@ input[type=radio]:checked::before {
   max-width: 63rem;
   height: 4.8rem;
   background-color: #ffffff;
-  border: 1px solid #ffffff;
+  border: none;
   width: 100%;
   font-size: 1.6rem;
 }
