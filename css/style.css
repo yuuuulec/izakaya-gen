@@ -1482,7 +1482,7 @@ form {
 }
 @media (max-width: 767px) {
   .contact__item {
-    margin-bottom: 3.1rem;
+    margin-bottom: 3.2rem;
   }
 }
 .contact__item:last-of-type {
@@ -1843,7 +1843,7 @@ input[type=radio]:checked::before {
 }
 @media (max-width: 767px) {
   .contact__item--column {
-    margin-bottom: 2.8rem;
+    margin-bottom: 3.2rem;
   }
 }
 
